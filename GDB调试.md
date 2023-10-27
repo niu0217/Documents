@@ -47,6 +47,8 @@ gcc -fno-asynchronous-unwind-tables -fno-exceptions -no-pie -fno-pic -m64 ./test
 
 查看指令地址0x56556280所对应的在源代码中的位置：`info line *0x56556280`
 
+打印数组的10个元素：`p *array@10`
+
 
 
 ## 常用的pwngdb命令
