@@ -34,3 +34,4 @@
 
 [动态库和静态库.md](https://github.com/niu0217/Documents/blob/main/动态库和静态库.md)
 
+[VIM常用操作.md](https://github.com/niu0217/Documents/blob/main/VIM常用操作.md)
