@@ -41,3 +41,12 @@
 ## 5. C++
 
 [C++UML类图详解.md](https://github.com/niu0217/Documents/blob/main/C%2B%2BUML类图详解.md)
+
+
+
+## 6. Make
+
+[make的基础用法.md](https://github.com/niu0217/Documents/blob/main/make的基础用法.md)
+
+[makefile从入门到项目编译实战.md](https://github.com/niu0217/Documents/blob/main/makefile从入门到项目编译实战.md)
+
