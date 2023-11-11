@@ -38,8 +38,8 @@ rcpt to: <xx@qq.com> #命令6
 250 Mail OK
 data #命令7
 354 End data with <CR><LF>.<CR><LF>
-From: 19502357024@163.com #命令8
-To: 2335658505@qq.com #命令9
+From: xx@163.com #命令8
+To: xx@qq.com #命令9
 Subject: test #命令10
  #命令11
 Hello niu0217, I am a tester. #命令12
