@@ -38,8 +38,12 @@ rcpt to: <xx@qq.com> #命令6
 250 Mail OK
 data #命令7
 354 End data with <CR><LF>.<CR><LF>
-hello I am niu0217 #命令8
-. #命令9
+From: 19502357024@163.com #命令8
+To: 2335658505@qq.com #命令9
+Subject: test #命令10
+ #命令11
+Hello niu0217, I am a tester. #命令12
+. #命令13
 250 Mail OK queued as zwqz-smtp-mta-g4-2,_____wDHR7eDME9lY+R4Cw--.9070S2 1699688669
 quit #命令10
 221 Bye
@@ -52,5 +56,7 @@ Connection closed by foreign host.
 + 命令4：base64加密后的授权码（打开POP3/SMTP服务后自动生成的）
 + 命令5：发送者的邮箱
 + 命令6：接受者的邮箱
-+ 命令8，9：发送的消息，其中命令9代表结束标志
++ 命令8、9、10、11代表的是头部。其中命令11就是一个空行，表示头部结束了。
++ 命令12就是发送的具体内容
++ 命令13表示发送的内容结束，“.”单独占一行标识发送结束。
 
