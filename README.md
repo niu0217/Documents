@@ -24,6 +24,8 @@
 
 [Git的分支操作.md](https://github.com/niu0217/Documents/blob/main/Git的分支操作.md)
 
+[Git的版本回退.md](https://github.com/niu0217/Documents/blob/main/Git的版本回退.md)
+
 
 
 ## 4. Linux
