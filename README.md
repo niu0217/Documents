@@ -1,5 +1,9 @@
 # Documents
 
+## 有趣知识
+
+[VPN的原理](https://zhuanlan.zhihu.com/p/71536075)
+
 ## 1. GDB
 
 [100个GDB小技巧.md](https://github.com/niu0217/Documents/blob/main/100个GDB小技巧.md)
