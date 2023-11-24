@@ -32,8 +32,6 @@
 
 ## 4. Linux
 
-[Linux常用命令.md](https://github.com/niu0217/Documents/blob/main/Linux常用命令.md)
-
 [正则表达式.md](https://github.com/niu0217/Documents/blob/main/正则表达式.md)
 
 [动态库和静态库.md](https://github.com/niu0217/Documents/blob/main/动态库和静态库.md)
