@@ -8,6 +8,10 @@
 
 [Readme.md](https://github.com/niu0217/Documents/blob/main/Linux/Readme.md)
 
+## 5. C++
+
+[Readme.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/Readme.md)
+
 ## 2. Ubuntu
 
 [Ubuntu常见操作.md](https://github.com/niu0217/Documents/blob/main/Ubuntu常见操作.md)
@@ -27,22 +31,6 @@
 [Git的分支操作.md](https://github.com/niu0217/Documents/blob/main/Git的分支操作.md)
 
 [Git的版本回退.md](https://github.com/niu0217/Documents/blob/main/Git的版本回退.md)
-
-
-
-## 4. Linux
-
-[正则表达式.md](https://github.com/niu0217/Documents/blob/main/正则表达式.md)
-
-[动态库和静态库.md](https://github.com/niu0217/Documents/blob/main/动态库和静态库.md)
-
-[VIM常用操作.md](https://github.com/niu0217/Documents/blob/main/VIM常用操作.md)
-
-
-
-## 5. C++
-
-[Readme.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/Readme.md)
 
 
 
