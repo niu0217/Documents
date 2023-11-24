@@ -4,9 +4,9 @@
 
 [VPN的原理](https://zhuanlan.zhihu.com/p/71536075)
 
-## 1. linux
+## 1. Linux
 
-
+[Readme.md](https://github.com/niu0217/Documents/blob/main/Linux/Readme.md)
 
 ## 2. Ubuntu
 
