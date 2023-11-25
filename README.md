@@ -12,6 +12,10 @@
 
 [Readme.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/Readme.md)
 
+## 软件安装
+
+[Readme.md](https://github.com/niu0217/Documents/blob/main/SoftwareInstall/Readme.md)
+
 ## 2. Ubuntu
 
 [Ubuntu常见操作.md](https://github.com/niu0217/Documents/blob/main/Ubuntu常见操作.md)
