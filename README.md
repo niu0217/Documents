@@ -18,8 +18,6 @@
 
 ## 2. Ubuntu
 
-[Ubuntu常见操作.md](https://github.com/niu0217/Documents/blob/main/Ubuntu常见操作.md)
-
 [mac使用ssh连接腾讯云服务器.md](https://github.com/niu0217/Documents/blob/main/mac使用ssh连接腾讯云服务器.md)
 
 
