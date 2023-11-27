@@ -4,6 +4,8 @@
 
 [VPN的原理](https://zhuanlan.zhihu.com/p/71536075)
 
+[mac使用ssh连接腾讯云服务器.md](https://github.com/niu0217/Documents/blob/main/mac使用ssh连接腾讯云服务器.md)
+
 ## 1. Linux
 
 [Readme.md](https://github.com/niu0217/Documents/blob/main/Linux/Readme.md)
@@ -15,12 +17,6 @@
 ## 软件安装
 
 [Readme.md](https://github.com/niu0217/Documents/blob/main/SoftwareInstall/Readme.md)
-
-## 2. Ubuntu
-
-[mac使用ssh连接腾讯云服务器.md](https://github.com/niu0217/Documents/blob/main/mac使用ssh连接腾讯云服务器.md)
-
-
 
 ## 3. Git
 
