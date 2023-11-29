@@ -6,6 +6,5 @@
 
 [动态库和静态库.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/动态库和静态库.md)
 
-[VIM常用操作.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/VIM常用操作.md)
-
 [正则表达式.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/正则表达式.md)
+
