@@ -511,3 +511,16 @@ ubuntu@niu0217:~/Dev/test$ tree
 ubuntu@niu0217:~/Dev/test$
 ```
 
+进阶使用：
+
++ 压缩：
+  + `time tar -zpcv -f /root/etc.tar.gz /etc`
+  + `time tar -jpcv -f /root/etc.tar.bz2 /etc `
+  + `time tar -Jpcv -f /root/etc.tar.xz /etc`
+
++ 查看所占空间：`du -sm /etc`
+
++ 查看：`tar -jtv -f /root/etc.tar.bz2`
+
++ 解压：
+  + `tar -jxv -f/root/etc.tar.bz2 -C /tmp`

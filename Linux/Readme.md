@@ -10,6 +10,3 @@
 
 [Linux常用命令.md](https://github.com/niu0217/Documents/blob/main/Linux/Linux常用命令.md)
 
-## 3. Ubuntu
-
-[Ubuntu常见操作.md](https://github.com/niu0217/Documents/blob/main/Linux/Ubuntu常见操作.md)
