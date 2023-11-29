@@ -10,7 +10,11 @@
 
 [VIM.md](https://github.com/niu0217/Documents/blob/main/Linux/VIM.md)
 
-## 3. 常用命令
+## 3. 终端
+
+
+
+## 4. 常用命令
 
 [Linux常用命令.md](https://github.com/niu0217/Documents/blob/main/Linux/Linux常用命令.md)
 
