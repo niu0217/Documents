@@ -109,6 +109,12 @@
 
 ## 3. PowerVIM
 
+安装教程：
+
+[Ubuntu20.04安装VIM.md](https://github.com/niu0217/Documents/blob/main/SoftwareInstall/Ubuntu20.04安装VIM.md)
+
+使用：
+
 ```
 正常模式下的快捷键（非插入模式）
 ;n              // 打开文件目录树显示在屏幕左侧
