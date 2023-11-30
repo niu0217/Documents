@@ -2,6 +2,8 @@
 
 ## 1. 基本规则
 
+特别注意⚠️：和通配符的含义不相同。这是正则表达式。
+
 | RE 字符   | 意义和范例                                                   |
 | --------- | ------------------------------------------------------------ |
 | `^word`   | 意义：待查找的字符串word在行首；<br>举例：查找行首为`#`开始的那一行，并列出行号；<br>`grep -n '^#' regular_express.txt` |
@@ -266,3 +268,219 @@ ubuntu@niu0217:~/Dev/Test$ grep -n 'go\{2,\}g' regular_express.txt
 19:goooooogle yes!
 ubuntu@niu0217:~/Dev/Test$
 ```
+
+## 3. 使用sed
+
+```bash
+#将/etc/passwd的内容列出并且打印行号，同时将2～行删除
+ubuntu@niu0217:~/Dev/Test$ nl /etc/passwd | sed '2,5d'
+     1	root:x:0:0:root:/root:/bin/bash
+     6	games:x:5:60:games:/usr/games:/usr/sbin/nologin
+     7	man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+```
+
+```bash
+#将/etc/passwd的第2行后面加入字符drink tea
+ubuntu@niu0217:~/Dev/Test$ nl /etc/passwd | sed '2a drink tea'
+     1	root:x:0:0:root:/root:/bin/bash
+     2	daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+drink tea
+     3	bin:x:2:2:bin:/bin:/usr/sbin/nologin
+```
+
+```bash
+#将/etc/passwd的第2行后面新增两行字符串
+ubuntu@niu0217:~/Dev/Test$ nl /etc/passwd | sed '2a drink tea....\
+> ghghghh'
+     1	root:x:0:0:root:/root:/bin/bash
+     2	daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+drink tea....
+ghghghh
+     3	bin:x:2:2:bin:/bin:/usr/sbin/nologin
+```
+
+```bash
+#替换2～5行的数据为no no bo
+ubuntu@niu0217:~/Dev/Test$ nl /etc/passwd | sed '2,5c no no bo'
+     1	root:x:0:0:root:/root:/bin/bash
+no no bo
+     6	games:x:5:60:games:/usr/games:/usr/sbin/nologin
+```
+
+```bash
+#打印你想要的行
+ubuntu@niu0217:~/Dev/Test$ nl /etc/passwd | sed -n '2,5p'
+     2	daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+     3	bin:x:2:2:bin:/bin:/usr/sbin/nologin
+     4	sys:x:3:3:sys:/dev:/usr/sbin/nologin
+     5	sync:x:4:65534:sync:/bin:/bin/sync
+ubuntu@niu0217:~/Dev/Test$
+```
+
+```bash
+#提取IP地址
+ubuntu@niu0217:~/Dev/Test$ /sbin/ifconfig eth0
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.0.16  netmask 255.255.252.0  broadcast 10.0.3.255
+        inet6 fe80::5054:ff:fe8b:5282  prefixlen 64  scopeid 0x20<link>
+        ether 52:54:00:8b:52:82  txqueuelen 1000  (Ethernet)
+        RX packets 33407989  bytes 7436261956 (7.4 GB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 31683094  bytes 5649778977 (5.6 GB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        
+ubuntu@niu0217:~/Dev/Test$ /sbin/ifconfig eth0 | grep 'inet ' | sed 's/^.*inet//g'  | sed 's/ *netmask.*$//g'
+ 10.0.0.16
+ubuntu@niu0217:~/Dev/Test$
+```
+
+```bash
+#将每一行.结尾的替换成!
+ubuntu@niu0217:~/Dev/Test$ sed -i 's/\.$/\!/g' regular_express.txt
+ubuntu@niu0217:~/Dev/Test$ cat -n regular_express.txt
+     1	"Open Source" is a good mechanism to develop programs!
+     2	apple is my favorite food!
+     3	Football game is not use feet only!
+     4	this dress doesn't fit me!
+     5	However, this dress is about $ 3183 dollars.^M
+     6	GNU is free air not free beer.^M
+     7	Her hair is very beauty.^M
+     8	I can't finish the test.^M
+     9	Oh! The soup taste good.^M
+    10	motorcycle is cheap than car!
+    11	This window is clear!
+    12	the symbol '*' is represented as start!
+    13	Oh!     My god!
+    14	The gd software is a library for drafting programs.^M
+    15	You are the best is mean you are the no. 1!
+    16	The world <Happy> is the same with "glad"!
+    17	I like dog!
+    18	google is the best tools for search keyword!
+    19	goooooogle yes!
+    20	go! go! Let's go!
+    21	# I am VBird
+    22
+ubuntu@niu0217:~/Dev/Test$
+```
+
+```bash
+#在文件的最后一行添加# this is a test
+ubuntu@niu0217:~/Dev/Test$ sed -i '$a #this is a test' regular_express.txt
+ubuntu@niu0217:~/Dev/Test$ cat -n regular_express.txt
+     1	"Open Source" is a good mechanism to develop programs!
+     2	apple is my favorite food!
+     3	Football game is not use feet only!
+     4	this dress doesn't fit me!
+     5	However, this dress is about $ 3183 dollars.^M
+     6	GNU is free air not free beer.^M
+     7	Her hair is very beauty.^M
+     8	I can't finish the test.^M
+     9	Oh! The soup taste good.^M
+    10	motorcycle is cheap than car!
+    11	This window is clear!
+    12	the symbol '*' is represented as start!
+    13	Oh!     My god!
+    14	The gd software is a library for drafting programs.^M
+    15	You are the best is mean you are the no. 1!
+    16	The world <Happy> is the same with "glad"!
+    17	I like dog!
+    18	google is the best tools for search keyword!
+    19	goooooogle yes!
+    20	go! go! Let's go!
+    21	# I am VBird
+    22
+    23	#this is a test
+ubuntu@niu0217:~/Dev/Test$
+```
+
+## 4. 扩展规则
+
+| RE 字符 | 意义和范例                                                   |
+| ------- | ------------------------------------------------------------ |
+| `+`     | 意义：重复【一个或一个以上】的前一个RE字符；<br>举例：查找`god good gooood`等字符串，`o+`代表【一个以上的o】；<br>`egrep -n 'go+d' regular_express.txt` |
+| `?`     | 意义：【零个或一个】的前一个RE字符；<br>举例：查找`gd god`这个两个字符串，`o?`表示【空的或1个o】；<br>`egrep -n 'go?d' regular_express.txt` |
+| `|`     | 意义：用或（or）的方式找出数个字符；<br>`egrep -n 'gd|good' regular_express.txt`<br>`egrep -n 'gd|good|dog' regular_express.txt` |
+| `()`    | 意义：找出【群组】字符串；<br>举例：`egrep -n 'g(la|oo)d' regular_express.txt` |
+| `()+`   | 意义：多个重复群组的判别；<br>举例：`echo 'AxyzxyzxyzxyzC' | egrep 'A(xyz)+C'`；<br>含义：查找开头是A，结尾是C，中间有一个以上的“xyz”字符串 |
+
+## 5. 使用awk
+
+```bash
+ubuntu@niu0217:~/Dev/Test$ last -n 5
+ubuntu   pts/0        125.85.244.64    Thu Nov 30 14:39   still logged in
+ubuntu   pts/0        125.85.244.64    Thu Nov 30 13:06 - 14:37  (01:31)
+ubuntu   pts/0        125.85.244.64    Thu Nov 30 11:46 - 12:26  (00:40)
+ubuntu   pts/0        125.85.244.64    Thu Nov 30 11:28 - 11:46  (00:18)
+ubuntu   pts/0        125.85.244.64    Thu Nov 30 11:22 - 11:28  (00:05)
+
+wtmp begins Tue Apr 13 14:22:36 2021
+ubuntu@niu0217:~/Dev/Test$ last -n 5 | awk '{print $1 "\t" $3}'
+ubuntu	125.85.244.64
+ubuntu	125.85.244.64
+ubuntu	125.85.244.64
+ubuntu	125.85.244.64
+ubuntu	125.85.244.64
+
+wtmp	Tue
+ubuntu@niu0217:~/Dev/Test$
+```
+
+```bash
+ubuntu@niu0217:~/Dev/Test$ last -n 5 | awk '{print $1 "\t lines: "NR"\t columns: " NF}'
+ubuntu	 lines: 1	 columns: 10
+ubuntu	 lines: 2	 columns: 10
+ubuntu	 lines: 3	 columns: 10
+ubuntu	 lines: 4	 columns: 10
+ubuntu	 lines: 5	 columns: 10
+	 lines: 6	 columns: 0
+wtmp	 lines: 7	 columns: 7
+ubuntu@niu0217:~/Dev/Test$
+```
+
+```bash
+ubuntu@niu0217:~/Dev/Test$ cat /etc/passwd | awk '{FS=":"} $3 < 10 {print $1 "\t " $3 }'
+root:x:0:0:root:/root:/bin/bash
+daemon	 1
+bin	 2
+sys	 3
+sync	 4
+games	 5
+man	 6
+lp	 7
+mail	 8
+news	 9
+ubuntu@niu0217:~/Dev/Test$
+```
+
+```bash
+ubuntu@niu0217:~/Dev/Test$ cat /etc/passwd | awk 'BEGIN {FS=":"} $3 < 10 {print $1 "\t " $3 }'
+root	 0
+daemon	 1
+bin	 2
+sys	 3
+sync	 4
+games	 5
+man	 6
+lp	 7
+mail	 8
+news	 9
+ubuntu@niu0217:~/Dev/Test$
+```
+
+```bash
+ubuntu@niu0217:~/Dev/Test$ cat pay.txt
+Name    1st     2nd     3th
+VBird   23000   24000   25000
+DMTsai  21000   20000   23000
+Bird2   43000   42000   41000
+ubuntu@niu0217:~/Dev/Test$ cat pay.txt | \
+> awk 'NR==1{printf "%10s %10s %10s %10s %10s\n", $1, $2, $3, $4, "Total"}
+> NR>=2{total = $2 + $3 + $4
+> printf "%10s %10d %10d %10d %10.2f\n", $1, $2, $3, $4, total}'
+      Name        1st        2nd        3th      Total
+     VBird      23000      24000      25000   72000.00
+    DMTsai      21000      20000      23000   64000.00
+     Bird2      43000      42000      41000  126000.00
+ubuntu@niu0217:~/Dev/Test$
+```
+
