@@ -78,6 +78,19 @@ ubuntu@niu0217:~/Dev/Test$ unalias grep
 
 图片来源：https://cloud.tencent.com/developer/article/1116370
 
+### 1.4 变量内容的删除、取代与替换
+
+| 变量设置方式               | 说明                                                         |
+| -------------------------- | ------------------------------------------------------------ |
+| ${变量#关键词}             | 若变量内容从头开始的数据符合【关键词】，则将符合的最短数据删除 |
+| ${变量##关键词}            | 若变量内容从头开始的数据符合【关键词】，则将符合的最长数据删除 |
+| ${变量%关键词}             | 若变量内容从尾向前的数据符合【关键词】，则将符合的最短数据删除 |
+| ${变量%%关键词}            | 若变量内容从尾向前的数据符合【关键词】，则将符合的最长数据删除 |
+| ${变量/旧字符串/新字符串}  | 若变量内容符合【旧字符串】则【第一个旧字符串会被新字符串替换】 |
+| ${变量//旧字符串/新字符串} | 若变量内容符合【旧字符串】则【全部的旧字符串会被新字符串替换】 |
+
+
+
 ## 2. 脚本
 
 ### 2.1 注意事项
@@ -89,9 +102,55 @@ ubuntu@niu0217:~/Dev/Test$ unalias grep
   + 3、作者与联系方式
   + 4、建文件日期
   + 5、历史记录
++ 脚本的文件头处记录：
+  + 1、脚本的功能
+  + 2、脚本的版本信息
+  + 3、脚本的作者与联系方式
+  + 4、脚本的版权声明方式
+  + 5、脚本的历史记录
+  + 6、脚本内比较特殊的命令，使用【绝对路径】的方式来执行
+  + 7、脚本运行时需要的环境变量预先声明与设置
 
 ### 2.2 hello
 
 ```sh
+#!/bin/bash
+# Program
+#   This program shows "Hello World!" in your screen.
+# History
+# 2023/11/30 niu0217 First release
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/ubuntu/bin
+export PATH
+echo -e "Hello World! \a \n"
+exit 0
+```
+
+执行：
+
+```bash
+chmod a+x hello.sh
+./hello.sh
+```
+
+### 2.3 showname
+
+```sh
+#!/bin/bash
+# Program
+#   User input his first name and last name. Program shoe his full name
+# History
+# 2023/11/30 niu0217 First release
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/ubuntu/bin
+export PATH
+read -p "Please input your first name: " firstname #提示用户输入
+read -p "Please input your last name: " lastname
+echo -e "\nYour full name is: ${firstname} ${lastname}" #结果由屏幕输出
+exit 0
+```
+
+执行：
+
+```bash
+sh showname.sh
 ```
 
