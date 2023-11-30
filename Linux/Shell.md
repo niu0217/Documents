@@ -1,6 +1,33 @@
 # Shell
 
-## 1. 快速编辑与执行
+## 1. 基础
+
+### 1.1 命令执行顺序
+
+1、以相对/绝对路径执行命令，例如【/bin/ls】或【./ls】
+
+2、由alias找到该命令来执行
+
+3、由bash内置的（builtin）命令来执行
+
+4、通过$PATH这个变量的顺序查找到的第一个命令来执行
+
+同时，我们可以通过命令`type -a 命令`来查看命令的的执行顺序。比如：
+
+```bash
+ubuntu@niu0217:~$ type -a ls
+ls is aliased to `ls --color=auto'
+ls is /usr/bin/ls
+ls is /bin/ls
+ubuntu@niu0217:~$
+ubuntu@niu0217:~$ type -a echo
+echo is a shell builtin
+echo is /usr/bin/echo
+echo is /bin/echo
+ubuntu@niu0217:~$
+```
+
+### 1.2 快速编辑与执行
 
 ```bash
 ubuntu@niu0217:~/Dev/test$ cp comp/data1.txt comp/data2.txt \
@@ -16,7 +43,7 @@ ubuntu@niu0217:~/Dev/test$ cp comp/data1.txt comp/data2.txt \
 | [ctrl] + a | 让光标移动到命令最前面 |
 | [ctrl] + e | 让光标移动到命令最后面 |
 
-## 2. 别名
+### 1.3 别名
 
 设置别名：
 
@@ -50,3 +77,6 @@ ubuntu@niu0217:~/Dev/Test$ unalias grep
 ![环境变量读取顺序](Shell.assets/环境变量读取顺序.jpeg) 
 
 图片来源：https://cloud.tencent.com/developer/article/1116370
+
+## 2. 脚本
+
