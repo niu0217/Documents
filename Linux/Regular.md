@@ -4,15 +4,16 @@
 
 | RE 字符   | 意义和范例                                                   |
 | --------- | ------------------------------------------------------------ |
-| `^word`   | 意义：带查找的字符串word在行首；<br>举例：查找行首为`#`开始的那一行，并列出行号；<br>`grep -n '^#' regular_express.txt` |
-| `word$`   |                                                              |
-| `.`       |                                                              |
-| `\`       |                                                              |
-| `*`       |                                                              |
-| `[list]`  |                                                              |
-| `[n1-n2]` |                                                              |
-| `[^list]` |                                                              |
-| `\{n,m\}` |                                                              |
+| `^word`   | 意义：待查找的字符串word在行首；<br>举例：查找行首为`#`开始的那一行，并列出行号；<br>`grep -n '^#' regular_express.txt` |
+| `word$`   | 意义：待查找的字符串word在行尾；<br>举例：将行尾为`!`的那一行打印出来，并列出行号；<br>`grep -n '!$' regular_express.txt` |
+| `.`       | 意义：代表【一定有一个任意字符】的字符；<br>举例：e与e的中间【一定】仅有一个字符，空格符也是字符；<br>`grep -n 'e.e' regular_express.txt` |
+| `\`       | 意义：转义符，将特殊符号的特殊意义去除；<br>举例：查找含有单引号`'`的那一行；<br>`grep -n \' regular_express.txt` |
+| `*`       | 意义：重复0个或无穷多个的前一个RE字符；<br>举例：查找`es ess esss`等的字符串；<br>`grep -n 'ess*' regular_express.txt` |
+| `.*`      | `.`和`*`组合起来的。非常重要！！<br>`.`代表任意字符。`*`代表重复前一个字符，0次或多次。因此`.*`就是重复任意字符，0次或多次<br>举例：g开头和g结尾，中间任意个字符的字符串；<br>`grep -n 'g.*g' regular_express.txt` |
+| `[list]`  | 意义：字符集合的RE字符，里面列出想要选取的【字符】；<br>举例：`grep -n 'g[ld]' regular_express.txt` |
+| `[n1-n2]` | 意义：字符集合的RE字符，里面列出想要选取的【字符范围】；<br>举例：`grep -n '[A-Z]' regular_express.txt` |
+| `[^list]` | 意义：字符集合的RE字符，里面列出不要的【字符串或范围】；<br>举例：`grep -n 'oo[^t]' regular_express.txt` |
+| `\{n,m\}` | 意义：连续n到m个的【前一个RE字符】；<br>意义：若为`\{n\}`，则是连续n个的【前一个RE字符】；<br>意义：若为`\{n,\}`，则是连续n个以上的【前一个RE字符】；<br>举例：`grep -n 'go\{2,3\}g' regular_express.txt` |
 
 ## 2. 使用grep
 
