@@ -18,3 +18,6 @@
 
 [Linux常用命令.md](https://github.com/niu0217/Documents/blob/main/Linux/Linux常用命令.md)
 
+## 5. 正则表达式
+
+[正则表达式.md](https://github.com/niu0217/Documents/blob/main/Linux/正则表达式.md)
