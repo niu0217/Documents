@@ -47,6 +47,6 @@ ubuntu@niu0217:~/Dev/Test$ unalias grep
 
 当登入系统时候获得一个shell进程时，其读取环境设定档如下:
 
-![img](https://ask.qcloudimg.com/http-save/yehe-1751832/kjopmerin0.jpeg) 
+![环境变量读取顺序](Shell.assets/环境变量读取顺序.jpeg) 
 
 图片来源：https://cloud.tencent.com/developer/article/1116370
