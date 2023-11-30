@@ -33,3 +33,20 @@ ubuntu@niu0217:~/Dev/Test$
 ubuntu@niu0217:~/Dev/Test$ unalias grep
 ```
 
+此时的别名只是暂时有效，想让别名永久生效：
+
++ 打开`/etc/profile`文件
++ 在文件最后添加你想要的别名，比如`alias grep='grep --color=auto'`
++ 然后`source /etc/profile`
+
+此时就是永久生效。
+
+解释：
+
+> profile（/etc/profile），**用于设置系统级的环境变量和启动程序，在这个文件下配置会对所有用户生效**。 当用户登录（login）时，文件会被执行，并从/etc/profile. d目录的配置文件中查找shell设置
+
+当登入系统时候获得一个shell进程时，其读取环境设定档如下:
+
+![img](https://ask.qcloudimg.com/http-save/yehe-1751832/kjopmerin0.jpeg) 
+
+图片来源：https://cloud.tencent.com/developer/article/1116370
