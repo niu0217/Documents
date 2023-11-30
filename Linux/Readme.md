@@ -14,6 +14,8 @@
 
 [Shell.md](https://github.com/niu0217/Documents/blob/main/Linux/Shell.md)
 
+[Shell实战.md](https://github.com/niu0217/Documents/blob/main/Linux/Shell实战.md)
+
 ## 4. 常用命令
 
 [Linux常用命令.md](https://github.com/niu0217/Documents/blob/main/Linux/Linux常用命令.md)
