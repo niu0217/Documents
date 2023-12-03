@@ -804,3 +804,123 @@ do
 done
 ```
 
+### 4.7 dirperm
+
+```sh
+#!/bin/bash
+# program
+#   User input dir name, I find the permission of files.
+# history
+# 2023/12/03 niu0217 first release
+path=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/ubuntu/bin
+export path
+read -p "Please input a directory: " dir
+if [ "${dir}" == "" -o ! -d "${dir}" ]; then
+    echo "The ${dir} is NOT exist in your system."
+    exit 1
+fi
+
+filelist=$(ls ${dir})
+for filename in ${filelist}
+do
+    perm=""
+    test -r "${dir}/${filename}" && perm="${perm} readable"
+    test -w "${dir}/${filename}" && perm="${perm} writable"
+    test -x "${dir}/${filename}" && perm="${perm} executable"
+    echo "The file ${dir}/${filename}'s permission is ${perm} "
+done
+```
+
+### 4.8 cal1-100-2
+
+```sh
+#!/bin/bash
+# Program
+#   Use loop to calculate "1+2+3...+your input" result.
+# History
+# 2023/12/03 niu0217 First release
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/ubuntu/bin
+export PATH
+read -p "Please input a number, I will count for 1+2+...+your_input: " nu
+s=0
+for (( i=1; i<=${nu}; i=i+1 ))
+do
+    s=$((${s}+${i}))
+done
+echo "The result of '1+2+...${nu}' is ==> ${s}"
+```
+
+### 4.9 whattoeat
+
+```sh
+#!/bin/bash
+# Program
+#   Try to tell you what you may eat.
+# History
+# 2023/12/03 niu0217 First release
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/ubuntu/bin
+export PATH
+eat[1]="卖当当汉堡"
+eat[2]="肯爷爷炸鸡"
+eat[3]="彩虹日式便当"
+eat[4]="太师父便当"
+eat[5]="泡面"
+eatnum=5
+check=$(( ${RANDOM} * ${eatnum} / 32767 + 1 ))
+echo "You may eat ${eat[${check}]}"
+```
+
+## 5. Shell脚本的调试和跟踪
+
+命令：
+
+```
+sh -[nvx] scripts.sh
+选项和参数：
+-n:不要执行脚本，仅查询语法的问题
+-v:在执行脚本前，先将脚本文件的内容输出到屏幕上
+-x:将使用到的脚本内容显示到屏幕上。非常有用
+```
+
+举例：
+
+```sh
+ubuntu@niu0217:~/bin$ sh -n dir_perm.sh
+ubuntu@niu0217:~/bin$
+```
+
+```sh
+ubuntu@niu0217:~/bin$ sh -v show_animal.sh
+#!/bin/bash
+# Program
+#   Using for ... loop to print 3 animals
+# History
+# 2023/12/01 niu0217 First release
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/ubuntu/bin
+export PATH
+for animal in dog cat elephant
+do
+    echo "There are ${animal}s..."
+done
+There are dogs...
+There are cats...
+There are elephants...
+ubuntu@niu0217:~/bin$
+```
+
+```sh
+ubuntu@niu0217:~/bin$ sh -x show_animal.sh
++ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/ubuntu/bin
++ export PATH
++ for animal in dog cat elephant
++ echo 'There are dogs...'
+There are dogs...
++ for animal in dog cat elephant
++ echo 'There are cats...'
+There are cats...
++ for animal in dog cat elephant
++ echo 'There are elephants...'
+There are elephants...
+ubuntu@niu0217:~/bin$
+```
+
