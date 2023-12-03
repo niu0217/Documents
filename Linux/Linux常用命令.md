@@ -524,3 +524,57 @@ ubuntu@niu0217:~/Dev/test$
 
 + 解压：
   + `tar -jxv -f/root/etc.tar.bz2 -C /tmp`
+
+## 5. 进程相关
+
+### 5.1 ps
+
+```bash
+#只查看自己的bash相关进程：
+ubuntu@niu0217:~$ ps -l
+F S   UID     PID    PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1000 1706363 1706362  0  80   0 -  3375 do_wai pts/0    00:00:00 bash
+0 R  1000 1706898 1706363  0  80   0 -  3442 -      pts/0    00:00:00 ps
+ubuntu@niu0217:~$
+```
+
+```bash
+#查看系统所有进程
+ubuntu@niu0217:~$ ps aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.5 169160 11964 ?        Ss   Sep17   3:22 /sbin/init
+root           2  0.0  0.0      0     0 ?        S    Sep17   0:02 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   Sep17   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   Sep17   0:00 [rcu_par_gp]
+...
+```
+
+### 5.2 top
+
+```bash
+#每两秒更新一次top，查看整体信息
+ubuntu@niu0217:~$ top -d 2
+#小技巧：进入top页面后，按下P，此时可以按CPU消耗来排序，很有用
+```
+
+```bash
+#查看单一的PID
+ubuntu@niu0217:~$ echo $$
+1706363
+ubuntu@niu0217:~$ ps -d 2 -p 1706363
+```
+
+### 5.3 pstree
+
+```bash
+ubuntu@niu0217:~$ pstree -A
+ubuntu@niu0217:~$ pstree -Aup
+```
+
+### 5.4 kill
+
+```bash
+#杀死PID为1706363的进程
+ubuntu@niu0217:~$ kill -9 1706363
+```
+
