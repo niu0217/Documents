@@ -14,6 +14,12 @@
 
 [C++类.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/C%2B%2B类.md)
 
+[C++函数.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/C%2B%2B函数.md)
+
+
+
+
+
 
 
 ## 未分类
