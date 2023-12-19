@@ -6,13 +6,17 @@
 
 [mac使用ssh连接腾讯云服务器.md](https://github.com/niu0217/Documents/blob/main/mac使用ssh连接腾讯云服务器.md)
 
-## 1. Linux
+## Linux
 
 [Readme.md](https://github.com/niu0217/Documents/blob/main/Linux/Readme.md)
 
-## 5. C++
+## C++
 
 [Readme.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/Readme.md)
+
+## Python
+
+[Readme.md](https://github.com/niu0217/Documents/blob/main/Python/Readme.md)
 
 ## 软件安装
 
