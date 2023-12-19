@@ -217,3 +217,47 @@ if __name__ == "__main__":
     introduce_animals(animals)
 ```
 
+### 函数
+
+```python
+# 命名规则：使用小写字母和下划线（snake_case）命名函数
+
+def calculate_area_of_circle(radius):
+    """
+    Calculate the area of a circle given its radius.
+
+    :param radius: The radius of the circle.
+    :type radius: float
+    :return: The area of the circle.
+    :rtype: float
+    """
+    pi = 3.14159
+    area = pi * (radius ** 2)
+    return area
+
+
+def convert_celsius_to_fahrenheit(celsius):
+    """
+    Convert a temperature from Celsius to Fahrenheit.
+
+    :param celsius: The temperature in Celsius.
+    :type celsius: float
+    :return: The temperature in Fahrenheit.
+    :rtype: float
+    """
+    fahrenheit = (celsius * 9/5) + 32
+    return fahrenheit
+
+
+if __name__ == "__main__":
+    # 使用函数计算圆的面积
+    radius = 5.0
+    area = calculate_area_of_circle(radius)
+    print(f"The area of a circle with radius {radius} is {area} square units.")
+
+    # 使用函数将摄氏温度转换为华氏温度
+    celsius_temperature = 20.0
+    fahrenheit_temperature = convert_celsius_to_fahrenheit(celsius_temperature)
+    print(f"{celsius_temperature} degrees Celsius is equal to {fahrenheit_temperature} degrees Fahrenheit.")
+```
+
