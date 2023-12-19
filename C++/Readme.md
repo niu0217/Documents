@@ -10,7 +10,7 @@
 
 [C++头文件.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/C%2B%2B头文件.md)
 
-
+[C++作用域.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/C%2B%2B作用域.md)
 
 
 
