@@ -24,7 +24,7 @@
 
 ## 2. 基础汇编知识
 
-
+[汇编-寄存器和数据类型.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/汇编-寄存器和数据类型.md)
 
 ## 未分类
 
