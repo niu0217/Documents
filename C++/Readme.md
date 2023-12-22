@@ -26,6 +26,8 @@
 
 [汇编-寄存器和数据类型.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/汇编-寄存器和数据类型.md)
 
+[汇编-分析函数.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/汇编-分析函数.md)
+
 ## 未分类
 
 [C++UML类图详解.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/C%2B%2BUML类图详解.md)
