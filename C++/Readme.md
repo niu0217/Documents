@@ -40,7 +40,7 @@
 
 ## 3. 基础知识
 
-
+[C++中的static.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/C%2B%2B中的static.md)
 
 ## 未分类
 
