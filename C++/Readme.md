@@ -48,6 +48,8 @@
 
 [C++中的static.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/C%2B%2B中的static.md)
 
+[C++的lambda.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/C%2B%2B的lambda.md)
+
 ## 4. 操作系统
 
 [操作系统-进程和线程.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/操作系统-进程和线程.md)
