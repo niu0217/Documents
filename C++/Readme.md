@@ -44,6 +44,8 @@
 
 [动态库和静态库.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/动态库和静态库.md)
 
+[从应用程序中加载和链接共享库.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/从应用程序中加载和链接共享库.md)
+
 [C++可执行程序.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/C%2B%2B可执行程序.md)
 
 [C++内存模型.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/C%2B%2B内存模型.md)
