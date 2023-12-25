@@ -131,6 +131,10 @@ int main()
 
 ### 2.4 位置无关代码
 
+[位置无关代码.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/位置无关代码.md)
+
+### 2.5 库打桩机制
+
 
 
 ## 3. 简要概述过程
