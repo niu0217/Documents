@@ -52,6 +52,12 @@
 
 [库打桩机制.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/库打桩机制.md)
 
+### 3.2 小知识点
+
+[C++中的static.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/C%2B%2B中的static.md)
+
+[C++的lambda.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/C%2B%2B的lambda.md)
+
 ### 3.2 其他
 
 [C++可执行程序.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/C%2B%2B可执行程序.md)
@@ -62,9 +68,7 @@
 
 [C++中的类函数.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/C%2B%2B中的类函数.md)
 
-[C++中的static.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/C%2B%2B中的static.md)
 
-[C++的lambda.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/C%2B%2B的lambda.md)
 
 ## 4. 操作系统
 
