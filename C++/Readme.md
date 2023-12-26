@@ -52,6 +52,8 @@
 
 [库打桩机制.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/库打桩机制.md)
 
+[处理目标文件的工具.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/处理目标文件的工具.md)
+
 ### 3.2 小知识点
 
 [C++中的static.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/C%2B%2B中的static.md)
