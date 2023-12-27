@@ -6,6 +6,8 @@
 
 [100个GDB小技巧.md](https://github.com/niu0217/Documents/blob/main/Linux/100个GDB小技巧.md)
 
+[GDB实战.md](https://github.com/niu0217/Documents/blob/main/Linux/GDB实战.md)
+
 ## 2. VIM
 
 [VIM.md](https://github.com/niu0217/Documents/blob/main/Linux/VIM.md)
