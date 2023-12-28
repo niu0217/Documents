@@ -25,3 +25,11 @@ C++中的容器是标准库提供的一系列数据结构，用于存储和管�
    - `std::priority_queue`：优先队列，元素按照其优先级进行排序。
 
 这些容器提供了多种操作，如插入、删除、查找、遍历等，并且可以通过迭代器进行元素访问。选择合适的容器取决于你的具体需求，包括数据的访问模式、元素数量、内存使用、性能要求等因素。在现代C++编程中，还推荐使用智能指针（如`std::unique_ptr`、`std::shared_ptr`）来管理容器中的对象生命周期，以提高代码的安全性和可维护性。
+
+## 2. 容器
+
+### 2.1 顺序容器
+
+[array.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/container/array.md)
+
+[vector.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/container/vector.md)
