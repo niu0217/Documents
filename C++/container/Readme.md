@@ -33,3 +33,6 @@ C++中的容器是标准库提供的一系列数据结构，用于存储和管�
 [array.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/container/array.md)
 
 [vector.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/container/vector.md)
+
+[list.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/container/list.md)
+
