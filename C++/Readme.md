@@ -64,6 +64,8 @@
 
 [C++中的extern.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/C%2B%2B中的extern.md)
 
+[C++中的new和delete.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/C%2B%2B中的new和delete.md)
+
 ### 3.2 其他
 
 [C++可执行程序.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/C%2B%2B可执行程序.md)
