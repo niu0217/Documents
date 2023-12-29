@@ -46,6 +46,8 @@ C++中的容器是标准库提供的一系列数据结构，用于存储和管�
 
 [multiset.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/container/multiset.md)
 
+[map.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/container/map.md)
+
 ### 2.3 容器适配器
 
 [stack.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/container/stack.md)
