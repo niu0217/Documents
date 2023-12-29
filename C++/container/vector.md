@@ -199,3 +199,116 @@ C++中的`std::vector`是一个动态数组容器，以下列出了其主要的�
 ## 5. 资料解释vector实现原理
 
 https://c.biancheng.net/view/6901.html
+
+## 6. 补充
+
+### 6.1 在中间插入元素
+
+```c++
+#include <iostream>
+#include <vector>
+
+int main() {
+    std::vector<int> vec = {1, 2, 3, 4, 5};
+
+    // 确定要插入元素的位置
+    int insert_index = 2; // 在索引为2的位置插入元素
+
+    // 要插入的元素
+    int new_element = 10;
+
+    // 在指定位置插入元素
+    vec.insert(vec.begin() + insert_index, new_element);
+
+    // 打印修改后的vector
+    for (const auto &value : vec) {
+        std::cout << value << ' ';
+    }
+
+    return 0;
+}
+```
+
+### 6.2 在中间删除元素
+
+```c++
+#include <iostream>
+#include <vector>
+
+int main() {
+    std::vector<int> vec = {1, 2, 3, 4, 5};
+
+    // 确定要删除元素的位置
+    int delete_index = 2; // 删除索引为2的元素
+
+    // 删除指定位置的元素
+    vec.erase(vec.begin() + delete_index);
+
+    // 打印修改后的vector
+    for (const auto &value : vec) {
+        std::cout << value << ' ';
+    }
+
+    return 0;
+}
+```
+
+### 6.3 查找中间的元素
+
+```c++
+#include <iostream>
+#include <vector>
+
+int main() {
+    std::vector<int> vec = {1, 2, 3, 4, 5};
+
+    int target = 3; // 要查找的元素
+
+    // 初始化一个迭代器用于遍历vector
+    auto it = vec.begin();
+
+    // 遍历vector，查找目标元素
+    while (it != vec.end()) {
+        if (*it == target) {
+            std::cout << "Found element " << target << " in the vector." << std::endl;
+            return 0;
+        }
+        ++it;
+    }
+
+    std::cout << "Element " << target << " not found in the vector." << std::endl;
+
+    return 0;
+}
+```
+
+### 6.4 修改中间的元素
+
+```c++
+#include <iostream>
+#include <vector>
+
+int main() {
+    std::vector<int> vec = {1, 2, 3, 4, 5};
+
+    int target = 3; // 要修改的元素的当前值
+    int new_value = 12; // 要修改的元素的新值
+
+    // 初始化一个迭代器用于遍历vector
+    auto it = vec.begin();
+
+    // 遍历vector，查找要修改的元素
+    while (it != vec.end()) {
+        if (*it == target) {
+            *it = new_value; // 更新元素的值
+            std::cout << "Element " << target << " has been modified to " << new_value << " in the vector." << std::endl;
+            return 0;
+        }
+        ++it;
+    }
+
+    std::cout << "Element " << target << " not found in the vector." << std::endl;
+
+    return 0;
+}
+```

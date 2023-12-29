@@ -159,3 +159,123 @@ C++中的`std::list`是一种双向链表容器，其增删查改的效率如下
 - 修改列表中已存在的元素的时间复杂度取决于你如何获取到该元素的引用。如果已经有一个指向该元素的迭代器，那么修改操作的时间复杂度为O(1)。但如果需要先查找元素，那么总时间复杂度将是查找操作的O(n)加上修改操作的O(1)。
 
 总结起来，`std::list`在插入和删除操作上具有高效的O(1)时间复杂度，但在查找和某些情况下的修改操作上效率较低，时间复杂度为O(n)。因此，`std::list`适用于那些需要频繁进行插入和删除操作，但对查找和修改操作速度要求不高的场景。如果程序中主要依赖于快速查找或者随机访问元素，那么其他容器如`std::vector`或`std::unordered_map`可能会是更好的选择。
+
+## 6. 补充
+
+### 6.1 在中间插入代码
+
+```c++
+#include <iostream>
+#include <list>
+
+int main() {
+    std::list<int> lst = {1, 2, 3, 4, 5};
+
+    // 确定要插入元素的位置
+    auto insert_position = lst.begin();
+    for (int i = 0; i < 2; ++i) {
+        insert_position++;
+    } // 现在，insert_position指向索引为2的位置
+
+    // 要插入的元素
+    int new_element = 10;
+
+    // 在指定位置插入元素
+    lst.insert(insert_position, new_element);
+
+    // 打印修改后的list
+    for (const auto &value : lst) {
+        std::cout << value << ' ';
+    }
+
+    return 0;
+}
+```
+
+### 6.2 在中间删除代码
+
+```c++
+#include <iostream>
+#include <list>
+
+int main() {
+    std::list<int> lst = {1, 2, 3, 4, 5};
+
+    // 确定要删除元素的位置
+    auto delete_position = lst.begin();
+    for (int i = 0; i < 2; ++i) {
+        delete_position++;
+    } // 现在，delete_position指向索引为2的位置
+
+    // 删除指定位置的元素
+    lst.erase(delete_position);
+
+    // 打印修改后的list
+    for (const auto &value : lst) {
+        std::cout << value << ' ';
+    }
+
+    return 0;
+}
+```
+
+### 6.3 查找中间的代码
+
+```c++
+#include <iostream>
+#include <list>
+
+int main() {
+    std::list<int> lst = {1, 2, 3, 4, 5};
+
+    int target = 3; // 要查找的元素
+
+    // 初始化一个迭代器用于遍历list
+    auto it = lst.begin();
+
+    // 遍历list，查找目标元素
+    while (it != lst.end()) {
+        if (*it == target) {
+            std::cout << "Found element " << target << " in the list." << std::endl;
+            return 0;
+        }
+        ++it;
+    }
+
+    std::cout << "Element " << target << " not found in the list." << std::endl;
+
+    return 0;
+}
+```
+
+### 6.4 修改中间的代码
+
+```c++
+#include <iostream>
+#include <list>
+
+int main() {
+    std::list<int> lst = {1, 2, 3, 4, 5};
+
+    int target = 3; // 要修改的元素的当前值
+    int new_value = 10; // 要修改的元素的新值
+
+    // 初始化一个迭代器用于遍历list
+    auto it = lst.begin();
+
+    // 遍历list，查找要修改的元素
+    while (it != lst.end()) {
+        if (*it == target) {
+            *it = new_value; // 更新元素的值
+            std::cout << "Element " << target << " has been modified to " << new_value << " in the list." << std::endl;
+            return 0;
+        }
+        ++it;
+    }
+
+    std::cout << "Element " << target << " not found in the list." << std::endl;
+
+    return 0;
+}
+```
+
