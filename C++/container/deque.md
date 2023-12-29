@@ -2,6 +2,35 @@
 
 ## 1. 问题
 
+### 1.1 deque支持随机访问吗
+
+是的，`std::deque` 支持随机访问。你可以使用下标操作符 `[]` 或者 `at()` 函数来直接访问 `std::deque` 中的元素。这使得 `std::deque` 在某些方面表现得类似于数组，可以快速地通过索引访问和修改元素。
+
+需要注意的是，虽然 `std::deque` 支持随机访问，但其内部实现与连续内存存储的容器（如 `std::vector`）有所不同。`std::deque` 通常由一块块连续的内存区域组成，这些内存区域被称为“缓冲区”。因此，尽管 `std::deque` 提供了随机访问的能力，但在某些情况下，它的随机访问性能可能略低于 `std::vector`，尤其是在需要跨越多个缓冲区的情况下。然而，在大多数实际应用中，这种性能差异通常是可接受的。
+
+```c++
+#include <iostream>
+#include <deque>
+
+int main() {
+    // 创建一个包含整数的 deque
+    std::deque<int> deq = {1, 2, 3, 4, 5};
+
+    // 使用下标操作符进行随机访问和修改元素
+    deq[2] = 10; // 将第三个元素（索引为2）修改为10
+
+    // 使用 at() 函数进行随机访问
+    std::cout << "The third element is: " << deq.at(2) << std::endl;
+
+    // 遍历 deque 并打印所有元素
+    for (size_t i = 0; i < deq.size(); ++i) {
+        std::cout << "Element at index " << i << ": " << deq[i] << std::endl;
+    }
+
+    return 0;
+}
+```
+
 ## 2. 引入代码
 
 ```c++
