@@ -47,3 +47,5 @@ C++中的容器是标准库提供的一系列数据结构，用于存储和管�
 [stack.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/container/stack.md)
 
 [queue.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/container/queue.md)
+
+[priority_queue.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/container/priority_queue.md)
