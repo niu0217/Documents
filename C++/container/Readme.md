@@ -38,6 +38,8 @@ C++中的容器是标准库提供的一系列数据结构，用于存储和管�
 
 [forward_list.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/container/forward_list.md)
 
+[deque.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/container/deque.md)
+
 ### 2.2 关联容器
 
 ### 2.3 容器适配器
