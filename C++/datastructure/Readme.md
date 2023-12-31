@@ -52,6 +52,8 @@
 
 ## 6. 树
 
+[tree.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/datastructure/tree.md)
+
 ## 7. 图
 
 ## 8. 散列表
