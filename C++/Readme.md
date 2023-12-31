@@ -56,6 +56,8 @@
 
 ### 3.2 小知识点
 
+[C++11的新特性.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/C%2B%2B11的新特性.md)
+
 [C++中的static.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/C%2B%2B中的static.md)
 
 [C++的lambda.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/C%2B%2B的lambda.md)
@@ -110,7 +112,7 @@
 
 [C++UML类图详解.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/C%2B%2BUML类图详解.md)
 
-[C++11的新特性.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/C%2B%2B11的新特性.md)
+
 
 
 
