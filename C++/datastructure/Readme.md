@@ -44,6 +44,8 @@
 
 ## 4. 栈
 
+[stack.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/datastructure/stack.md)
+
 ## 5. 队列
 
 ## 6. 树
