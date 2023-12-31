@@ -40,6 +40,8 @@
 
 ## 3. 链表
 
+[linkedlist.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/datastructure/linkedlist.md)
+
 ## 4. 栈
 
 ## 5. 队列
