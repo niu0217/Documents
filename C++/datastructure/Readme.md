@@ -48,6 +48,8 @@
 
 ## 5. 队列
 
+[queue.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/datastructure/queue.md)
+
 ## 6. 树
 
 ## 7. 图
