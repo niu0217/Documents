@@ -36,6 +36,8 @@
 
 ## 2. 数组
 
+[array.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/datastructure/array.md)
+
 ## 3. 链表
 
 ## 4. 栈
