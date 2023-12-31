@@ -38,6 +38,8 @@
 
 [汇编-C++多态.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/汇编-C%2B%2B多态.md)
 
+[汇编-C++类.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/汇编-C%2B%2B类.md)
+
 ## 3. 基础知识
 
 ### 3.1 链接
