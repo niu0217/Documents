@@ -87,6 +87,10 @@ struct TreeNode {
 
 这些不同类型的树结构各有其特点和适用场景，在实际应用中需要根据具体需求选择合适的树结构来实现相应的功能。
 
+## 二叉树
+
+[二叉树.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/datastructure/二叉树.md)
+
 ## 二叉搜索树(BST)
 
 [二叉搜索树.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/datastructure/二叉搜索树.md)
