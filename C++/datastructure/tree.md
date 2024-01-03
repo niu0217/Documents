@@ -108,3 +108,7 @@ struct TreeNode {
 ## B+树
 
 [B+树.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/datastructure/B%2B树.md)
+
+## 哈夫曼树
+
+[哈夫曼树.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/datastructure/哈夫曼树.md)
