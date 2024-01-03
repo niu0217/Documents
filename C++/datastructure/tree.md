@@ -100,3 +100,6 @@ struct TreeNode {
 [二叉平衡树.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/datastructure/二叉平衡树.md)
 
 [红黑树.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/datastructure/红黑树.md)
+
+## B树
+
