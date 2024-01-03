@@ -112,3 +112,7 @@ struct TreeNode {
 ## 哈夫曼树
 
 [哈夫曼树.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/datastructure/哈夫曼树.md)
+
+## 堆
+
+[堆.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/datastructure/堆.md)
