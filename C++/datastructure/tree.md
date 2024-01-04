@@ -116,3 +116,7 @@ struct TreeNode {
 ## 堆
 
 [堆.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/datastructure/堆.md)
+
+## 并查集
+
+[并查集.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/datastructure/并查集.md)
