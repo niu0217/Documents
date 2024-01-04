@@ -87,36 +87,36 @@ struct TreeNode {
 
 这些不同类型的树结构各有其特点和适用场景，在实际应用中需要根据具体需求选择合适的树结构来实现相应的功能。
 
-## 二叉树
+## 3. 二叉树
 
 [二叉树.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/datastructure/二叉树.md)
 
-## 二叉搜索树(BST)
+## 4. 二叉搜索树(BST)
 
 [二叉搜索树.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/datastructure/二叉搜索树.md)
 
-## 二叉平衡树
+## 5. 二叉平衡树
 
 [二叉平衡树.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/datastructure/二叉平衡树.md)
 
 [红黑树.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/datastructure/红黑树.md)
 
-## B树
+## 6. B树
 
 [B树.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/datastructure/B树.md)
 
-## B+树
+## 7. B+树
 
 [B+树.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/datastructure/B%2B树.md)
 
-## 哈夫曼树
+## 8. 哈夫曼树
 
 [哈夫曼树.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/datastructure/哈夫曼树.md)
 
-## 堆
+## 9. 堆
 
 [堆.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/datastructure/堆.md)
 
-## 并查集
+## 10.并查集
 
 [并查集.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/datastructure/并查集.md)
