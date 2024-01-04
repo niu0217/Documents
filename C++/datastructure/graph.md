@@ -41,5 +41,7 @@ https://www.cnblogs.com/skywang12345/p/3711514.html
 
 邻接矩阵：
 
+[dijkstra_matrix.cpp](https://github.com/niu0217/Documents/blob/main/C%2B%2B/datastructure/code/dijkstra_matrix.cpp)
 
+邻接表：
 
