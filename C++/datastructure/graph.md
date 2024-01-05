@@ -95,9 +95,9 @@ https://www.cnblogs.com/biyeymyhjob/archive/2012/07/30/2615542.html
 
 在实际编码时，通常需要使用一些辅助数据结构来提高算法的效率，例如优先队列（用于Prim算法）或并查集（用于Kruskal算法）。
 
-## 代码
+## 5. 代码
 
-### Dijkstra
+### 5.1 Dijkstra
 
 https://www.cnblogs.com/skywang12345/p/3711514.html
 
@@ -111,7 +111,13 @@ https://www.cnblogs.com/skywang12345/p/3711514.html
 
 ![IMG_2197](graph.assets/IMG_2197.jpg) 
 
-### 图的其他算法和遍历
+### 5.2 图的其他算法和遍历
+
+邻接矩阵实现：
+
+[grapth_matrix.cpp](https://github.com/niu0217/Documents/blob/main/C%2B%2B/datastructure/code/grapth_matrix.cpp)
+
+邻接表实现：
 
 
 
