@@ -6,23 +6,25 @@
 
 [mac使用ssh连接腾讯云服务器.md](https://github.com/niu0217/Documents/blob/main/mac使用ssh连接腾讯云服务器.md)
 
-## 1. Linux
+## 1. 总结
+
+## 2. Linux
 
 [Readme.md](https://github.com/niu0217/Documents/blob/main/Linux/Readme.md)
 
-## 2. C++
+## 3. C++
 
 [Readme.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/Readme.md)
 
-## 3. Python
+## 4. Python
 
 [Readme.md](https://github.com/niu0217/Documents/blob/main/Python/Readme.md)
 
-## 4. 八股文
+## 5. 八股文
 
 [Readme.md](https://github.com/niu0217/Documents/blob/main/EightPartEssay/Readme.md)
 
-## 5. 软件安装
+## 6. 软件安装
 
 [Readme.md](https://github.com/niu0217/Documents/blob/main/SoftwareInstall/Readme.md)
 
@@ -32,7 +34,7 @@
 
 
 
-## 3. Git
+## Git
 
 [和Github仓库建立连接.md](https://github.com/niu0217/Documents/blob/main/和Github仓库建立连接.md)
 
@@ -46,7 +48,7 @@
 
 
 
-## 6. Make
+## Make
 
 [make的基础用法.md](https://github.com/niu0217/Documents/blob/main/make的基础用法.md)
 
@@ -54,7 +56,7 @@
 
 
 
-## 7. wireshark
+## wireshark
 
 [wireshark安装教程.md](https://github.com/niu0217/Documents/blob/main/wireshark安装教程.md)
 
@@ -62,12 +64,12 @@
 
 
 
-## 8. SMTP
+## SMTP
 
 [使用telnet给邮箱发消息.md](https://github.com/niu0217/Documents/blob/main/使用telnet给邮箱发消息.md)
 
 
 
-## 9. 计算机网络
+## 计算机网络
 
 [DNS解析过程.md](https://github.com/niu0217/Documents/blob/main/DNS解析过程.md)
