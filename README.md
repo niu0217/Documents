@@ -6,7 +6,7 @@
 
 [mac使用ssh连接腾讯云服务器.md](https://github.com/niu0217/Documents/blob/main/mac使用ssh连接腾讯云服务器.md)
 
-## 1. 总结
+## [1. 总结](https://github.com/niu0217/Documents/tree/main/Summarize)
 
 ## 2. Linux
 
