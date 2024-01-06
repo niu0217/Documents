@@ -8,23 +8,25 @@
 
 ## [1. 总结](https://github.com/niu0217/Documents/tree/main/Summarize)
 
-## 2. Linux
+## [2. 失败案例](https://github.com/niu0217/Documents/tree/main/Library)
+
+## 3. Linux
 
 [Readme.md](https://github.com/niu0217/Documents/blob/main/Linux/Readme.md)
 
-## 3. C++
+## 4. C++
 
 [Readme.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/Readme.md)
 
-## 4. Python
+## 5. Python
 
 [Readme.md](https://github.com/niu0217/Documents/blob/main/Python/Readme.md)
 
-## 5. 八股文
+## 6. 八股文
 
 [Readme.md](https://github.com/niu0217/Documents/blob/main/EightPartEssay/Readme.md)
 
-## 6. 软件安装
+## 7. 软件安装
 
 [Readme.md](https://github.com/niu0217/Documents/blob/main/SoftwareInstall/Readme.md)
 
