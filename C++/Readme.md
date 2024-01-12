@@ -2,7 +2,7 @@
 
 ## 1. 规范
 
-[面向对象.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/面向对象.md)
+
 
 ## 2. 汇编知识
 
