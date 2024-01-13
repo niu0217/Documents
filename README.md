@@ -22,19 +22,17 @@
 
 [Readme.md](https://github.com/niu0217/Documents/blob/main/Python/Readme.md)
 
-## 6. 八股文
+## 6. 算法
+
+
+
+## 7. 八股文
 
 [Readme.md](https://github.com/niu0217/Documents/blob/main/EightPartEssay/Readme.md)
 
-## 7. 软件安装
+## 8. 软件安装
 
 [Readme.md](https://github.com/niu0217/Documents/blob/main/SoftwareInstall/Readme.md)
-
-
-
-
-
-
 
 ## Git
 
