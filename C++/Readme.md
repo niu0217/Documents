@@ -96,5 +96,11 @@
 
 ## 8. 程序是如何跑起来的
 
+视频地址：
 
+https://www.bilibili.com/cheese/play/ss10626?csource=common_hp_favorite_null&spm_id_from=333.999.0.0
+
+资料：
+
+https://github.com/niu0217/Documents/tree/main/C%2B%2B/sources/%E7%A8%8B%E5%BA%8F%E6%98%AF%E6%80%8E%E4%B9%88%E8%B7%91%E8%B5%B7%E6%9D%A5%E7%9A%84PPT
 
