@@ -7,191 +7,174 @@
 ```c++
 #include<iostream>
 
-//链表节点
-class Node {
-public:
-    int data_;
-    Node *next_;
-    Node(int d): data_(d), next_(nullptr) { }
+struct LinkedNode {
+    int nodeData;
+    LinkedNode* nextNode;
+    LinkedNode(int initialNodeData)
+        : nodeData{ initialNodeData }, nextNode{ nullptr } { }
 };
 
-//链表类
 class LinkedList {
 public:
-    LinkedList(): head_(nullptr), tail_(nullptr), size_(0) { }
+    LinkedList()
+        : headNode{ nullptr }, tailNode{ nullptr }, linkedlistSize{ 0 } { }
     ~LinkedList() {
-        clear();
+        clearLinkedList();
+        std::cout<<"Delete all LinkedNode...."<<std::endl;
     }
+    void insertToEndOfLinkedList(int newNodeData);
+    void insertToIndex(int index, int newNodeData);
+    void removeToIndex(int index);
+    int findLinkedNode(int findNodeData) const;
+    void clearLinkedList();
+    void printLinkedList() const;
 
-    //链表操作
-    void clear();  //清空链表
-    void append(int data);  //插入到链表尾部
-    void insert_at(int index, int data);  //在指定位置插入数据
-    void remove_at(int index);  //删除指定位置的数据
-    int find(int data);  //查找数据所在位置，不存在返回-1
-
-    //辅助函数
-    void print_linked_list();  //打印链表
-
+    bool checkIndex(int index);
 private:
-    Node *head_;
-    Node *tail_;
-    int size_;
+    LinkedNode* headNode;
+    LinkedNode* tailNode;
+    int linkedlistSize;
 };
 
-void LinkedList::clear() {
-    Node *current_node = head_;
-    Node *next_node = nullptr;
-    while(current_node != nullptr) {
-        next_node = current_node->next_;
-        delete current_node;
-        current_node = next_node;
-    }
-    head_ = tail_ = nullptr;
-    size_ = 0;
-}
-
-void LinkedList::append(int data) {
-    Node *new_node = new Node(data);
-    if(head_ == nullptr) {
-        head_ = tail_ = new_node;
+void LinkedList::insertToEndOfLinkedList(int newNodeData) {
+    LinkedNode* newNode = new LinkedNode(newNodeData);
+    if(headNode == nullptr) {
+        headNode = tailNode = newNode;
     }
     else {
-        tail_->next_ = new_node;
-        tail_ = new_node;
+        tailNode->nextNode = newNode;
+        tailNode = newNode;
     }
-    size_++;
+    linkedlistSize++;
 }
 
-void LinkedList::insert_at(int index, int data) {
-    if(index < 0 || index > size_) {  //index不合法
-        std::cout<<"Index out of range."<<std::endl;
+void LinkedList::insertToIndex(int index, int newNodeData) {
+    if(!checkIndex(index)) {
         return;
     }
-    if(index == 0) {  //index在头部
-        Node *new_node = new Node(data);
-        new_node->next_ = head_;
-        head_ = new_node;
+    if(index == 0) {
+        LinkedNode* newNode = new LinkedNode(newNodeData);
+        newNode->nextNode = headNode;
+        headNode = newNode;
     }
-    else { //index在中间位置或者尾部
-        Node *prev_node = head_;
-        //找到要插入位置的前一个节点
+    else {
+        LinkedNode* prevNodeOfInsertPosition = headNode;
         for(int i = 0; i < index - 1; i++) {
-            prev_node = prev_node->next_;
+            prevNodeOfInsertPosition = prevNodeOfInsertPosition->nextNode;
         }
-        Node *new_node = new Node(data);
-        new_node->next_ = prev_node->next_;
-        prev_node->next_ = new_node;
-        if(prev_node == tail_) {  //刚好要在尾部插入元素
-            tail_ = new_node;
+        LinkedNode* newNode = new LinkedNode(newNodeData);
+        newNode->nextNode = prevNodeOfInsertPosition->nextNode;
+        prevNodeOfInsertPosition->nextNode = newNode;
+        if(prevNodeOfInsertPosition == tailNode) {
+            tailNode = newNode;
         }
     }
-    size_++;
+    linkedlistSize++;
 }
 
-void LinkedList::remove_at(int index) {
-    if(index < 0 || index > size_) { //index不合法
-        std::cout<<"Index out of range."<<std::endl;
+void LinkedList::removeToIndex(int index) {
+    if(!checkIndex(index)) {
         return;
     }
-    if(index == 0) {  //index在头部
-        Node *next_node = head_->next_;
-        delete head_;
-        head_ = next_node;
-        if(head_ == nullptr) {  //链表为空,则更新尾节点
-            tail_ = nullptr;
+    if(index == 0) {
+        LinkedNode* headNextNode = headNode->nextNode;
+        delete headNode;
+        headNode = headNextNode;
+        if(headNode == nullptr) {
+            tailNode = nullptr;
         }
     }
-    else {  //index在中间位置或者尾部
-        Node *prev_node = head_;
-        //找到要删除位置的前一个节点
+    else {
+        LinkedNode* prevNodeOfDeletePosition = headNode;
         for(int i = 0; i < index - 1; i++) {
-            prev_node = prev_node->next_;
+            prevNodeOfDeletePosition = prevNodeOfDeletePosition->nextNode;
         }
-        Node *to_del_node = prev_node->next_;
-        prev_node->next_ = to_del_node->next_;
-        if(to_del_node == tail_) {  //要删除的节点刚好是尾节点需要更新尾节点
-            tail_ = prev_node;
+        LinkedNode* toDeleteNode = prevNodeOfDeletePosition->nextNode;
+        prevNodeOfDeletePosition->nextNode = toDeleteNode->nextNode;
+        if(toDeleteNode == tailNode) {
+            tailNode = prevNodeOfDeletePosition;
         }
-        delete to_del_node;
+        delete toDeleteNode;
     }
-    size_--;
+    linkedlistSize--;
 }
 
-int LinkedList::find(int data) {
-    Node *current_node = head_;
-    for(int i = 0; i < size_; i++) {
-        if(current_node->data_ == data) {
+int LinkedList::findLinkedNode(int findNodeData) const {
+    LinkedNode* currentNode = headNode;
+    for(int i = 0; i < linkedlistSize; i++) {
+        if(currentNode->nodeData == findNodeData) {
             return i;
         }
-        current_node = current_node->next_;
+        currentNode = currentNode->nextNode;
     }
-    return -1;  //不在链表中
+    return -1;
 }
 
-void LinkedList::print_linked_list() {
-    Node *current_node = head_;
-    while(current_node != nullptr) {
-        std::cout<<current_node->data_<<"  ";
-        current_node = current_node->next_;
+void LinkedList::clearLinkedList() {
+    LinkedNode* toDeleteNode = headNode;
+    LinkedNode* nextToDeleteNode = nullptr;
+    while(toDeleteNode != nullptr) {
+        nextToDeleteNode = toDeleteNode->nextNode;
+        delete toDeleteNode;
+        toDeleteNode = nextToDeleteNode;
     }
-    printf("\n");
+    headNode = tailNode = nullptr;
+    linkedlistSize = 0;
+}
+
+void LinkedList::printLinkedList() const {
+    LinkedNode* toPrintNode = headNode;
+    while(toPrintNode != nullptr) {
+        std::cout<<toPrintNode->nodeData<<" ";
+        toPrintNode = toPrintNode->nextNode;
+    }
+    std::cout<<std::endl<<std::endl;
+}
+
+bool LinkedList::checkIndex(int index) {
+    if(index < 0 || index > linkedlistSize) {
+        std::cout<<"Index out of range."<<std::endl;
+        return false;
+    }
+    return true;
 }
 
 int main()
 {
-    LinkedList *linked_list = new LinkedList;
-    linked_list->append(10);
-    linked_list->append(20);
-    linked_list->append(30);
-    linked_list->append(40);
-    linked_list->append(50);
-    linked_list->append(60);
-    linked_list->append(70);
-    linked_list->append(80);
-    linked_list->append(90);
-    linked_list->append(100);
-    linked_list->print_linked_list();
+    LinkedList* linkedList = new LinkedList();
+    linkedList->insertToEndOfLinkedList(10);
+    linkedList->insertToEndOfLinkedList(20);
+    linkedList->insertToEndOfLinkedList(30);
+    linkedList->insertToEndOfLinkedList(40);
+    linkedList->insertToEndOfLinkedList(50);
+    linkedList->insertToEndOfLinkedList(60);
+    linkedList->insertToEndOfLinkedList(70);
+    linkedList->insertToEndOfLinkedList(80);
+    linkedList->insertToEndOfLinkedList(90);
+    linkedList->insertToEndOfLinkedList(100);
+    std::cout<<"初始链表：\n";
+    linkedList->printLinkedList();
 
-    linked_list->insert_at(5, 999);
-    linked_list->print_linked_list();
+    std::cout<<"在链表的index=5的位置插入数据999: \n";
+    linkedList->insertToIndex(5, 999);
+    linkedList->printLinkedList();
 
-    linked_list->remove_at(7);
-    linked_list->print_linked_list();
+    std::cout<<"删除链表中的index=7的节点：\n";
+    linkedList->removeToIndex(7);
+    linkedList->printLinkedList();
 
-    if(linked_list->find(40)) {
-        std::cout<<"Find ...."<<std::endl;
+    std::cout<<"查找节点数据为40的节点：\n";
+    if(linkedList->findLinkedNode(40)) {
+        std::cout<<"Find.....\n"<<std::endl;
     }
     else {
-        std::cout<<"Not find..."<<std::endl;
+        std::cout<<"Not find...\n"<<std::endl;
     }
 
-    return 0;
+    std::cout<<"删除所有节点：\n";
+    delete linkedList;
 }
 ```
 
-## 3. 扩展
 
-### 3.1 反转链表
-
-```c++
-void LinkedList::reverse() {
-    if(size_ == 1) {  //只有一个节点不需要反转
-        return;
-    }
-    Node *prev_node = head_;
-    Node *current_node = head_->next_;
-    Node *next_node = current_node->next_;
-    while(current_node && current_node->next_) {
-        current_node->next_ = prev_node;
-        prev_node = current_node;
-        current_node = next_node;
-        next_node = current_node->next_;
-    }
-    current_node->next_ = prev_node;
-    tail_ = head_;
-    tail_->next_ = nullptr;
-    head_ = current_node;
-}
-```
 
