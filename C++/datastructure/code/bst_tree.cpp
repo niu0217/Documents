@@ -40,7 +40,7 @@ public:
     void postorderTraversalRecursive(TreeNode* rootOfTree) const;
     void postorderTraversalIterate(TreeNode* rootOfTree) const;
     void levelTraversal() const;
-public:
+private:
     TreeNode* root;
 };
 
