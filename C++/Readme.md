@@ -1,8 +1,6 @@
 # C++文档
 
-## 1. 规范
-
-[Readme.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/standard/Readme.md)
+## [1. 规范](https://github.com/niu0217/Documents/blob/main/C%2B%2B/standard/Readme.md)
 
 ## 2. 汇编知识
 
@@ -38,13 +36,9 @@
 
 [处理目标文件的工具.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/处理目标文件的工具.md)
 
-### 3.2 小知识点
+### [3.2 小知识点](https://github.com/niu0217/Documents/blob/main/C%2B%2B/little_knowledge_points/Readme.md)
 
-[Readme.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/little_knowledge_points/Readme.md)
-
-### 3.3 容器
-
-[Readme.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/container/Readme.md)
+### [3.3 容器](https://github.com/niu0217/Documents/blob/main/C%2B%2B/container/Readme.md)
 
 ## 4. 操作系统
 
@@ -60,25 +54,13 @@
 
 [操作系统-进程和线程.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/操作系统-进程和线程.md)
 
-## 5. 数据结构
+## [5. 数据结构](https://github.com/niu0217/Documents/blob/main/C%2B%2B/datastructure/Readme.md)
 
-[Readme.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/datastructure/Readme.md)
-
-## 6. 单元测试
-
-[Readme.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/unittest/Readme.md)
+## [6. 单元测试](https://github.com/niu0217/Documents/blob/main/C%2B%2B/unittest/Readme.md)
 
 ## 7. UML
 
 [C++中的UML.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/C%2B%2B中的UML.md)
 
-## 8. 程序是如何跑起来的
-
-视频地址：
-
-https://www.bilibili.com/cheese/play/ss10626?csource=common_hp_favorite_null&spm_id_from=333.999.0.0
-
-资料：
-
-https://github.com/niu0217/Documents/tree/main/C%2B%2B/sources/%E7%A8%8B%E5%BA%8F%E6%98%AF%E6%80%8E%E4%B9%88%E8%B7%91%E8%B5%B7%E6%9D%A5%E7%9A%84PPT
+## [8. 程序是如何跑起来的](https://www.bilibili.com/cheese/play/ss10626?csource=common_hp_favorite_null&spm_id_from=333.999.0.0)
 
