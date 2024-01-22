@@ -6,6 +6,8 @@
 
 [mac安装Clion.md](https://github.com/niu0217/Documents/blob/main/SoftwareInstall/mac安装Clion.md)
 
+[mac使用ssh连接腾讯云服务器.md](https://github.com/niu0217/Documents/blob/main/SoftwareInstall/mac使用ssh连接腾讯云服务器.md)
+
 ## 2. Ubuntu
 
 ### 2.1 Ubuntu20.04
