@@ -10,12 +10,12 @@
 
 ## [6. 算法](https://github.com/niu0217/Documents/blob/main/Algorithm/Readme.md)
 
-## [7. 八股文](https://github.com/niu0217/Documents/blob/main/EightPartEssay/Readme.md)
+## [7. 计算机网络]([Readme.md](https://github.com/niu0217/Documents/blob/main/ComputerNetwork/Readme.md))
 
-## [8. 软件安装](https://github.com/niu0217/Documents/blob/main/SoftwareInstall/Readme.md)
+## [8. 八股文](https://github.com/niu0217/Documents/blob/main/EightPartEssay/Readme.md)
+
+## [9. 软件安装](https://github.com/niu0217/Documents/blob/main/SoftwareInstall/Readme.md)
 
 ## [Git]([Readme.md](https://github.com/niu0217/Documents/blob/main/Git/Readme.md))
 
 ## [Make]([Readme.md](https://github.com/niu0217/Documents/blob/main/Make/Readme.md))
-
-## [计算机网络]([Readme.md](https://github.com/niu0217/Documents/blob/main/ComputerNetwork/Readme.md))
