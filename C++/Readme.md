@@ -4,21 +4,7 @@
 
 ## [2. 汇编知识](https://github.com/niu0217/Documents/blob/main/C%2B%2B/assembly/Readme.md)
 
-## 3. 基础知识
-
-### 3.1 链接
-
-[C++链接.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/C%2B%2B链接.md)
-
-[动态库和静态库.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/动态库和静态库.md)
-
-[从应用程序中加载和链接共享库.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/从应用程序中加载和链接共享库.md)
-
-[位置无关代码.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/位置无关代码.md)
-
-[库打桩机制.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/库打桩机制.md)
-
-[处理目标文件的工具.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/处理目标文件的工具.md)
+## [3. 基础知识](https://github.com/niu0217/Documents/blob/main/C%2B%2B/base/Readme.md)
 
 ### [3.2 小知识点](https://github.com/niu0217/Documents/blob/main/C%2B%2B/little_knowledge_points/Readme.md)
 
