@@ -14,8 +14,8 @@
 
 ## [8. 软件安装](https://github.com/niu0217/Documents/blob/main/SoftwareInstall/Readme.md)
 
-## Git
+## [Git]([Readme.md](https://github.com/niu0217/Documents/blob/main/Git/Readme.md))
 
-## Make
+## [Make]([Readme.md](https://github.com/niu0217/Documents/blob/main/Make/Readme.md))
 
-## 计算机网络
+## [计算机网络]([Readme.md](https://github.com/niu0217/Documents/blob/main/ComputerNetwork/Readme.md))
