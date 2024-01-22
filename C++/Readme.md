@@ -6,8 +6,6 @@
 
 ## [3. 基础知识](https://github.com/niu0217/Documents/blob/main/C%2B%2B/base/Readme.md)
 
-### [3.2 小知识点](https://github.com/niu0217/Documents/blob/main/C%2B%2B/little_knowledge_points/Readme.md)
-
 ## 4. 操作系统
 
 ### 4.1 虚拟内存
