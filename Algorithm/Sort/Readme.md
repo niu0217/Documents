@@ -448,7 +448,208 @@ int main()
 
 ## 计数排序
 
-## 桶排序
+```c++
+#include<iostream>
+#include<vector>
+#include<string>
+using namespace std;
+
+void countSort(vector<int>& arr, int maxVal) {
+    int size = arr.size();
+    if(size < 1) {
+        return;
+    }
+    vector<int> count(maxVal + 1, 0);
+    vector<int> temp(arr);
+    for(auto element : arr) {
+        count[element]++;
+    }
+    for(int i = 1; i <= maxVal; i++) {
+        count[i] += count[i - 1];
+    }
+    for(int i = size - 1; i >= 0; i--) {
+        arr[count[temp[i]] - 1] = temp[i];
+        count[temp[i]]--;
+    }
+}
+
+int main()
+{
+    vector<int> arr = {
+        1, 5, 3, 7, 6, 2, 8, 9, 4, 3, 3
+    };
+    int maxVal = 9;
+    countSort(arr, maxVal);
+    for(auto element : arr) {
+        cout<<element<<" ";
+    }
+    cout<<endl;
+}
+```
+
+计数排序的时间复杂度：
+
+- **最好情况**：无论输入数组的具体内容如何，计数排序的时间复杂度总是O(n + k)，其中n是待排序数组的元素个数，k是待排序整数的最大值与最小值之间的差加1（即所有可能取到的不同数值的数量）。这是因为计数排序的主要操作包括遍历输入数组一次以统计每个数字出现的次数、填充输出数组以及恢复原始顺序，这些操作的时间复杂度都是线性的。
+- **最坏情况**：同样地，计数排序在最坏情况下的时间复杂度也是O(n + k)。即使输入数组已经是有序或无序，算法所需的时间和空间开销保持不变。
 
 ## 基数排序
+
+## 桶排序
+
+https://www.bilibili.com/video/BV1QA411j7qV?p=1&vd_source=c6838f09fbfc9766e04f0c65ca196c42
+
+数组实现桶排序：
+
+```c++
+#include<iostream>
+#include<vector>
+#include<climits>
+#include<algorithm>
+
+using namespace std;
+
+void bucketSort(vector<int>& arr) {
+    vector<vector<int>> bucketArray(5, vector<int>(5, INT_MAX));
+    vector<int> bucketSizeArray(5, 0);
+    int arrSize = arr.size();
+    for(int i = 0; i < arrSize; i++) {
+        bucketArray[arr[i] / 10][bucketSizeArray[arr[i] / 10]++] = arr[i];
+    }
+    for(int i = 0; i < 5; i++) {
+        sort(begin(bucketArray[i]), end(bucketArray[i]));
+    }
+    int k = 0;
+    for(int i = 0; i < 5; i++) {
+        for(int j = 0; j < bucketSizeArray[i]; j++) {
+            arr[k++] = bucketArray[i][j];
+        }
+    }
+}
+
+int main()
+{
+    vector<int> arr = {
+        21, 3, 30, 44, 15, 36, 6, 10, 9, 19, 25, 48, 5, 23, 47
+    };
+    bucketSort(arr);
+    for(auto element : arr) {
+        cout<<element<<" ";
+    }
+    cout<<endl;
+}
+
+```
+
+链表实现桶排序：
+
+```c++
+#include<iostream>
+#include<vector>
+#include<climits>
+#include<algorithm>
+
+using namespace std;
+
+struct ListNode {
+    explicit ListNode(int initialData)
+        : data{ initialData }, next{ nullptr } { }
+    ~ListNode() {
+        cout<<"Destructure   "<<data<<"  ...\n";
+    }
+    int data;
+    ListNode* next;
+};
+
+ListNode* insertNode(ListNode* head, int value) {
+    ListNode* dummyNode = new ListNode(0);
+    dummyNode->next = head;
+    ListNode* newNode = new ListNode(value);
+    ListNode* pre = dummyNode;
+    ListNode* cur = head;
+    while(cur != nullptr && cur->data <= value) {
+        pre = cur;
+        cur = cur->next;
+    }
+    newNode->next = cur;
+    pre->next = newNode;
+
+    ListNode* resultNode = dummyNode->next;
+    delete dummyNode;
+    dummyNode = nullptr;
+    return resultNode;
+}
+
+ListNode* mergeList(ListNode* head1, ListNode* head2) {
+    ListNode* dummyNode = new ListNode(0);
+    ListNode* cur = dummyNode;
+    while(head1 != nullptr && head2 != nullptr) {
+        if(head1->data <= head2->data) {
+            cur->next = head1;
+            head1 = head1->next;
+        }
+        else {
+            cur->next = head2;
+            head2 = head2->next;
+        }
+        cur = cur->next;
+    }
+    if(head1 != nullptr) {
+        cur->next = head1;
+    }
+    else if(head2 != nullptr) {
+        cur->next = head2;
+    }
+
+    cur = dummyNode->next;
+    delete dummyNode;
+    dummyNode = nullptr;
+    return cur;
+}
+
+void clearAllNodes(vector<ListNode*> buckets, ListNode* head) {
+    ListNode* nextNode = nullptr;
+    while(head != nullptr) {
+        nextNode = head->next;
+        delete head;
+        head = nextNode;
+    }
+    int size = buckets.size();
+    for(int i = 0; i < size; i++) {
+        buckets[i] = nullptr;
+    }
+}
+
+void bucketSort(vector<int>& arr) {
+    vector<ListNode*> buckets(10, (ListNode*)(0));
+    int arrSize = arr.size();
+    for(int i = 0; i < arrSize; i++) {
+        int index = arr[i] / 10;
+        ListNode* head = buckets.at(index);
+        buckets.at(index) = insertNode(head, arr[i]);
+    }
+    ListNode* head = buckets.at(0);
+    for(int i = 1; i < 10; i++) {
+        head = mergeList(head, buckets.at(i));
+    }
+    for(int i = 0; i < arrSize; i++) {
+        arr[i] = head->data;
+        head = head->next;
+    }
+
+    head = buckets.at(0);
+    clearAllNodes(buckets, head);
+}
+
+int main()
+{
+    vector<int> arr = {
+        21, 3, 30, 44, 15, 36, 6, 10, 9, 19, 25, 48, 5, 23, 47
+    };
+    bucketSort(arr);
+    for(auto element : arr) {
+        cout<<element<<" ";
+    }
+    cout<<endl;
+}
+```
 
