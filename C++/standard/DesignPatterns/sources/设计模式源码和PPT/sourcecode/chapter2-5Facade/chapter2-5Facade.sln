@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "chapter2-5Facade", "chapter2-5Facade.vcxproj", "{D1936CC2-AE36-466D-8D74-906338566AEF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1936CC2-AE36-466D-8D74-906338566AEF}.Debug|x64.ActiveCfg = Debug|x64
+		{D1936CC2-AE36-466D-8D74-906338566AEF}.Debug|x64.Build.0 = Debug|x64
+		{D1936CC2-AE36-466D-8D74-906338566AEF}.Debug|x86.ActiveCfg = Debug|Win32
+		{D1936CC2-AE36-466D-8D74-906338566AEF}.Debug|x86.Build.0 = Debug|Win32
+		{D1936CC2-AE36-466D-8D74-906338566AEF}.Release|x64.ActiveCfg = Release|x64
+		{D1936CC2-AE36-466D-8D74-906338566AEF}.Release|x64.Build.0 = Release|x64
+		{D1936CC2-AE36-466D-8D74-906338566AEF}.Release|x86.ActiveCfg = Release|Win32
+		{D1936CC2-AE36-466D-8D74-906338566AEF}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BDC38F09-861F-44F2-9F11-8532E57E83CE}
+	EndGlobalSection
+EndGlobal
