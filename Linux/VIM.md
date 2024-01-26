@@ -224,3 +224,53 @@ Ctrl + o
 ```
 
 就可以了！
+
+## 5. 插件使用
+
+### 5.1 ack使用
+
++ 示例 1：搜索当前目录及其子目录下所有文件中包含特定字符串的内容
+
+```bash
+:Ack "search term"
+```
+
+这个命令会在当前目录下递归查找含有 `search term` 的所有行，并将结果加载到快速fix列表（quickfix list），你可以通过 `:copen` 命令打开快速fix窗口查看并导航至搜索结果。
+
++ 示例 2：限定搜索文件类型
+
+```bash
+:Ack --type=python "my_function"
+```
+
+这个命令会只在Python文件中搜索包含 `my_function` 的行。
+
+```bash
+:Ack --type=cpp "my_function"
+```
+
+这个命令会只在cpp文件中搜索包含 `my_function` 的行。
+
++ 示例 3：排除某些文件或目录
+
+```bash
+:Ack --ignore-dir=tests,docs "error message"
+```
+
+此命令在搜索时会忽略 `tests` 和 `docs` 目录下的文件。
+
++ 示例 4：从其他目录开始搜索
+
+```bash
+:Ack ~/projects/my_project "needle in haystack"
+```
+
+这里直接指定从 `~/projects/my_project` 目录开始搜索包含 "needle in haystack" 字符串的文件。
+
++ 示例5：搜索hello.cpp中的所有的help字符串
+
+```bash
+:AckFile hello.cpp "help"
+```
+
+`AckFile` 命令会限制 ack 只在指定文件 (`hello.cpp`) 中进行搜索。
