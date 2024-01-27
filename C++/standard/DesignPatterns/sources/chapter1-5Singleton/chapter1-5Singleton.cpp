@@ -12,7 +12,7 @@ private:
 public:
    // Singleton(Singleton& other) = delete;
     Singleton(const Singleton& other) = delete;
-    void operator=(const Singleton&) = delete;
+    Singleton& operator=(const Singleton&) = delete;
     std::string value() const { return m_value; }
 
     static Singleton* getInstance(const std::string& value);
