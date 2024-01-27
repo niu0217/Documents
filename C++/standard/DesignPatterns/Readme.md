@@ -10,6 +10,8 @@
 
 [FactoryMethod.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/standard/DesignPatterns/FactoryMethod.md)
 
+[AbstractFactory.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/standard/DesignPatterns/AbstractFactory.md)
+
 ## 结构型模式
 
 ## 行为型模式
