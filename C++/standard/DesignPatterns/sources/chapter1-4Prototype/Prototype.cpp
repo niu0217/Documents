@@ -38,6 +38,7 @@ public:
 
     virtual void setStateOfCharge(float value) override{
         m_stateOfCharge = value;
+        //下面这种逻辑不好，需要分离
         std::cout << "--" << m_prototype_name << " 当前电量：" << m_stateOfCharge
             << ",m_CatValue:" << m_CatValue << std::endl;
     }
@@ -56,6 +57,7 @@ public:
 
     virtual void setStateOfCharge(float value) override {
         m_stateOfCharge = value;
+        //下面这种逻辑不好，需要分离
         std::cout << "--" << m_prototype_name << " 当前电量：" << m_stateOfCharge
             << ",m_DogValue:" << m_DogValue << std::endl;
     }
