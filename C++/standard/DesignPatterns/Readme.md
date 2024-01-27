@@ -16,6 +16,8 @@
 
 [Prototype.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/standard/DesignPatterns/Prototype.md)
 
+[Singleton.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/standard/DesignPatterns/Singleton.md)
+
 ## 结构型模式
 
 ## 行为型模式
