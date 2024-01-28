@@ -6,11 +6,13 @@
 
 ## [3. 操作系统](https://github.com/niu0217/Documents/blob/main/C%2B%2B/operatingsystem/Readme.md)
 
-## [4. 基础知识](https://github.com/niu0217/Documents/blob/main/C%2B%2B/base/Readme.md)
+## [4. 深度探索C++对象模型](https://github.com/niu0217/Documents/blob/main/C%2B%2B/objectmodel/Readme.md)
 
-## [5. 数据结构](https://github.com/niu0217/Documents/blob/main/C%2B%2B/datastructure/Readme.md)
+## [5. 基础知识](https://github.com/niu0217/Documents/blob/main/C%2B%2B/base/Readme.md)
 
-## [6. 单元测试](https://github.com/niu0217/Documents/blob/main/C%2B%2B/unittest/Readme.md)
+## [6. 数据结构](https://github.com/niu0217/Documents/blob/main/C%2B%2B/datastructure/Readme.md)
+
+## [7. 单元测试](https://github.com/niu0217/Documents/blob/main/C%2B%2B/unittest/Readme.md)
 
 ## [扩展知识](https://github.com/niu0217/Documents/blob/main/C%2B%2B/extend/Readme.md)
 
