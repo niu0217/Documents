@@ -20,4 +20,6 @@
 
 ## 结构型模式
 
+[Adapter.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/standard/DesignPatterns/Adapter.md)
+
 ## 行为型模式
