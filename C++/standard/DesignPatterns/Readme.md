@@ -22,4 +22,6 @@
 
 [Adapter.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/standard/DesignPatterns/Adapter.md)
 
+[Bridge.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/standard/DesignPatterns/Bridge.md)
+
 ## 行为型模式
