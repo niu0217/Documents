@@ -24,4 +24,6 @@
 
 [Bridge.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/standard/DesignPatterns/Bridge.md)
 
+[Composite.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/standard/DesignPatterns/Composite.md)
+
 ## 行为型模式
