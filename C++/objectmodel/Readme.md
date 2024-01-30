@@ -1,5 +1,11 @@
 # 深度探索C++对象模型
 
+## 必备知识
+
+[Linux下C++的OBJ文件解析.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/objectmodel/Linux下C%2B%2B的OBJ文件解析.md)
+
+## 小知识点
+
 [类所占有的空间.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/objectmodel/类所占有的空间.md)
 
 [对象this指针调整.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/objectmodel/对象this指针调整.md)
