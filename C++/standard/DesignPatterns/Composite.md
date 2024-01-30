@@ -21,6 +21,8 @@
 
 ## 自己实现的代码
 
+![IMG_2238](Composite.assets/IMG_2238.jpg) 
+
 ```c++
 #include <iostream>
 #include <list>
