@@ -26,6 +26,8 @@
 
 ## 自己实现的代码
 
+![IMG_2236](Adapter.assets/IMG_2236.jpg) 
+
 ```c++
 #include <iostream>
 
