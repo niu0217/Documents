@@ -20,6 +20,8 @@
 
 ## 自己实现的代码
 
+![IMG_2235](Prototype.assets/IMG_2235.jpg) 
+
 ```c++
 #include<iostream>
 #include<unordered_map>
