@@ -2,7 +2,7 @@
 #include <string>
 
 //子系统1
-class VideoStstem {
+class VideoSystem {
 public:
     std::string initial() const {
         return "视频系统：Ready!\n";
@@ -16,7 +16,7 @@ public:
     }
 };
 //子系统2
-class RadioStstem {
+class RadioSystem {
 public:
     std::string init() const {
         return "音频系统：就绪!\n";
@@ -35,16 +35,12 @@ public:
 //外观
 class Controller {
 protected:
-    VideoStstem* m_video;
-    RadioStstem* m_radio;
+    VideoSystem* m_video;
+    RadioSystem* m_radio;
 public:
-    Controller(VideoStstem* video = nullptr,
-        RadioStstem* radio = nullptr) {
-        if (!video) m_video = video;
-        else new VideoStstem;
-
-        m_radio = radio ? radio : new RadioStstem;
-    }
+    Controller(VideoSystem* video = nullptr, RadioSystem* radio = nullptr)
+        : m_video{ video ? video : new VideoSystem },
+          m_radio{ radio ? radio : new RadioSystem } { }
     ~Controller() {
         delete m_video;
         delete m_radio;
@@ -64,8 +60,8 @@ public:
 };
 int main()
 {
-    VideoStstem* video = new VideoStstem;
-    RadioStstem* radio = new RadioStstem;
+    VideoSystem* video = new VideoSystem;
+    RadioSystem* radio = new RadioSystem;
     Controller controller(video, radio);//外观对象，负责回收子系统
     std::cout << controller.start();
 }
