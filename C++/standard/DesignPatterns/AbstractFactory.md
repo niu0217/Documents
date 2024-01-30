@@ -22,6 +22,8 @@
 
 ## 自己的代码实现
 
+![IMG_2233](AbstractFactory.assets/IMG_2233.jpg) 
+
 ```c++
 #include <iostream>
 
