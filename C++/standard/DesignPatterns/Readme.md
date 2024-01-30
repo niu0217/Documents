@@ -30,4 +30,6 @@
 
 [Facade.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/standard/DesignPatterns/Facade.md)
 
+[Flyweight.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/standard/DesignPatterns/Flyweight.md)
+
 ## 行为型模式
