@@ -39,3 +39,5 @@
 [ChainOfResponsibility.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/standard/DesignPatterns/ChainOfResponsibility.md)
 
 [Command.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/standard/DesignPatterns/Command.md)
+
+[Iterator.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/standard/DesignPatterns/Iterator.md)
