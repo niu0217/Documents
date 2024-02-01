@@ -45,3 +45,5 @@
 [Mediator.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/standard/DesignPatterns/Mediator.md)
 
 [Memento.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/standard/DesignPatterns/Memento.md)
+
+[Observer.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/standard/DesignPatterns/Observer.md)
