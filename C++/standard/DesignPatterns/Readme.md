@@ -53,3 +53,5 @@
 [Strategy.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/standard/DesignPatterns/Strategy.md)
 
 [TemplateMethod.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/standard/DesignPatterns/TemplateMethod.md)
+
+[Visitor.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/standard/DesignPatterns/Visitor.md)
