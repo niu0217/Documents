@@ -49,3 +49,5 @@
 [Observer.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/standard/DesignPatterns/Observer.md)
 
 [State.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/standard/DesignPatterns/State.md)
+
+[Strategy.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/standard/DesignPatterns/Strategy.md)
