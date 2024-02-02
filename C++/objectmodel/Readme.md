@@ -12,3 +12,4 @@
 
 [构造函数.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/objectmodel/构造函数.md)
 
+[成员初始化列表.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/objectmodel/成员初始化列表.md)
