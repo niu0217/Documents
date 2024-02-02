@@ -289,5 +289,5 @@ Ctrl + o
 
 ## 6. 我目前的.vimrc配置
 
-
+[VIMRC](https://github.com/niu0217/Documents/blob/main/Linux/VIM.assets/VIMRC)
 
