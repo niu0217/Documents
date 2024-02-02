@@ -279,3 +279,4 @@ endfunction
 + `vim.current` 代表各种 Vim 的“当前”对象（详见 :help python-current），包括行、缓冲区、窗口等
 
 此外，在拓展 2 里我们给出的使用 pyxf 来执行一个 Python 脚本文件，也是一种在 Vim 里调用 Python 的方式（详见 [:help pyxfile](https://yianwillis.github.io/vimcdoc/doc/if_pyth.html#:pyxfile)）。那段 clang-format 的代码，总体上也就是访问 `vim.current.buffer` 对象，调用外部命令格式化指定行，然后把修改的内容写回到 Vim 缓冲区里。
+
