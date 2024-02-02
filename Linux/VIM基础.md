@@ -1,5 +1,7 @@
 # VIM基础
 
+参考网址：https://time.geekbang.org/column/article/280172
+
 ## 1. 引入
 
 ### 1.1 打印输出和字符串
