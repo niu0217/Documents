@@ -10,6 +10,8 @@
 
 ## 2. VIM
 
+[VIM基础.md](https://github.com/niu0217/Documents/blob/main/Linux/VIM基础.md)
+
 [VIM.md](https://github.com/niu0217/Documents/blob/main/Linux/VIM.md)
 
 ## 3. 终端
