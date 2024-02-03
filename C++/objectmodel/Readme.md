@@ -4,6 +4,8 @@
 
 [Linux下C++的OBJ文件解析.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/objectmodel/Linux下C%2B%2B的OBJ文件解析.md)
 
+[可重定位目标文件.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/objectmodel/可重定位目标文件.md)
+
 ## 最重要的知识
 
 [虚函数.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/objectmodel/虚函数.md)
