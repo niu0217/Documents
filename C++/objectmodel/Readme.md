@@ -20,3 +20,4 @@
 
 ## 数据语义学
 
+[数据成员绑定时机.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/objectmodel/数据成员绑定时机.md)
