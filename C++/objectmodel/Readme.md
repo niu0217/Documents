@@ -10,6 +10,8 @@
 
 [重定位.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/objectmodel/重定位.md)
 
+[可执行目标文件.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/objectmodel/可执行目标文件.md)
+
 ## 最重要的知识
 
 [虚函数.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/objectmodel/虚函数.md)
