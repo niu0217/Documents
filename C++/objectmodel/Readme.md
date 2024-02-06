@@ -36,3 +36,5 @@
 
 ## 函数语义学
 
+[函数语义.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/objectmodel/函数语义.md)
+
