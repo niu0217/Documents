@@ -33,3 +33,6 @@
 [数据成员.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/objectmodel/数据成员.md)
 
 [数据成员续.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/objectmodel/数据成员续.md)
+
+## 函数语义学
+
