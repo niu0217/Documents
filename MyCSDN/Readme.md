@@ -13,3 +13,5 @@
 ## C++虚函数
 
 [C++中虚表指针的初始化时机.md](https://github.com/niu0217/Documents/blob/main/MyCSDN/C%2B%2B中虚表指针的初始化时机.md)
+
+[C++中虚成员函数调用方式.md](https://github.com/niu0217/Documents/blob/main/MyCSDN/C%2B%2B中虚成员函数调用方式.md)
