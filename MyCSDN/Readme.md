@@ -10,10 +10,14 @@
 
 [C++中指针和引用的区别.md](https://github.com/niu0217/Documents/blob/main/MyCSDN/C%2B%2B中指针和引用的区别.md)
 
-[C++普通成员函数调用方式.md](https://github.com/niu0217/Documents/blob/main/MyCSDN/C%2B%2B普通成员函数调用方式.md)
-
 ## C++虚函数
 
 [C++中虚表指针的初始化时机.md](https://github.com/niu0217/Documents/blob/main/MyCSDN/C%2B%2B中虚表指针的初始化时机.md)
+
+## 函数
+
+[C++普通成员函数调用方式.md](https://github.com/niu0217/Documents/blob/main/MyCSDN/C%2B%2B普通成员函数调用方式.md)
+
+[C++静态成员函数调用方式.md](https://github.com/niu0217/Documents/blob/main/MyCSDN/C%2B%2B静态成员函数调用方式.md)
 
 [C++中虚成员函数调用方式.md](https://github.com/niu0217/Documents/blob/main/MyCSDN/C%2B%2B中虚成员函数调用方式.md)
