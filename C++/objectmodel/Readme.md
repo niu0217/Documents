@@ -38,3 +38,6 @@
 
 [函数语义.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/objectmodel/函数语义.md)
 
+## 对象构造语义学
+
+[对象构造语义学.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/objectmodel/对象构造语义学.md)
