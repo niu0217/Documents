@@ -43,3 +43,5 @@
 [对象构造语义学.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/objectmodel/对象构造语义学.md)
 
 [new和delete.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/objectmodel/new和delete.md)
+
+[内存池.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/objectmodel/内存池.md)
