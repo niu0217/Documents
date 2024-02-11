@@ -75,7 +75,7 @@ B::B()的this指针是：0x7ffc3ff4ccb0
 C::C()的this指针是：0x7ffc3ff4ccac
 ```
 
-然后，调用`objectC.funcA();`。因为`funcA`输入类A，所以使用的是类A的this地址。同理，调用`objectC.funcB();`。`funcB`属于类B，所以使用类B的this地址。然后是调用类C的`funcC`。这一切都是编译器在背后默默的调整this指针。
+然后，调用`objectC.funcA();`。因为`funcA`属于类A，所以使用的是类A的`this`地址。同理，调用`objectC.funcB();`。`funcB`属于类B，所以使用类B的`this`地址。然后是调用类C的`funcC`。这一切都是编译器在背后默默的调整`this`指针。
 
 **关系图：**
 
