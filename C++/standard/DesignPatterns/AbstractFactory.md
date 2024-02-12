@@ -25,6 +25,13 @@
 ![IMG_2233](AbstractFactory.assets/IMG_2233.jpg) 
 
 ```c++
+/* ************************************************************************
+> File Name:     AbstractFactory.cpp
+> Author:        niu0217
+> Created Time:  Mon 12 Feb 2024 11:24:32 AM CST
+> Description:
+ ************************************************************************/
+
 #include <iostream>
 
 class Chair {
@@ -32,17 +39,17 @@ public:
     virtual ~Chair(){}
     virtual void sitOn() const = 0;
 };
-class ModernChair:public Chair {
+class ModernChair : public Chair {
 public:
     virtual ~ModernChair() {}
-    virtual void sitOn() const override {
+    void sitOn() const override {
         std::cout << "可以被坐下的ModernChair\n";
     }
 };
-class ChineseChair :public Chair {
+class ChineseChair : public Chair {
 public:
     virtual ~ChineseChair() {}
-    virtual void sitOn() const override {
+    void sitOn() const override {
         std::cout << "可以被坐下的ChineseChair\n";
     }
 };
@@ -52,17 +59,17 @@ public:
     virtual ~Table() {}
     virtual void putOn() const = 0;
 };
-class ModernTable :public Table {
+class ModernTable : public Table {
 public:
     virtual ~ModernTable() {}
-    virtual void putOn() const override {
+    void putOn() const override {
         std::cout << "ModernTable可以放东西\n";
     }
 };
-class ChineseTable :public Table {
+class ChineseTable : public Table {
 public:
     virtual ~ChineseTable() {}
-    virtual void putOn() const override {
+    void putOn() const override {
         std::cout << "ChineseTable可以放东西\n";
     }
 };
@@ -71,21 +78,21 @@ public:
     virtual Chair* createChair() const = 0;
     virtual Table* createTable() const = 0;
 };
-class ModernStyleFactory:public FurnitureFacotry {
+class ModernStyleFactory : public FurnitureFacotry {
 public:
-    virtual Chair* createChair() const override{
+    Chair* createChair() const override{
         return new ModernChair();
     }
-    virtual Table* createTable() const override {
+    Table* createTable() const override {
         return new ModernTable();
     }
 };
-class ChineseStyleFactory :public FurnitureFacotry {
+class ChineseStyleFactory : public FurnitureFacotry {
 public:
-    virtual Chair* createChair() const override {
+    Chair* createChair() const override {
         return new ChineseChair();
     }
-    virtual Table* createTable() const override {
+    Table* createTable() const override {
         return new ChineseTable();
     }
 };
@@ -103,6 +110,8 @@ public:
         table->putOn();
         delete chair;
         delete table;
+        chair = nullptr;
+        table = nullptr;
     }
 
     void setFacotry(FurnitureFacotry* factory) {

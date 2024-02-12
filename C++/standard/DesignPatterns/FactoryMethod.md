@@ -24,6 +24,13 @@
 ![自己的设计图](FactoryMethod.assets/自己的设计图.jpg) 
 
 ```c++
+/* ************************************************************************
+> File Name:     FactoryMethod.cpp
+> Author:        niu0217
+> Created Time:  Mon 12 Feb 2024 11:15:55 AM CST
+> Description:
+ ************************************************************************/
+
 #include <iostream>
 //产品的接口
 class Transport {
@@ -31,20 +38,23 @@ public:
     virtual ~Transport(){}
     virtual void deliver() const = 0;
 };
+
 //产品A
-class Truck:public Transport {
+class Truck : public Transport {
 public:
     void deliver() const override{
         std::cout << "卡车运输货物中ing。\n";
     }
 };
+
 //产品B
-class Ship :public Transport {
+class Ship : public Transport {
 public:
     void deliver() const override {
         std::cout << "轮船运输货物中ing。\n";
     }
 };
+
 //创造者（注意：除了创建产品以外，创造者还有自己的业务需要处理）
 class Logistics {
 public:
@@ -55,37 +65,40 @@ public:
         Transport * transport= factoryMethod();
         transport->deliver();
         delete transport;
+        transport = nullptr;
     }
 };
 //具体的创造者A
-class TruckLogistis:public Logistics {
+class TruckLogistis : public Logistics {
 public:
     virtual ~TruckLogistis(){}
-    virtual Transport* factoryMethod() const override{
+    Transport* factoryMethod() const override {
         return new Truck();
     }
 };
 //具体的创造者B
-class ShipLogistis :public Logistics {
+class ShipLogistis : public Logistics {
 public:
     virtual ~ShipLogistis() {}
-    virtual Transport* factoryMethod() const override {
+    Transport* factoryMethod() const override {
         return new Ship();
     }
 };
 int main()
 {
     Logistics* truckLogistics = new TruckLogistis();
-    Logistics* shipLogistics = new ShipLogistis();
+    truckLogistics->doSomething();
+    truckLogistics->doSomething();
 
-    truckLogistics->doSomething();
-    truckLogistics->doSomething();
-   
+    Logistics* shipLogistics = new ShipLogistis();
     shipLogistics->doSomething();
     shipLogistics->doSomething();
     shipLogistics->doSomething();
+
     delete truckLogistics;
     delete shipLogistics;
+    truckLogistics = nullptr;
+    shipLogistics = nullptr;
 }
 ```
 

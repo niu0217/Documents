@@ -26,6 +26,13 @@
 ![IMG_2239](Facade.assets/IMG_2239.jpg) 
 
 ```c++
+/* ************************************************************************
+> File Name:     Facade.cpp
+> Author:        niu0217
+> Created Time:  Mon 12 Feb 2024 03:37:12 PM CST
+> Description:
+ ************************************************************************/
+
 #include <iostream>
 #include <string>
 
@@ -71,7 +78,9 @@ public:
           m_radio{ radio ? radio : new RadioSystem } { }
     ~Controller() {
         delete m_video;
+        m_video = nullptr;
         delete m_radio;
+        m_radio = nullptr;
     }
     std::string start() {
         std::string string = "控制器启动系统：\n";

@@ -32,6 +32,13 @@
 ![IMG_2234](Builder.assets/IMG_2234.jpg) 
 
 ```c++
+/* ************************************************************************
+> File Name:     Builder.cpp
+> Author:        niu0217
+> Created Time:  Mon 12 Feb 2024 11:30:11 AM CST
+> Description:
+ ************************************************************************/
+
 #include <iostream>
 #include <vector>
 #include <string>
@@ -57,7 +64,7 @@ public:
     virtual void makePool() = 0;
 };
 //concreteBuilder1，施工队
-class SimpleHouseBuilder:public Builder {
+class SimpleHouseBuilder : public Builder {
 private:
     SimpleHouse* m_simplehouse;
 public:

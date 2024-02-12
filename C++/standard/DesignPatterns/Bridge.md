@@ -25,6 +25,13 @@
 ![IMG_2237](Bridge.assets/IMG_2237.jpg) 
 
 ```c++
+/* ************************************************************************
+> File Name:     Bridge.cpp
+> Author:        niu0217
+> Created Time:  Mon 12 Feb 2024 11:49:04 AM CST
+> Description:
+ ************************************************************************/
+
 #include <iostream>
 #include <string>
 
@@ -36,7 +43,7 @@ public:
     virtual std::string turnOff() const = 0;
     virtual std::string mute() const = 0;
 };
-class TV :public Device {
+class TV : public Device {
 public:
     ~TV(){}
     std::string turnOn() const override{
@@ -49,7 +56,7 @@ public:
         return "TV:静音...\n";
     }
 };
-class Radio:public Device {
+class Radio : public Device {
 public:
     ~Radio() {}
     std::string turnOn() const override {
@@ -79,16 +86,16 @@ public:
         return "基础遥控器发出TurnOff：" + m_implementation->turnOff();
     }
 };
-class AdvancedRemoteController :public BaseRemoteController {
+class AdvancedRemoteController : public BaseRemoteController {
 public:
     ~AdvancedRemoteController() {}
     AdvancedRemoteController(Device* implementation) :BaseRemoteController(implementation) {
     }
 public:
-    virtual std::string sendTurnOn() {
+    virtual std::string sendTurnOn() override {
         return "高级遥控器发出TurnOn：" + m_implementation->turnOn();
     }
-    virtual std::string sendTurnOff() {
+    virtual std::string sendTurnOff() override {
         return "高级遥控器发出TurnOff：" + m_implementation->turnOff();
     }
     virtual std::string sendMute() {

@@ -29,6 +29,13 @@
 ![IMG_2236](Adapter.assets/IMG_2236.jpg) 
 
 ```c++
+/* ************************************************************************
+> File Name:     Adapter.cpp
+> Author:        niu0217
+> Created Time:  Mon 12 Feb 2024 11:42:50 AM CST
+> Description:
+ ************************************************************************/
+
 #include <iostream>
 
 //Target:客户端需要的目标接口
@@ -50,7 +57,7 @@ public:
 };
 
 //Adaptor:适配器，就是把Adaptee包装起来，让他看上去像是Target
-class XmlJasonAdapter :public JasonInfo {
+class XmlJasonAdapter : public JasonInfo {
 private:
     XmlInfo* m_adaptee;
 public:
@@ -63,7 +70,7 @@ public:
 };
 
 void clientCode(const JasonInfo* info) {
-    
+
     std::cout << "股票分析软件运行Jason：" <<
         info->request()<<std::endl;
     std::cout << "----------------------------------------\n";

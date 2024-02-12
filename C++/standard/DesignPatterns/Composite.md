@@ -24,6 +24,13 @@
 ![IMG_2238](Composite.assets/IMG_2238.jpg) 
 
 ```c++
+/* ************************************************************************
+> File Name:     Composite.cpp
+> Author:        niu0217
+> Created Time:  Mon 12 Feb 2024 11:54:09 AM CST
+> Description:
+ ************************************************************************/
+
 #include <iostream>
 #include <list>
 #include <string>
