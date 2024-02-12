@@ -2,7 +2,7 @@
 
 ## 1. 数据结构
 
-### 1.1 数组
+### [1.1 数组](https://github.com/niu0217/Documents/blob/main/Algorithm/Array/Readme.md)
 
 ### 1.2 链表
 
