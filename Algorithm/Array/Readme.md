@@ -25,3 +25,10 @@
 [LeetCode977.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/Array/LeetCode977.cpp)
 
 ## 长度最小的子数组
+
+[LeetCode76.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/Array/LeetCode76.cpp)
+
+[LeetCode209.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/Array/LeetCode209.cpp)
+
+[LeetCode904.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/Array/LeetCode904.cpp)
+
