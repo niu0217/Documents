@@ -17,4 +17,10 @@ int main()
         {16, 17, 18, 19, 20}
     };
     cout<<nums.size()<<endl;
+    for(int i = 0; i < nums.size(); i++) {
+        for(int j = 0; j < nums[0].size(); j++) {
+            printf("%p ", &nums[i][j]);
+        }
+        printf("\n");
+    }
 }
