@@ -4,6 +4,8 @@
 
 ### 34
 
+![IMG_2262](Readme.assets/IMG_2262.jpg) 
+
 [LeetCode34.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/Array/LeetCode34.cpp)
 
 ### 35
@@ -14,6 +16,8 @@
 
 ### 69
 
+![IMG_2263](Readme.assets/IMG_2263.jpg) 
+
 [LeetCode69.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/Array/LeetCode69.cpp)
 
 ### 367
@@ -22,7 +26,7 @@
 
 ### 704
 
-![IMG_2261](Readme.assets/IMG_2261.jpg) 
+![IMG_2264](Readme.assets/IMG_2264.jpg)  
 
 [LeetCode704.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/Array/LeetCode704.cpp)
 
@@ -71,3 +75,4 @@
 ### 59
 
 [LeetCode59.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/Array/LeetCode59.cpp)
+
