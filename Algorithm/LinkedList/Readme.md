@@ -6,6 +6,8 @@
 
 ## 设计链表
 
+[LeetCode707.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/LinkedList/LeetCode707.cpp)
+
 ## 翻转链表
 
 ## 两两交换链表中的节点
