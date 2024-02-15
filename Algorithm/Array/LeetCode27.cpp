@@ -27,9 +27,11 @@ public:
 class Solution {
 public:
     int removeElement(vector<int>& nums, int val) {
+        //slowIndex: 保存的是需要修改的位置
+        //fastIndex: 保存的是下一个不等于val的位置
         int slowIndex = 0;
         for(int fastIndex = 0; fastIndex < nums.size(); fastIndex++) {
-            if(val != nums[fastIndex]) {
+            if(nums[fastIndex] != val) {
                 nums[slowIndex++] = nums[fastIndex];
             }
         }

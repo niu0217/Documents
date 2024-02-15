@@ -9,14 +9,14 @@ class Solution {
 public:
     int minSubArrayLen(int target, vector<int>& nums) {
         int minLength = INT_MAX;
+        int sumOfCurWindow = 0;
         int slowIndex = 0;
-        int sum = 0;
         for(int fastIndex = 0; fastIndex < nums.size(); fastIndex++) {
-            sum += nums[fastIndex];
-            while(sum >= target) {
-                int curLength = fastIndex - slowIndex + 1;
-                minLength = minLength > curLength ? curLength : minLength;
-                sum -= nums[slowIndex];
+            sumOfCurWindow += nums[fastIndex];
+            while(sumOfCurWindow >= target) {
+                int curWindowSize = fastIndex - slowIndex + 1;
+                minLength = minLength > curWindowSize ? curWindowSize : minLength;
+                sumOfCurWindow -= nums[slowIndex];
                 slowIndex++;
             }
         }

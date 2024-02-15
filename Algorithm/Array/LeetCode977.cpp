@@ -11,7 +11,7 @@ public:
         int slowIndex = 0;
         int fastIndex = nums.size() - 1;
         int curIndex = nums.size() - 1;
-        vector<int> result(nums.size());
+        vector<int> result(nums.size(), 0);
         while(slowIndex <= fastIndex) {
             if(nums[slowIndex] * nums[slowIndex] < nums[fastIndex] * nums[fastIndex]) {
                 result[curIndex--] = nums[fastIndex] * nums[fastIndex];

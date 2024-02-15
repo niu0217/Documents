@@ -8,25 +8,25 @@
 class Solution {
 public:
     int totalFruit(vector<int>& fruits) {
-        //key: 水果种类
-        //value： 该种类的水果个数
+        //key:   水果种类
+        //value: 该种类数量
         unordered_map<int, int> baskets;
-        int fruitsSize = fruits.size();
-        int maxCanPickedTreeNumbers = 0;
+        const int MAX_FRUITS_TYPES = 2;
+        int maxCanPickedTrees = INT_MIN;
+        int curCanPickedTrees = 0;
         int slowIndex = 0;
-        for(int fastIndex = 0; fastIndex < fruitsSize; fastIndex++) {
+        for(int fastIndex = 0; fastIndex < fruits.size(); fastIndex++) {
             baskets[fruits[fastIndex]]++;
-            while(baskets.size() > 2) {
+            while(baskets.size() > MAX_FRUITS_TYPES) {
                 baskets[fruits[slowIndex]]--;
                 if(baskets[fruits[slowIndex]] == 0) {
                     baskets.erase(fruits[slowIndex]);
                 }
                 slowIndex++;
             }
-            int canPickedTreeNumbers = fastIndex - slowIndex + 1;
-            maxCanPickedTreeNumbers = maxCanPickedTreeNumbers > canPickedTreeNumbers 
-                                      ? maxCanPickedTreeNumbers : canPickedTreeNumbers;
+            curCanPickedTrees = fastIndex - slowIndex + 1;
+            maxCanPickedTrees = max(curCanPickedTrees, maxCanPickedTrees);
         }
-        return maxCanPickedTreeNumbers;
+        return maxCanPickedTrees;
     }
 };

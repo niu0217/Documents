@@ -4,21 +4,23 @@ public:
         if(x == 1) {
             return 1;
         }
-        int leftValue = 1;
-        int rightValue = x;
-        long long midValue = 0;
-        while(leftValue <= rightValue) {
-            midValue = leftValue + (rightValue - leftValue) / 2;
-            if(midValue * midValue == x) {
-                return midValue;
+        int leftIndex = 1;
+        int rightIndex = x;
+        long long midIndex = 0;
+        long long curSqrt = 0.0;
+        while(leftIndex <= rightIndex) {
+            midIndex = leftIndex + (rightIndex - leftIndex) / 2;
+            curSqrt = midIndex * midIndex;
+            if(curSqrt < x) {
+                leftIndex = midIndex + 1;
             }
-            else if( midValue * midValue < x) {
-                leftValue = midValue + 1;
+            else if(curSqrt > x) {
+                rightIndex = midIndex - 1;
             }
             else {
-                rightValue = midValue - 1;
+                return midIndex;
             }
         }
-        return rightValue;
+        return rightIndex;
     }
 };

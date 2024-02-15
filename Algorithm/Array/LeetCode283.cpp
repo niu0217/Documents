@@ -8,17 +8,13 @@
 class Solution {
 public:
     void moveZeroes(vector<int>& nums) {
-        int slowIndex = -1;
-        int fastIndex = 0;
-        int numsLength = nums.size();
-        while(fastIndex < numsLength) {
+        //slowIndex: 需要修改的位置
+        //fastIndex: 下一个不等于0的位置
+        int slowIndex = 0;
+        for(int fastIndex = 0; fastIndex < nums.size(); fastIndex++) {
             if(nums[fastIndex] != 0) {
-                swap(nums[fastIndex], nums[slowIndex + 1]);
+                swap(nums[slowIndex], nums[fastIndex]);
                 slowIndex++;
-                fastIndex++;
-            }
-            else {
-                fastIndex++;
             }
         }
     }

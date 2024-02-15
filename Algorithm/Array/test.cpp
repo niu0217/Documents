@@ -10,17 +10,9 @@ using namespace std;
 
 int main()
 {
-    vector<vector<int>> nums = {
-        {1, 2, 3, 4, 5},
-        {6, 7, 8, 9, 10},
-        {11, 12, 13, 14, 15},
-        {16, 17, 18, 19, 20}
-    };
-    cout<<nums.size()<<endl;
-    for(int i = 0; i < nums.size(); i++) {
-        for(int j = 0; j < nums[0].size(); j++) {
-            printf("%p ", &nums[i][j]);
-        }
-        printf("\n");
-    }
+    cout<<"int: "<<sizeof(int)<<endl;
+    cout<<"unsigned int: "<<sizeof(unsigned int)<<endl;
+    cout<<"long: "<<sizeof(long)<<endl;
+    cout<<"unsigned long: "<<sizeof(unsigned long)<<endl;
+    cout<<"long long: "<<sizeof(long long)<<endl;
 }

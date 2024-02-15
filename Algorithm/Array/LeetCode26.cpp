@@ -8,17 +8,14 @@
 class Solution {
 public:
     int removeDuplicates(vector<int>& nums) {
-        int length = nums.size();
-        if(length == 1) {
-            return length;
-        }
+        //slowIndex: 用来判断fastIndex和slowIndex位置的元素是否相同
+        //++slowIndex: 需要被修改的位置
+        //fastIndex: 下一个和slowIndex位置元素不相同的位置
         int slowIndex = 0;
-        int fastIndex = 1;
-        while(fastIndex < length) {
-            if(nums[fastIndex] != nums[slowIndex]) {
+        for(int fastIndex = 0; fastIndex < nums.size(); fastIndex++) {
+            if(nums[slowIndex] != nums[fastIndex]) {
                 nums[++slowIndex] = nums[fastIndex];
             }
-            fastIndex++;
         }
         return slowIndex + 1;
     }

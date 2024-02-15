@@ -7,20 +7,17 @@ public:
         bool isFind = false;
         while(leftIndex <= rightIndex) {
             midIndex = leftIndex + (rightIndex - leftIndex) / 2;
-            if(target <= nums[midIndex]) {
-                if(target == nums[midIndex]) {
+            if(nums[midIndex] >= target) {
+                if(nums[midIndex] == target) {
                     isFind = true;
                 }
                 rightIndex = midIndex - 1;
             }
             else {
-                leftIndex = leftIndex + 1;
+                leftIndex = midIndex + 1;
             }
         }
-        if(!isFind) {
-            leftIndex = -1;
-        }
-        return leftIndex;
+        return isFind == true ? leftIndex : -1;
     }
     int getLastPosition(vector<int>& nums, int target) {
         int leftIndex = 0;
@@ -29,24 +26,21 @@ public:
         bool isFind = false;
         while(leftIndex <= rightIndex) {
             midIndex = leftIndex + (rightIndex - leftIndex) / 2;
-            if(target < nums[midIndex]) {
-                rightIndex = midIndex - 1;
-            }
-            else {
-                if(target == nums[midIndex]) {
+            if(nums[midIndex] <= target) {
+                if(nums[midIndex] == target) {
                     isFind = true;
                 }
-                leftIndex = leftIndex + 1;
+                leftIndex = midIndex + 1;
+            }
+            else {
+                rightIndex = midIndex - 1;
             }
         }
-        if(!isFind) {
-            rightIndex = -1;
-        }
-        return rightIndex;
+        return isFind == true ? rightIndex : -1;
     }
     vector<int> searchRange(vector<int>& nums, int target) {
         int firstPosition = getFirstPosition(nums, target);
         int lastPosition = getLastPosition(nums, target);
-        return { firstPosition, lastPosition };
+        return {firstPosition, lastPosition};
     }
 };

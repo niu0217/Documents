@@ -7,28 +7,30 @@
 class Solution {
 public:
     string minWindow(string s, string t) {
-        //key: 字符
-        //value：该字符出现的次数
-        unordered_map<char, int> umapT;
+        //key:   字符
+        //vaule: 该字符出现的次数
         unordered_map<char, int> umapS;
-        string minMatchStr = "";
+        unordered_map<char, int> umapT;
         for(auto ch : t) {
             umapT[ch]++;
         }
-        int countTimes = 0;
-        int j = 0;
-        for(int i = 0; i < s.size(); i++) {
-            umapS[s[i]]++;
-            if(umapS[s[i]] <= umapT[s[i]]) {
+        string minMatchStr = "";
+        int countTimes = 0; //t中字符在s中出现的次数
+        int slowIndex = 0;
+        for(int fastIndex = 0; fastIndex < s.size(); fastIndex++) {
+            umapS[s[fastIndex]]++;
+            if(umapS[s[fastIndex]] <= umapT[s[fastIndex]]) {
                 countTimes++;
             }
             //边界调整
-            while(umapS[s[j]] > umapT[s[j]]) {
-                umapS[s[j++]]--;
+            while(umapS[s[slowIndex]] > umapT[s[slowIndex]]) {
+                umapS[s[slowIndex]]--;
+                slowIndex++;
             }
             if(countTimes == t.size()) {
-                if(minMatchStr == "" || (i - j + 1) < minMatchStr.size()) {
-                    minMatchStr = s.substr(j, i - j + 1);
+                int curStrLength = fastIndex - slowIndex + 1;
+                if(minMatchStr == "" || curStrLength < minMatchStr.size()) {
+                    minMatchStr = s.substr(slowIndex, curStrLength);
                 }
             }
         }

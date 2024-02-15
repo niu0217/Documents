@@ -6,11 +6,11 @@ public:
         int midIndex = 0;
         while(leftIndex <= rightIndex) {
             midIndex = leftIndex + (rightIndex - leftIndex) / 2;
-            if(target < nums[midIndex]) {
-                rightIndex = midIndex - 1;
-            }
-            else if(target > nums[midIndex]) {
+            if(nums[midIndex] < target) {
                 leftIndex = midIndex + 1;
+            }
+            else if(nums[midIndex] > target) {
+                rightIndex = midIndex - 1;
             }
             else {
                 return midIndex;

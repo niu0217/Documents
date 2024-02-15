@@ -5,21 +5,21 @@ public:
         if(num == 1) {
             return true;
         }
-        int leftValue = 1;
-        int rightValue = num / 2;
-        int midValue = 0;
-        long long result = 0;
-        while(leftValue <= rightValue) {
-            midValue = leftValue + (rightValue - leftValue) / 2;
-            result = (long long)midValue * midValue;
-            if(result > num) {
-                rightValue = midValue - 1;
+        int leftIndex = 1;
+        int rightIndex = num;
+        long long midIndex = 0;
+        long long curSqrt = 0.0;
+        while(leftIndex <= rightIndex) {
+            midIndex = leftIndex + (rightIndex - leftIndex) / 2;
+            curSqrt = midIndex * midIndex;
+            if(curSqrt == num) {
+                return true;
             }
-            else if(result < num){
-                leftValue = midValue + 1;
+            else if(curSqrt < num) {
+                leftIndex = midIndex + 1;
             }
             else {
-                return true;
+                rightIndex = midIndex - 1;
             }
         }
         return false;
