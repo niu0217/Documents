@@ -32,15 +32,21 @@
 
 ## 移除元素
 
-### 26
+### 26 
+
+![IMG_2266](Readme.assets/IMG_2266.jpg) 
 
 [LeetCode26.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/Array/LeetCode26.cpp)
 
 ### 27
 
+![IMG_2267](Readme.assets/IMG_2267.jpg)  
+
 [LeetCode27.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/Array/LeetCode27.cpp)
 
 ### 283
+
+![IMG_2268](Readme.assets/IMG_2268.jpg) 
 
 [LeetCode283.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/Array/LeetCode283.cpp)
 
@@ -49,6 +55,8 @@
 [LeetCode844.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/Array/LeetCode844.cpp)
 
 ### 977
+
+![IMG_2269](Readme.assets/IMG_2269.jpg) 
 
 [LeetCode977.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/Array/LeetCode977.cpp)
 
