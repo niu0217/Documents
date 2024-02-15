@@ -4,7 +4,7 @@
 
 ### [1.1 数组](https://github.com/niu0217/Documents/blob/main/Algorithm/Array/Readme.md)
 
-### 1.2 链表
+### [1.2 链表](https://github.com/niu0217/Documents/blob/main/Algorithm/LinkedList/Readme.md)
 
 ### 1.3 字符串
 
