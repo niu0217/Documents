@@ -66,4 +66,8 @@ std::unordered_map 底层实现为哈希表，std::map 和std::multimap 的底�
 
 ## 三数之和
 
+[LeetCode15.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/HashTable/LeetCode15.cpp)
+
 ## 四数之和
+
+[LeetCode18.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/HashTable/LeetCode18.cpp)
