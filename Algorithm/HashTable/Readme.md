@@ -54,6 +54,8 @@ std::unordered_map 底层实现为哈希表，std::map 和std::multimap 的底�
 
 ## 两数之和
 
+[LeetCode1.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/HashTable/LeetCode1.cpp)
+
 ## 四数相加III
 
 ## 赎金信
