@@ -10,7 +10,7 @@
 
 ### 1.4 栈与队列
 
-### 1.5 哈希表
+### [1.5 哈希表](https://github.com/niu0217/Documents/blob/main/Algorithm/HashTable/Readme.md)
 
 ### 1.6 二叉树
 
