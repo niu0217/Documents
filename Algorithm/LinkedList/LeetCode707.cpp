@@ -15,15 +15,15 @@ public:
     };
 private:
     ListNode* dummyHead;
-    int linkelistSize;
+    int listSize;
 public:
     MyLinkedList() {
         dummyHead = new ListNode(0);
-        linkelistSize = 0;
+        listSize = 0;
     }
 
     int get(int index) {
-        if(index >= linkelistSize || index < 0) {
+        if(index >= listSize || index < 0) {
             return -1;
         }
         ListNode* curNode = dummyHead->next;
@@ -37,7 +37,7 @@ public:
         ListNode* toInsertNode = new ListNode(val);
         toInsertNode->next = dummyHead->next;
         dummyHead->next = toInsertNode;
-        linkelistSize++;
+        ++listSize;
     }
 
     void addAtTail(int val) {
@@ -47,39 +47,39 @@ public:
             curNode = curNode->next;
         }
         curNode->next = toInsertNode;
-        linkelistSize++;
+        ++listSize;
     }
 
     void addAtIndex(int index, int val) {
-        if(index > linkelistSize) {
+        if(index > listSize) {
             return;
         }
         if(index < 0) {
             index = 0;
         }
-        ListNode* toInsertNode = new ListNode(val);
         ListNode* curNode = dummyHead;
+        ListNode* toInsertNode = new ListNode(val);
         while(index--) {
             curNode = curNode->next;
         }
         toInsertNode->next = curNode->next;
         curNode->next = toInsertNode;
-        linkelistSize++;
+        ++listSize;
     }
 
     void deleteAtIndex(int index) {
-       if(index >= linkelistSize || index < 0) {
-           return;
-       }
-       ListNode* curNode = dummyHead;
-       while(index--) {
-           curNode = curNode->next;
-       }
-       ListNode* toDeleteNode = curNode->next;
-       curNode->next = toDeleteNode->next;
-       delete toDeleteNode;
-       toDeleteNode = nullptr;
-       linkelistSize--;
+        if(index >= listSize || index < 0) {
+            return;
+        }
+        ListNode* curNode = dummyHead;
+        while(index--) {
+            curNode = curNode->next;
+        }
+        ListNode* toDeleteNode = curNode->next;
+        curNode->next = toDeleteNode->next;
+        delete toDeleteNode;
+        toDeleteNode = nullptr;
+        --listSize;
     }
 };
 

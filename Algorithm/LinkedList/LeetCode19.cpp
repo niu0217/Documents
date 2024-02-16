@@ -17,6 +17,7 @@
 class Solution {
 public:
     ListNode* removeNthFromEnd(ListNode* head, int n) {
+        //必须保证n的合法性
         ListNode* dummyHead = new ListNode(0);
         dummyHead->next = head;
         ListNode* slowNode = dummyHead;

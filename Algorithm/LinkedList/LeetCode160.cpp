@@ -14,35 +14,35 @@
  */
 class Solution {
 public:
-    int getLinkedListLength(ListNode* head) {
-        int linkedlistLength = 0;
+    int getListSize(ListNode* head) {
         ListNode* curNode = head;
+        int listSize = 0;
         while(curNode != nullptr) {
-            linkedlistLength++;
             curNode = curNode->next;
+            ++listSize;
         }
-        return linkedlistLength;
+        return listSize;
     }
     ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
-        int linkedlistALength = getLinkedListLength(headA);
-        int linkedlistBLength = getLinkedListLength(headB);
-        ListNode* curNodeA = headA;
-        ListNode* curNodeB = headB;
-        //让链表A始终是最长的一个链表
-        while(linkedlistALength < linkedlistBLength) {
-            swap(linkedlistALength, linkedlistBLength);
-            swap(curNodeA, curNodeB);
+        int aListSize = getListSize(headA);
+        int bListSize = getListSize(headB);
+        ListNode* curANode = headA;
+        ListNode* curBNode = headB;
+        //保持curANode始终指向最长的那条链表
+        if(aListSize < bListSize) {
+            swap(aListSize, bListSize);
+            swap(curANode, curBNode);
         }
-        int gap = linkedlistALength - linkedlistBLength;
+        int gap = aListSize - bListSize;
         while(gap--) {
-            curNodeA = curNodeA->next;
+            curANode = curANode->next;
         }
-        while(curNodeA != nullptr) {
-            if(curNodeA == curNodeB) {
-                return curNodeA;
+        while(curANode != nullptr) {
+            if(curANode == curBNode) {
+                return curANode;
             }
-            curNodeA = curNodeA->next;
-            curNodeB = curNodeB->next;
+            curANode = curANode->next;
+            curBNode = curBNode->next;
         }
         return nullptr;
     }

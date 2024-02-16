@@ -19,17 +19,22 @@ public:
     ListNode* swapPairs(ListNode* head) {
         ListNode* dummyHead = new ListNode(0);
         dummyHead->next = head;
+        ListNode* index1 = nullptr;
+        ListNode* index2 = nullptr;
         ListNode* curNode = dummyHead;
         while(curNode->next != nullptr && curNode->next->next != nullptr) {
-            ListNode* curNeedExchangeEndNode = curNode->next;
-            ListNode* nextNeedExchangeStartNode = curNode->next->next->next;
+            index1 = curNode->next;
+            index2 = curNode->next->next->next;
 
             curNode->next = curNode->next->next;
-            curNode->next->next = curNeedExchangeEndNode;
-            curNode->next->next->next = nextNeedExchangeStartNode;
-
+            curNode->next->next = index1;
+            curNode->next->next->next = index2;
             curNode = curNode->next->next;
         }
-        return dummyHead->next;
+
+        head = dummyHead->next;
+        delete dummyHead;
+        dummyHead = nullptr;
+        return head;
     }
 };

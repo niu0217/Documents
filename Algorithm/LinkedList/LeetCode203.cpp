@@ -31,6 +31,7 @@ public:
                 curNode = curNode->next;
             }
         }
+
         head = dummyHead->next;
         delete dummyHead;
         dummyHead = nullptr;
