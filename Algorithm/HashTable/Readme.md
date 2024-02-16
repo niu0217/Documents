@@ -44,6 +44,10 @@ std::unordered_map 底层实现为哈希表，std::map 和std::multimap 的底�
 
 ## 两个数组的交集
 
+[LeetCode349.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/HashTable/LeetCode349.cpp)
+
+[LeetCode350.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/HashTable/LeetCode350.cpp)
+
 ## 快乐数
 
 ## 两数之和
