@@ -34,7 +34,7 @@ std::unordered_map 底层实现为哈希表，std::map 和std::multimap 的底�
 
 ## 有效的字母异位词
 
-
+[LeetCode242.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/HashTable/LeetCode242.cpp)
 
 ## 两个数组的交集
 
