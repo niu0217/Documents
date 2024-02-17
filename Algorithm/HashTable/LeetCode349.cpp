@@ -7,14 +7,14 @@
 class Solution {
 public:
     vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
-        unordered_set<int> resultSet;
-        unordered_set<int> nums1Set(begin(nums1), end(nums1));
-        for(auto num : nums2) {
-            if(nums1Set.find(num) != nums1Set.end()) {
-                resultSet.insert(num);
+        unordered_set<int> usetNum(nums1.begin(), nums1.end());
+        unordered_set<int> usetResult;
+        for(int num : nums2) {
+            if(usetNum.find(num) != usetNum.end()) {
+                usetResult.insert(num);
             }
         }
-        return vector<int>(begin(resultSet), end(resultSet));
+        return vector<int>{usetResult.begin(), usetResult.end()};
     }
 };
 
