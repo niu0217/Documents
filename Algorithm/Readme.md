@@ -20,7 +20,7 @@
 
 ## 2. 算法
 
-### 2.1 双指针法
+### [2.1 双指针法](https://github.com/niu0217/Documents/blob/main/Algorithm/DoublePointer/Readme.md)
 
 ### 2.2 贪心算法
 
