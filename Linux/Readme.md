@@ -32,3 +32,5 @@
 
 ## 6. 小知识点
 
+[Linux中的软链接和硬链接.md](https://github.com/niu0217/Documents/blob/main/Linux/Linux中的软链接和硬链接.md)
+
