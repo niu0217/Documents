@@ -8,7 +8,7 @@
 
 ### [1.3 字符串](https://github.com/niu0217/Documents/blob/main/Algorithm/String/Readme.md)
 
-### 1.4 栈与队列
+### [1.4 栈与队列](https://github.com/niu0217/Documents/blob/main/Algorithm/StackAndQueue/Readme.md)
 
 ### [1.5 哈希表](https://github.com/niu0217/Documents/blob/main/Algorithm/HashTable/Readme.md)
 
