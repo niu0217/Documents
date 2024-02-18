@@ -12,35 +12,41 @@
 
 ```c++
 #include<iostream>
+#include<string>
 using namespace std;
-int main() {
+
+int main()
+{
     string s;
-    while (cin >> s) {
-        int count = 0; // 统计数字的个数
-        int sOldSize = s.size();
-        for (int i = 0; i < s.size(); i++) {
-            if (s[i] >= '0' && s[i] <= '9') {
+    while(cin>>s) {
+        int count = 0;
+        for(char ch : s) {
+            if(ch >= '0' && ch <= '9') {
                 count++;
             }
         }
-        // 扩充字符串s的大小，也就是每个空格替换成"number"之后的大小
-        s.resize(s.size() + count * 5);
+        int sOldSize = s.size();
+        s.resize(sOldSize + 5 * count);
         int sNewSize = s.size();
-        // 从后先前将空格替换为"number"
-        for (int i = sNewSize - 1, j = sOldSize - 1; j < i; i--, j--) {
-            if (s[j] > '9' || s[j] < '0') {
-                s[i] = s[j];
-            } else {
-                s[i] = 'r';
-                s[i - 1] = 'e';
-                s[i - 2] = 'b';
-                s[i - 3] = 'm';
-                s[i - 4] = 'u';
-                s[i - 5] = 'n';
-                i -= 5;
+        int left = sOldSize - 1;
+        int right = sNewSize - 1;
+        while(left >= 0) {
+            if(s[left] >= '0' && s[left] <= '9') {
+                s[right] = 'r';
+                s[right - 1] = 'e';
+                s[right - 2] = 'b';
+                s[right - 3] = 'm';
+                s[right - 4] = 'u';
+                s[right - 5] = 'n';
+                right -= 5;
             }
+            else {
+                s[right] = s[left];
+            }
+            left--;
+            right--;
         }
-        cout << s << endl;
+        cout<<s<<endl;
     }
 }
 ```
