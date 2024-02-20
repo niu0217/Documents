@@ -23,5 +23,5 @@
 
 ## 标准库函数
 
-
+[fread实现.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/base/runtime_library/fread实现.md)
 
