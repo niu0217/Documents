@@ -12,7 +12,7 @@
 
 ### [1.5 哈希表](https://github.com/niu0217/Documents/blob/main/Algorithm/HashTable/Readme.md)
 
-### 1.6 二叉树
+### [1.6 二叉树](https://github.com/niu0217/Documents/blob/main/Algorithm/BinaryTree/Readme.md)
 
 ### 1.7 单调栈
 
