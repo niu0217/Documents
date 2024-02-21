@@ -1,7 +1,7 @@
 /* ************************************************************************
-> File Name:     LeetCode104.cpp
+> File Name:     LeetCode404.cpp
 > Author:        niu0217
-> Created Time:  三  2/21 15:57:50 2024
+> Created Time:  三  2/21 20:28:40 2024
  ************************************************************************/
 
 /**
@@ -17,19 +17,21 @@
  */
 class Solution {
 public:
-    int maxDepth(TreeNode* root) {
-        if(root == nullptr) {
+    int sumOfLeftLeaves(TreeNode* root) {
+        if(root == nullptr || (root->left == nullptr && root->right == nullptr)) {
             return 0;
         }
-        int treeDepth = 0;
         queue<TreeNode*> que;
         que.push(root);
+        int sum = 0;
         while(!que.empty()) {
             int size = que.size();
-            treeDepth++;
             for(int i = 0; i < size; i++) {
                 TreeNode* node = que.front();
                 que.pop();
+                if(node->left != nullptr && node->left->left == nullptr && node->left->right == nullptr) {
+                    sum += node->left->val;
+                }
                 if(node->left) {
                     que.push(node->left);
                 }
@@ -38,19 +40,6 @@ public:
                 }
             }
         }
-        return treeDepth;
-    }
-};
-
-//递归
-class Solution {
-public:
-    int maxDepth(TreeNode* root) {
-        if(root == nullptr) {
-            return 0;
-        }
-        int leftSubTreeDepth = maxDepth(root->left);
-        int rightSubTreeDepth = maxDepth(root->right);
-        return 1 + max(leftSubTreeDepth, rightSubTreeDepth);
+        return sum;
     }
 };
