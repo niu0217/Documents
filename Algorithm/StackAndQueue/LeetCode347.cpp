@@ -7,7 +7,7 @@
 //小顶堆 + 优先级队列 + 哈希
 class Solution {
 public:
-    struct Compare {
+    struct LittleHeap {
         bool operator()(const pair<int, int>& lhs, const pair<int, int>& rhs) {
             return lhs.second > rhs.second; //小顶堆
         }
@@ -19,13 +19,14 @@ public:
         for(int num : nums) {
             umap[num]++;
         }
-        priority_queue<pair<int, int>, vector<pair<int, int>>, Compare> windows;
+        //优先级队列，按照元素出现的次数构建小顶堆
+        priority_queue<pair<int, int>, vector<pair<int, int>>, LittleHeap> windows;
         for(auto iter = umap.begin(); iter != umap.end(); iter++) {
             windows.push(*iter);
             if(windows.size() > k) {
                 windows.pop();
             }
-        }
+        }   
         vector<int> result(k, 0);
         for(int i = k - 1; i >= 0; i--) {
             result[i] = windows.top().first;

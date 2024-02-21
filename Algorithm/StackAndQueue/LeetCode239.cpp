@@ -56,16 +56,16 @@ public:
         }
     };
     vector<int> maxSlidingWindow(vector<int>& nums, int k) {
-        Myqueue myqueue;
+        Myqueue windows;
         vector<int> result;
         for(int i = 0; i < k; i++) {
-            myqueue.push(nums[i]);
+            windows.push(nums[i]);
         }
-        result.push_back(myqueue.front());
+        result.push_back(windows.front());
         for(int i = k; i < nums.size(); i++) {
-            myqueue.pop(nums[i - k]);
-            myqueue.push(nums[i]);
-            result.push_back(myqueue.front());
+            windows.pop(nums[i - k]);
+            windows.push(nums[i]);
+            result.push_back(windows.front());
         }
         return result;
     }
@@ -75,16 +75,19 @@ public:
 class Solution {
 public:
     vector<int> maxSlidingWindow(vector<int>& nums, int k) {
-        multiset<int> maxValuesSet;
+        multiset<int> windows;
         vector<int> result;
-        for(int i = 0; i < nums.size(); i++) {
-            if(i >= k) {
-                maxValuesSet.erase(maxValuesSet.find(nums[i - k]));
+        for(int i = 0; i < k; i++) {
+            windows.insert(nums[i]);
+        }
+        result.push_back(*windows.rbegin());
+        for(int i = k; i < nums.size(); i++) {
+            auto iter = windows.find(nums[i - k]);
+            if(iter != windows.end()) {
+                windows.erase(iter);
             }
-            maxValuesSet.insert(nums[i]);
-            if(i >= k - 1) {
-                result.push_back(*(maxValuesSet.rbegin()));
-            }
+            windows.insert(nums[i]);
+            result.push_back(*windows.rbegin());
         }
         return result;
     }

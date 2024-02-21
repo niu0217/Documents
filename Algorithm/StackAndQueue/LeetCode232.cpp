@@ -6,96 +6,41 @@
 
 class MyQueue {
 private:
-    stack<int> stackIn;
-    stack<int> stackOut;
+    stack<int> stIn;
+    stack<int> stOut;
 public:
     MyQueue() {
 
     }
 
     void push(int x) {
-        stackIn.push(x);
+        stIn.push(x);
     }
 
     int pop() {
-        if(stackOut.empty()) {
-            if(stackIn.empty()) {
-                return 0;
-            }
-            while(!stackIn.empty()) {
-                stackOut.push(stackIn.top());
-                stackIn.pop();
-            }
+        //特殊判断
+        if(this->empty()) {
+            return -1;
         }
-        int topElement = stackOut.top();
-        stackOut.pop();
-        return topElement;
-    }
-
-    int peek() {
-        if(!stackOut.empty()) {
-            return stackOut.top();
-        }
-        if(!stackIn.empty()) {
-            stack<int> stackTemp = stackIn;
-            while(stackTemp.size() != 1) {
-                stackTemp.pop();
-            }
-            return stackTemp.top();
-        }
-        return -1;
-    }
-
-    bool empty() {
-        return stackIn.empty() && stackOut.empty();
-    }
-};
-
-/**
- * Your MyQueue object will be instantiated and called as such:
- * MyQueue* obj = new MyQueue();
- * obj->push(x);
- * int param_2 = obj->pop();
- * int param_3 = obj->peek();
- * bool param_4 = obj->empty();
- */
-
-class MyQueue {
-private:
-    stack<int> stackIn;
-    stack<int> stackOut;
-public:
-    MyQueue() {
-
-    }
-
-    void push(int x) {
-        stackIn.push(x);
-    }
-
-    int pop() {
-        if(stackOut.empty()) {
-            if(stackIn.empty()) {
-                return 0;
-            }
-            while(!stackIn.empty()) {
-                stackOut.push(stackIn.top());
-                stackIn.pop();
-            }
-        }
-        int topElement = stackOut.top();
-        stackOut.pop();
-        return topElement;
+       if(stOut.empty()) {
+           while(!stIn.empty()) {
+               stOut.push(stIn.top());
+               stIn.pop();
+           }
+       }
+       int topElement = stOut.top();
+       stOut.pop();
+       return topElement;
     }
 
     int peek() {
         int topElement = this->pop();
-        stackOut.push(topElement);
+        stOut.push(topElement);
         return topElement;
     }
 
     bool empty() {
-        return stackIn.empty() && stackOut.empty();
+        return stIn.empty() && stOut.empty();
     }
 };
 
