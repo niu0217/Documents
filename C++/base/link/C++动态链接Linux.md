@@ -374,5 +374,26 @@ Key to Flags:
 
 ## 6. 动态链接的步骤和实现
 
+### 6.1 动态链接器自举
+
+![image-20240222163120283](C++动态链接Linux.assets/image-20240222163120283.png) 
+
+### 6.2 装载共享对象
+
+![image-20240222163645962](C++动态链接Linux.assets/image-20240222163645962.png) 
+
+![image-20240222163704183](C++动态链接Linux.assets/image-20240222163704183.png) 
+
+### 6.3 重定位和初始化
+
+![image-20240222164005577](C++动态链接Linux.assets/image-20240222164005577.png) 
+
+### 6.4 Linux动态链接器实现
+
+![image-20240222164406108](C++动态链接Linux.assets/image-20240222164406108.png) 
+
+![image-20240222164419903](C++动态链接Linux.assets/image-20240222164419903.png) 
+
 ## 7. 显式运行时链接
 
+[从应用程序中加载和链接共享库.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/base/link/从应用程序中加载和链接共享库.md)
