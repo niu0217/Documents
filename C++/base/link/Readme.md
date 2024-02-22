@@ -4,6 +4,8 @@
 
 [C++动态链接Linux.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/base/link/C%2B%2B动态链接Linux.md)
 
+[Linux共享库的组织.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/base/link/Linux共享库的组织.md)
+
 [C++动态链接Windows.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/base/link/C%2B%2B动态链接Windows.md)
 
 [从应用程序中加载和链接共享库.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/base/link/从应用程序中加载和链接共享库.md)
