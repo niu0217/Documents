@@ -101,21 +101,17 @@
 
 [LeetCode226.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/BinaryTree/LeetCode226.cpp)
 
-（2）
+（2）从中序与后序遍历序列构造二叉树
 
-（3）
 
-（4）
 
-（5）
+（3）最大二叉树
 
-（6）
 
-（7）
 
-（8）
+（4）合并二叉树
 
-（9）
+
 
 ## 4. 求二叉树的属性
 

@@ -365,19 +365,19 @@ int main()
 #include<algorithm>
 
 //调整堆结构,使其满足大顶堆的性质
-void heapify(std::vector<int>& elements, int minheapSize, int rootIndex) {
+void heapify(std::vector<int>& elements, int maxheapSize, int rootIndex) {
     int largest = rootIndex;  //初始化largest为根节点
     int left = 2 * rootIndex + 1;  //左子节点
     int right = 2 * rootIndex + 2;  //右子节点
-    if(left < minheapSize && elements[left] > elements[largest]) {
+    if(left < maxheapSize && elements[left] > elements[largest]) {
         largest = left;
     }
-    if(right < minheapSize && elements[right] > elements[largest]) {
+    if(right < maxheapSize && elements[right] > elements[largest]) {
         largest = right;
     }
     if(largest != rootIndex) {
         std::swap(elements[rootIndex], elements[largest]);
-        heapify(elements, minheapSize, largest);
+        heapify(elements, maxheapSize, largest);
     }
 }
 
