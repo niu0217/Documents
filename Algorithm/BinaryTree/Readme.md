@@ -103,7 +103,9 @@
 
 （2）从中序与后序遍历序列构造二叉树
 
+[LeetCode106.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/BinaryTree/LeetCode106.cpp)
 
+[LeetCode105.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/BinaryTree/LeetCode105.cpp)
 
 （3）最大二叉树
 
