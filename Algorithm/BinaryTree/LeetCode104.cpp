@@ -21,24 +21,24 @@ public:
         if(root == nullptr) {
             return 0;
         }
-        int treeDepth = 0;
-        queue<TreeNode*> que;
-        que.push(root);
-        while(!que.empty()) {
-            int size = que.size();
-            treeDepth++;
+        int depth = 0;
+        queue<TreeNode*> nodeQueue;
+        nodeQueue.push(root);
+        while(!nodeQueue.empty()) {
+            int size = nodeQueue.size();
+            depth++;
             for(int i = 0; i < size; i++) {
-                TreeNode* node = que.front();
-                que.pop();
+                TreeNode* node = nodeQueue.front();
+                nodeQueue.pop();
                 if(node->left) {
-                    que.push(node->left);
+                    nodeQueue.push(node->left);
                 }
                 if(node->right) {
-                    que.push(node->right);
+                    nodeQueue.push(node->right);
                 }
             }
         }
-        return treeDepth;
+        return depth;
     }
 };
 

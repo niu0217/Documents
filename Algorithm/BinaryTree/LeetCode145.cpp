@@ -51,17 +51,17 @@ public:
             return {};
         }
         vector<int> result;
-        stack<TreeNode*> st;
-        st.push(root);
-        while(!st.empty()) {
-            TreeNode* node = st.top();
-            st.pop();
+        stack<TreeNode*> nodeStack;
+        nodeStack.push(root);
+        while(!nodeStack.empty()) {
+            TreeNode* node = nodeStack.top();
+            nodeStack.pop();
             result.push_back(node->val);
             if(node->left) {
-                st.push(node->left);
+                nodeStack.push(node->left);
             }
             if(node->right) {
-                st.push(node->right);
+                nodeStack.push(node->right);
             }
         }
         reverse(result.begin(), result.end());

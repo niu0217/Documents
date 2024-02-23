@@ -31,18 +31,18 @@ public:
             return {};
         }
         vector<vector<int>> result;
-        queue<Node*> que;
-        que.push(root);
-        while(!que.empty()) {
-            int size = que.size();
+        queue<Node*> nodeQueue;
+        nodeQueue.push(root);
+        while(!nodeQueue.empty()) {
+            int size = nodeQueue.size();
             vector<int> curLevelResult;
             for(int i = 0; i < size; i++) {
-                Node* curNode = que.front();
-                que.pop();
-                curLevelResult.push_back(curNode->val);
-                for(int j = 0; j < curNode->children.size(); j++) {
-                    if(curNode->children[j] != nullptr) {
-                        que.push(curNode->children[j]);
+                Node* node = nodeQueue.front();
+                nodeQueue.pop();
+                curLevelResult.push_back(node->val);
+                for(int j = 0; j < node->children.size(); j++) {
+                    if(node->children[j] != nullptr) {
+                        nodeQueue.push(node->children[j]);
                     }
                 }
             }

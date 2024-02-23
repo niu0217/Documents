@@ -18,26 +18,52 @@
 class Solution {
 public:
     int sumOfLeftLeaves(TreeNode* root) {
-        if(root == nullptr || (root->left == nullptr && root->right == nullptr)) {
+        if(root == nullptr) {
             return 0;
         }
-        queue<TreeNode*> que;
-        que.push(root);
         int sum = 0;
-        while(!que.empty()) {
-            int size = que.size();
+        queue<TreeNode*> nodeQueue;
+        nodeQueue.push(root);
+        while(!nodeQueue.empty()) {
+            int size = nodeQueue.size();
             for(int i = 0; i < size; i++) {
-                TreeNode* node = que.front();
-                que.pop();
+                TreeNode* node = nodeQueue.front();
+                nodeQueue.pop();
                 if(node->left != nullptr && node->left->left == nullptr && node->left->right == nullptr) {
                     sum += node->left->val;
                 }
                 if(node->left) {
-                    que.push(node->left);
+                    nodeQueue.push(node->left);
                 }
                 if(node->right) {
-                    que.push(node->right);
+                    nodeQueue.push(node->right);
                 }
+            }
+        }
+        return sum;
+    }
+};
+
+class Solution {
+public:
+    int sumOfLeftLeaves(TreeNode* root) {
+        if(root == nullptr) {
+            return 0;
+        }
+        int sum = 0;
+        stack<TreeNode*> nodeStack;
+        nodeStack.push(root);
+        while(!nodeStack.empty()) {
+            TreeNode* node = nodeStack.top();
+            nodeStack.pop();
+            if(node->left != nullptr && node->left->left == nullptr && node->left->right == nullptr) {
+                sum += node->left->val;
+            }
+            if(node->right) {
+                nodeStack.push(node->right);
+            }
+            if(node->left) {
+                nodeStack.push(node->left);
             }
         }
         return sum;

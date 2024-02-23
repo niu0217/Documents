@@ -18,7 +18,6 @@
 class Solution {
 public:
     bool isSame(TreeNode* root1, TreeNode* root2) {
-        //递归终止条件
         if(root1 == nullptr && root2 != nullptr) {
             return false;
         }
@@ -28,14 +27,15 @@ public:
         if(root1 == nullptr && root2 == nullptr) {
             return true;
         }
-        //root1: 左右中遍历
-        //root2: 右左中遍历
-        bool condition1 = isSame(root1->left, root2->right);
-        bool condition2 = isSame(root1->right, root2->left);
-        bool condition3 = root1->val == root2->val;
+        bool condition1 = root1->val == root2->val;
+        bool condition2 = isSame(root1->left, root2->right);
+        bool condition3 = isSame(root1->right, root2->left);
         return condition1 && condition2 && condition3;
     }
     bool isSymmetric(TreeNode* root) {
+        if(root == nullptr) {
+            return true;
+        }
         return isSame(root, root);
     }
 };

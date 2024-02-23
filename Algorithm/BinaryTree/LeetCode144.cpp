@@ -47,21 +47,21 @@ public:
 class Solution {
 public:
     vector<int> preorderTraversal(TreeNode* root) {
-        vector<int> result;
-        stack<TreeNode*> st;
         if(root == nullptr) {
             return {};
         }
-        st.push(root);
-        while(!st.empty()) {
-            TreeNode* node = st.top();
-            st.pop();
+        vector<int> result;
+        stack<TreeNode*> nodeStack;
+        nodeStack.push(root);
+        while(!nodeStack.empty()) {
+            TreeNode* node = nodeStack.top();
+            nodeStack.pop();
             result.push_back(node->val);
             if(node->right) {
-                st.push(node->right);
+                nodeStack.push(node->right);
             }
             if(node->left) {
-                st.push(node->left);
+                nodeStack.push(node->left);
             }
         }
         return result;

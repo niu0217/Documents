@@ -43,22 +43,22 @@ public:
             return 0;
         }
         int depth = 0;
-        queue<TreeNode*> que;
-        que.push(root);
-        while(!que.empty()) {
-            int size = que.size();
+        queue<TreeNode*> nodeQueue;
+        nodeQueue.push(root);
+        while(!nodeQueue.empty()) {
+            int size = nodeQueue.size();
             depth++;
             for(int i = 0; i < size; i++) {
-                TreeNode* node = que.front();
-                que.pop();
-                if(node->left) {
-                    que.push(node->left);
-                }
-                if(node->right) {
-                    que.push(node->right);
-                }
+                TreeNode* node = nodeQueue.front();
+                nodeQueue.pop();
                 if(node->left == nullptr && node->right == nullptr) {
                     return depth;
+                }
+                if(node->left) {
+                    nodeQueue.push(node->left);
+                }
+                if(node->right) {
+                    nodeQueue.push(node->right);
                 }
             }
         }

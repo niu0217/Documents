@@ -21,38 +21,36 @@ public:
         if(root == nullptr) {
             return {};
         }
-        stack<TreeNode*> treenodeStack;
+        vector<string> result;
+        stack<TreeNode*> nodeStack;
         stack<string> pathStack;
-        vector<string> pathCollection;
-        treenodeStack.push(root);
+        nodeStack.push(root);
         pathStack.push(to_string(root->val));
-        while(!treenodeStack.empty()) {
-            TreeNode* node = treenodeStack.top();
-            treenodeStack.pop();
+        while(!nodeStack.empty()) {
+            TreeNode* node = nodeStack.top();
+            nodeStack.pop();
             string path = pathStack.top();
             pathStack.pop();
-            //是叶子节点，收割路径
             if(node->left == nullptr && node->right == nullptr) {
-                pathCollection.push_back(path);
+                result.push_back(path);
             }
             if(node->right) {
-                treenodeStack.push(node->right);
+                nodeStack.push(node->right);
                 pathStack.push(path + "->" + to_string(node->right->val));
             }
             if(node->left) {
-                treenodeStack.push(node->left);
+                nodeStack.push(node->left);
                 pathStack.push(path + "->" + to_string(node->left->val));
             }
         }
-        return pathCollection;
+        return result;
     }
 };
 
 //递归
 class Solution {
 public:
-    void traversal(TreeNode* root, vector<string>& result, string path) {
-        //采用前序遍历，遇到叶子节点就收割
+    void collectionPaths(TreeNode* root, vector<string>& result, string path) {
         path += to_string(root->val);
         if(root->left == nullptr && root->right == nullptr) {
             result.push_back(path);
@@ -60,15 +58,15 @@ public:
         }
         if(root->left) {
             path += "->";
-            traversal(root->left, result, path);
-            path.pop_back(); //回溯">"
-            path.pop_back(); //回溯"-"
+            collectionPaths(root->left, result, path);
+            path.pop_back(); //回溯 >
+            path.pop_back(); //回溯 -
         }
         if(root->right) {
             path += "->";
-            traversal(root->right, result, path);
-            path.pop_back(); //回溯">"
-            path.pop_back(); //回溯"-"
+            collectionPaths(root->right, result, path);
+            path.pop_back(); //回溯 >
+            path.pop_back(); //回溯 -
         }
     }
     vector<string> binaryTreePaths(TreeNode* root) {
@@ -76,8 +74,8 @@ public:
             return {};
         }
         vector<string> result;
-        string path;
-        traversal(root, result, path);
+        string path = "";
+        collectionPaths(root, result, path);
         return result;
     }
 };

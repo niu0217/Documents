@@ -17,22 +17,19 @@
  */
 class Solution {
 public:
-    bool isSameTree(TreeNode* rootA, TreeNode* rootB) {
-        //剪枝
-        if(rootA == nullptr && rootB != nullptr) {
+    bool isSameTree(TreeNode* root1, TreeNode* root2) {
+        if(root1 != nullptr && root2 == nullptr) {
             return false;
         }
-        if(rootA != nullptr && rootB == nullptr) {
+        if(root1 == nullptr && root2 != nullptr) {
             return false;
         }
-        if(rootA == nullptr && rootB == nullptr) {
+        if(root1 == nullptr && root2 == nullptr) {
             return true;
         }
-        //rootA：中左右
-        //rootB：中左右
-        bool condition1 = rootA->val == rootB->val;
-        bool condition2 = isSameTree(rootA->left, rootB->left);
-        bool condition3 = isSameTree(rootA->right, rootB->right);
+        bool condition1 = root1->val == root2->val;
+        bool condition2 = isSameTree(root1->left, root2->left);
+        bool condition3 = isSameTree(root1->right, root2->right);
         return condition1 && condition2 && condition3;
     }
 };

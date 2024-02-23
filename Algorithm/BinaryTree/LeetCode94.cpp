@@ -51,16 +51,16 @@ public:
             return {};
         }
         vector<int> result;
-        stack<TreeNode*> st;
+        stack<TreeNode*> nodeStack;
         TreeNode* curNode = root;
-        while(!st.empty() || curNode != nullptr) {
+        while(!nodeStack.empty() || curNode != nullptr) {
             if(curNode != nullptr) {
-                st.push(curNode);
+                nodeStack.push(curNode);
                 curNode = curNode->left;
             }
             else {
-                curNode = st.top();
-                st.pop();
+                curNode = nodeStack.top();
+                nodeStack.pop();
                 result.push_back(curNode->val);
                 curNode = curNode->right;
             }
