@@ -18,10 +18,11 @@
 class Solution {
 public:
     int findMaxIndex(vector<int>& nums) {
-        auto maxIt = max_element(nums.begin(), nums.end());
-        return distance(nums.begin(), maxIt);
+        auto maxIter = max_element(nums.begin(), nums.end());
+        return distance(nums.begin(), maxIter);
     }
     TreeNode* traversal(vector<int>& nums) {
+        //空节点处理
         if(nums.size() == 0) {
             return nullptr;
         }
@@ -29,16 +30,17 @@ public:
         int idxMax = findMaxIndex(nums);
         int rootValue = nums[idxMax];
         TreeNode* root = new TreeNode(rootValue);
-        //叶子节点
+        //叶子节点处理
         if(nums.size() == 1) {
             return root;
         }
-        //分割为两部分
+        //根据最大值下标分割为左右两个数组
         vector<int> leftPart(nums.begin(), nums.begin() + idxMax);
         vector<int> rightPart(nums.begin() + idxMax + 1, nums.end());
         //构建左右子树
         root->left = traversal(leftPart);
         root->right = traversal(rightPart);
+        //返回构建的根结点
         return root;
     }
     TreeNode* constructMaximumBinaryTree(vector<int>& nums) {

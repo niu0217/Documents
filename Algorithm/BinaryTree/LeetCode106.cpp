@@ -18,13 +18,14 @@
 class Solution {
 public:
     TreeNode* traversal(vector<int>& inorder, vector<int>& postorder) {
+        //空节点处理
         if(postorder.size() == 0) {
             return nullptr;
         }
-        //创建根结点
+        //构建根结点
         int rootValue = postorder[postorder.size() - 1];
         TreeNode* root = new TreeNode(rootValue);
-        //是叶子节点
+        //叶子节点处理
         if(postorder.size() == 1) {
             return root;
         }
@@ -43,16 +44,17 @@ public:
         postorder.resize(postorder.size() - 1);
         vector<int> leftPostorder(postorder.begin(), postorder.begin() + leftInorder.size());
         vector<int> rightPostorder(postorder.begin() + leftInorder.size(), postorder.end());
-        //构建根结点的左右子树
+        //构建左右子树
         root->left = traversal(leftInorder, leftPostorder);
         root->right = traversal(rightInorder, rightPostorder);
         return root;
     }
     TreeNode* buildTree(vector<int>& inorder, vector<int>& postorder) {
-        //inorder和postorder至少有一个为空
+        //inorder和postorder中至少有一个为空
         if(inorder.size() == 0 || postorder.size() == 0) {
             return nullptr;
         }
+        //inorder和postorderd都不为空
         return traversal(inorder, postorder);
     }
 };

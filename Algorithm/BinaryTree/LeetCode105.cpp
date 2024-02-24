@@ -18,17 +18,18 @@
 class Solution {
 public:
     TreeNode* traversal(vector<int>& preorder, vector<int>& inorder) {
+        //空节点
         if(preorder.size() == 0) {
             return nullptr;
         }
         //构建根结点
         int rootValue = preorder[0];
         TreeNode* root = new TreeNode(rootValue);
-        //叶子节点
+        //叶子节点处理
         if(preorder.size() == 1) {
             return root;
         }
-        //寻找分割点
+        //找到分割点
         int delimiterIndex;
         for(delimiterIndex = 0; delimiterIndex < inorder.size(); delimiterIndex++) {
             if(inorder[delimiterIndex] == rootValue) {
@@ -39,12 +40,14 @@ public:
         vector<int> leftInorder(inorder.begin(), inorder.begin() + delimiterIndex);
         vector<int> rightInorder(inorder.begin() + delimiterIndex + 1, inorder.end());
         //分割前序数组
+        //关键点：前序数组的长度和中序数组的长度一定相同
         preorder.erase(preorder.begin());
         vector<int> leftPreorder(preorder.begin(), preorder.begin() + leftInorder.size());
         vector<int> rightPreorder(preorder.begin() + leftInorder.size(), preorder.end());
         //构建左右子树
         root->left = traversal(leftPreorder, leftInorder);
         root->right = traversal(rightPreorder, rightInorder);
+        //返回构建的根结点
         return root;
     }
     TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
@@ -52,6 +55,7 @@ public:
         if(preorder.size() == 0 || inorder.size() == 0) {
             return nullptr;
         }
+        //preorder和inorder都不为空
         return traversal(preorder, inorder);
     }
 };
