@@ -119,21 +119,23 @@
 
 （1）二叉搜索树中的搜索
 
-
+[LeetCode700.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/BinaryTree/LeetCode700.cpp)
 
 （2）验证二叉搜索树
 
-
+[LeetCode98.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/BinaryTree/LeetCode98.cpp)
 
 （3）二叉搜索树的最小绝对差
 
-
+[LeetCode530.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/BinaryTree/LeetCode530.cpp)
 
 （4）二叉搜索树中的众数
 
-
+[LeetCode501.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/BinaryTree/LeetCode501.cpp)
 
 （5）把二叉搜索树转换为累加数
+
+[LeetCode538.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/BinaryTree/LeetCode538.cpp)
 
 ## 5. 二叉树公共祖先问题
 
