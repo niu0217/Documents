@@ -53,30 +53,30 @@ public:
 //中序遍历  递归
 class Solution {
 public:
-    int maxCount = 0; //最大频率
-    int count; //当前频率
-    TreeNode* preNode = nullptr;
     vector<int> result;
+    TreeNode* preNode = nullptr;
+    int maxCount = 0;
+    int count = 0;
     void traversal(TreeNode* curNode) {
         if(curNode == nullptr) {
             return;
         }
         traversal(curNode->left);
-        //统计出现的频率
         if(preNode == nullptr) {
             count = 1;
         }
-        else if(preNode->val == curNode->val) {
-            count++;
-        }
         else {
-            count = 1;
+            if(preNode->val == curNode->val) {
+                count++;
+            }
+            else {
+                count = 1;
+            }
         }
         preNode = curNode;
         if(count == maxCount) {
             result.push_back(curNode->val);
         }
-        //更新最大频率
         if(count > maxCount) {
             maxCount = count;
             result.clear();

@@ -18,17 +18,17 @@
 class Solution {
 public:
     TreeNode* getMinValueNode(TreeNode* root) {
-       if(root == nullptr) {
-           return root;
-       }
-       while(root->left != nullptr) {
-           root = root->left;
-       }
-       return root;
+        if(root == nullptr) {
+            return nullptr;
+        }
+        while(root->left != nullptr) {
+            root = root->left;
+        }
+        return root;
     }
     TreeNode* deleteNode(TreeNode* root, int key) {
         if(root == nullptr) {
-            return root;
+            return nullptr;
         }
         if(key < root->val) {
             root->left = deleteNode(root->left, key);
@@ -43,18 +43,16 @@ public:
                 root = nullptr;
                 return afterDeleteNode;
             }
-            else if(root->right == nullptr) {
+            if(root->right == nullptr) {
                 TreeNode* afterDeleteNode = root->left;
                 delete root;
                 root = nullptr;
                 return afterDeleteNode;
             }
-            else {
-                //用右子树的最小值结点来代替
-                TreeNode* minSubTreeNode = getMinValueNode(root->right);
-                root->val = minSubTreeNode->val;
-                root->right = deleteNode(root->right, minSubTreeNode->val);
-            }
+            //到这里root的左右子树都不为空
+            TreeNode* minValueNode = getMinValueNode(root->right);
+            root->val = minValueNode->val;
+            root->right = deleteNode(root->right, minValueNode->val);
         }
         return root;
     }

@@ -44,20 +44,14 @@ public:
 class Solution {
 public:
     TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
-        if(root == nullptr) {
-            return nullptr;
+        if(root == p || root == q || root == nullptr) {
+            return root;
         }
-        if(root->val > p->val && root->val > q->val) {
-            TreeNode* leftSubTree = lowestCommonAncestor(root->left, p, q);
-            if(leftSubTree != nullptr) {
-                return leftSubTree;
-            }
+        if(p->val < root->val && q->val < root->val) {
+            return lowestCommonAncestor(root->left, p, q);
         }
-        if(root->val < p->val && root->val < q->val) {
-            TreeNode* rightSubTree = lowestCommonAncestor(root->right, p, q);
-            if(rightSubTree != nullptr) {
-                return rightSubTree;
-            }
+        if(p->val > root->val && q->val > root->val) {
+            return lowestCommonAncestor(root->right, p, q);
         }
         return root;
     }

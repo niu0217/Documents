@@ -17,21 +17,15 @@
  */
 class Solution {
 public:
-    int preValue = 0;
-    void traversal(TreeNode* root) {
-        if(root == nullptr) {
-            return;
-        }
-        traversal(root->right);
-        root->val += preValue;
-        preValue = root->val;
-        traversal(root->left);
-    }
+    int preNodeValue = 0;
     TreeNode* convertBST(TreeNode* root) {
         if(root == nullptr) {
             return nullptr;
         }
-        traversal(root);
+        root->right = convertBST(root->right);
+        root->val += preNodeValue;
+        preNodeValue = root->val;
+        root->left = convertBST(root->left);
         return root;
     }
 };

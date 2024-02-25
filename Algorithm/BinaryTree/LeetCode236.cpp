@@ -23,22 +23,18 @@ public:
         if(root == p || root == q || root == nullptr) {
             return root;
         }
-        //leftSubTree告诉我们左子树中是否出现过p或者q，如果没出现，则值应该是nullptr
-        //rightSubTree告诉我们右子树中是否出现过p或者q，如果没出现，则值应该是nullptr
-        TreeNode* leftSubTree = lowestCommonAncestor(root->left, p, q);
-        TreeNode* rightSubTree = lowestCommonAncestor(root->right, p, q);
-        if(leftSubTree != nullptr && rightSubTree != nullptr) {
+        //leftSubtree为空表示左子树中没有p也没有q，不为空表示左子树中有p或者有q
+        //rightSubtree为空表示右子树中没有p也没有q，不为空表示右子树中有p或者有q
+        TreeNode* leftSubtree = lowestCommonAncestor(root->left, p, q);
+        TreeNode* rightSubtree = lowestCommonAncestor(root->right, p, q);
+        if(leftSubtree != nullptr && rightSubtree != nullptr) {
             return root;
         }
-        else if(leftSubTree != nullptr && rightSubTree == nullptr) {
-            return leftSubTree;
+        if(leftSubtree != nullptr && rightSubtree == nullptr) {
+            return leftSubtree;
         }
-        else if(leftSubTree == nullptr && rightSubTree != nullptr) {
-            return rightSubTree;
-        }
-        else {
-            //leftSubTree == nullptr && rightSubTree == nullptr
-            return nullptr;
+        if(leftSubtree == nullptr && rightSubtree != nullptr) {
+            return rightSubtree;
         }
         return nullptr;
     }

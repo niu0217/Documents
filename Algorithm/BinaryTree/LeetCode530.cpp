@@ -41,7 +41,7 @@ public:
 
 class Solution {
 public:
-    int result = INT_MAX;
+    int minDistance = INT_MAX;
     TreeNode* preNode = nullptr;
     void traversal(TreeNode* curNode) {
         if(curNode == nullptr) {
@@ -49,7 +49,7 @@ public:
         }
         traversal(curNode->left);
         if(preNode != nullptr) {
-            result = min(result, curNode->val - preNode->val);
+            minDistance = min(curNode->val - preNode->val, minDistance);
         }
         preNode = curNode;
         traversal(curNode->right);
@@ -59,6 +59,6 @@ public:
             return 0;
         }
         traversal(root);
-        return result;
+        return minDistance;
     }
 };

@@ -71,3 +71,23 @@ public:
         return true;
     }
 };
+
+//递归
+class Solution {
+public:
+    TreeNode* preNode = nullptr;
+    bool isValidBST(TreeNode* root) {
+        if(root == nullptr) {
+            return true;
+        }
+        bool condition1 = isValidBST(root->left);
+        if(preNode != nullptr) {
+            if(preNode->val >= root->val) {
+                return false;
+            }
+        }
+        preNode = root;
+        bool condition2 = isValidBST(root->right);
+        return condition1 && condition2;
+    }
+};
