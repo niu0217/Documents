@@ -51,9 +51,13 @@ void backtracking(参数) {
 
 （1）分割回文串
 
+[LeetCode131.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/BackTracking/LeetCode131.cpp)
+
 ![131.分割回文串](Readme.assets/131.分割回文串.jpg) 
 
 （2）复原IP地址
+
+[LeetCode93.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/BackTracking/LeetCode93.cpp)
 
 ![IMG_2285](Readme.assets/IMG_2285.jpg) 
 
