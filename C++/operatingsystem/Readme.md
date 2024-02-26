@@ -12,3 +12,4 @@
 
 [操作系统-进程和线程.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/operatingsystem/操作系统-进程和线程.md)
 
+[操作系统-锁的分类.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/operatingsystem/操作系统-锁的分类.md)
