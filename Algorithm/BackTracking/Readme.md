@@ -51,7 +51,11 @@ void backtracking(参数) {
 
 （1）分割回文串
 
+![131.分割回文串](Readme.assets/131.分割回文串.jpg) 
+
 （2）复原IP地址
+
+![IMG_2285](Readme.assets/IMG_2285.jpg) 
 
 ## 子集
 
