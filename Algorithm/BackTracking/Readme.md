@@ -25,9 +25,11 @@ void backtracking(参数) {
 
 ## 组合
 
+![IMG_2284](Readme.assets/IMG_2284.jpg) 
+
 （1）组合
 
-[LeetCode77.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/BackTracking/LeetCode77.cpp)
+[LeetCode77.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/BackTracking/LeetCode77.cpp) 
 
 （2）电话号码的字母组合
 
