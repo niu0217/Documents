@@ -22,7 +22,7 @@
 
 ### [2.1 双指针法](https://github.com/niu0217/Documents/blob/main/Algorithm/DoublePointer/Readme.md)
 
-### 2.2 贪心算法
+### [2.2 贪心算法](https://github.com/niu0217/Documents/blob/main/Algorithm/Greedy/Readme.md)
 
 ### [2.3 回溯算法](https://github.com/niu0217/Documents/blob/main/Algorithm/BackTracking/Readme.md)
 
