@@ -62,3 +62,29 @@ public:
         return result;
     }
 };
+
+class Solution {
+private:
+    vector<vector<int>> result;
+    vector<int> path;
+public:
+    void backtracking(int k, int n, int sum, int startIndex) {
+       if(path.size() == k) {
+           if(sum == n) {
+               result.push_back(path);
+           }
+           return;
+       }
+        for(int i = startIndex; i <= 9 && sum + i <= n; i++) {
+            sum += i;
+            path.push_back(i);
+            backtracking(k, n, sum, i +1);
+            path.pop_back();
+            sum -= i;
+        }
+    }
+    vector<vector<int>> combinationSum3(int k, int n) {
+        backtracking(k, n, 0, 1);
+        return result;
+    }
+};

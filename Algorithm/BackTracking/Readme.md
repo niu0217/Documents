@@ -75,7 +75,11 @@ void backtracking(参数) {
 
 （1）全排列
 
+![IMG_2286](Readme.assets/IMG_2286.jpg) 
+
 （2）全排列II
+
+![47.全排列II1](Readme.assets/20201124201331223.png) 
 
 ## 棋盘问题
 
