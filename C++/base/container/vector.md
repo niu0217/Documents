@@ -79,6 +79,12 @@ private:
 int main() {
     // 创建一个空的vector
     std::vector<int> intVector;
+    std::vector<int> emptyVec{};
+
+    //创建vector的方式
+    std::vector<int> vec1(5, 9); //一共有5个元素都是9
+    std::vector<int> vec2{ 3, 4, 5 }; //一共有3个元素
+    std::vector<int> vec3(vec2.begin(), vec2.end()); //用vec2构建
 
     // 在vector末尾添加元素
     intVector.push_back(10);

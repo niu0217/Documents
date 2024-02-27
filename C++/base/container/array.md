@@ -12,28 +12,43 @@
 std::array<int, 3> myArray = {10, 20, 30};
 
 int main() {
-    // 访问元素
+    printf("*************访问元素*****************************\n");
     std::cout << "Element at index 0: " << myArray[0] << std::endl;
     std::cout << "Element at index 1: " << myArray[1] << std::endl;
     std::cout << "Element at index 2: " << myArray[2] << std::endl;
+    std::cout << "Element at index 0: " << myArray.front() << std::endl;
+    std::cout << "Element at index 2: " << myArray.back() << std::endl;
+    std::cout << "Element at index 2: " << myArray.at(2) << std::endl;
+    std::cout << "Element at index 2: " << std::get<2>(myArray) << std::endl;
+    printf("\n\n");
 
-    // 修改元素
+    printf("***********取得array数组的第一个元素地址***********\n");
+    std::cout << "Element at index 0: " << myArray.data() << std::endl;
+    std::cout << "Element at index 0: " << &myArray[0] << std::endl;
+    std::cout << "Element at index 0: " << &myArray.at(0) << std::endl;
+    printf("\n\n");
+
+    printf("***********修改元素***********\n");
     myArray[0] = 5;
     std::cout << "After modification, element at index 0: " << myArray[0] << std::endl;
+    printf("\n\n");
 
-    // 获取数组的大小
+    printf("***********获取数组的大小***********\n");
     std::size_t arraySize = myArray.size();
     std::cout << "Size of the array: " << arraySize << std::endl;
+    printf("\n\n");
 
-    // 使用范围for循环遍历数组
+    printf("***********使用范围for循环遍历数组***********\n");
     for (const auto& element : myArray) {
         std::cout << "Element: " << element << std::endl;
     }
+    printf("\n\n");
 
-    // 使用begin()和end()进行迭代
+    printf("***********使用begin()和end()进行迭代***********\n");
     for (auto it = myArray.begin(); it != myArray.end(); ++it) {
         std::cout << "Element: " << *it << std::endl;
     }
+    printf("\n\n");
 
     return 0;
 }
