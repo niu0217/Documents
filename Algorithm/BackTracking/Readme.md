@@ -75,9 +75,13 @@ void backtracking(参数) {
 
 （1）全排列
 
+[LeetCode46.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/BackTracking/LeetCode46.cpp)
+
 ![IMG_2286](Readme.assets/IMG_2286.jpg) 
 
 （2）全排列II
+
+[LeetCode47.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/BackTracking/LeetCode47.cpp)
 
 ![47.全排列II1](Readme.assets/20201124201331223.png) 
 
@@ -85,7 +89,11 @@ void backtracking(参数) {
 
 （1）N皇后
 
+![IMG_2287](Readme.assets/IMG_2287.jpg) 
+
 （2）解数独
+
+![37.解数独](Readme.assets/2020111720451790-20230310131822254.png) 
 
 ## 其他
 
