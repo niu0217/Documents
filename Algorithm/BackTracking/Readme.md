@@ -89,9 +89,13 @@ void backtracking(参数) {
 
 （1）N皇后
 
+[LeetCode51.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/BackTracking/LeetCode51.cpp)
+
 ![IMG_2287](Readme.assets/IMG_2287.jpg) 
 
 （2）解数独
+
+[LeetCode37.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/BackTracking/LeetCode37.cpp)
 
 ![37.解数独](Readme.assets/2020111720451790-20230310131822254.png) 
 
