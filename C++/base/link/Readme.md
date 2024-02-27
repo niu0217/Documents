@@ -10,7 +10,15 @@
 
 [从应用程序中加载和链接共享库.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/base/link/从应用程序中加载和链接共享库.md)
 
-## 基础
+## 基本概念
+
+[可重定位目标文件.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/base/link/可重定位目标文件.md)
+
+[可执行目标文件.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/base/link/可执行目标文件.md)
+
+[符号解析.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/base/link/符号解析.md)
+
+## 整合
 
 [C++链接.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/base/link/C%2B%2B链接.md)
 
