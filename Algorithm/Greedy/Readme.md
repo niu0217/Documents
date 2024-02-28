@@ -50,9 +50,11 @@
 
 （1）分发糖果
 
-
+[LeetCode135.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/Greedy/LeetCode135.cpp)
 
 （2）根据身高重建队列
+
+[LeetCode406.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/Greedy/LeetCode406.cpp)
 
 ## 困难
 
