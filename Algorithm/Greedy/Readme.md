@@ -24,9 +24,13 @@
 
 （1）摆动序列
 
+[LeetCode376.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/Greedy/LeetCode376.cpp)
+
 ![IMG_2291](Readme.assets/IMG_2291.jpg) 
 
 （2）单调递增的数字
+
+[LeetCode738.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/Greedy/LeetCode738.cpp)
 
 ![IMG_2292](Readme.assets/IMG_2292.jpg) 
 
