@@ -8,9 +8,15 @@
 
 （1）分发饼干
 
+[LeetCode455.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/Greedy/LeetCode455.cpp)
+
 （2）K次取反后最大化的数组和
 
+[LeetCode1005.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/Greedy/LeetCode1005.cpp)
+
 （3）柠檬水找零
+
+[LeetCode860.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/Greedy/LeetCode860.cpp)
 
 ## 2. 中等题目
 
