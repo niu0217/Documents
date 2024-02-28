@@ -41,12 +41,14 @@ int main() {
     // 创建一个 deque 容器
     std::deque<int> deq;
 
-    // 向 deque 中添加元素
+    // 向deque 中添加元素
+    // 不保证元素地址的连续性
     deq.push_back(1);
-    deq.push_front(2);
     deq.push_back(10);
     deq.push_back(20);
     deq.push_back(30);
+    deq.push_front(2);
+    deq.push_front(4);
     deq.insert(deq.begin() + 1, 3); // 在索引为1的位置插入元素
 
     // 打印 deque 的内容
@@ -57,13 +59,16 @@ int main() {
     std::cout << std::endl;
 
     // 删除 deque 中的元素
-    deq.pop_back();
-    deq.pop_front();
+    deq.pop_back(); //删除最后一个
+    deq.pop_front(); //删除第一个
     deq.erase(deq.begin() + 1);
 
     // 访问 deque 中的元素
     std::cout << "First element: " << deq.front() << std::endl;
     std::cout << "Last element: " << deq.back() << std::endl;
+    std::cout << "0 element: " << deq[0] << std::endl;
+    std::cout << "1 element: " << deq[1] << std::endl;
+    std::cout << "2 element: " << deq[2] << std::endl;
 
     // 检查 deque 是否为空
     if (deq.empty()) {

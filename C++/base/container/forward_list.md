@@ -45,13 +45,16 @@ int main() {
     // 创建一个空的forward_list
     std::forward_list<int> flist;
 
-    // 在forward_list末尾添加元素
+    // 在forward_list开头添加元素
     flist.push_front(10);
     flist.push_front(20);
     flist.push_front(30);
-
-    // 在forward_list开头添加元素
     flist.push_front(0);
+
+    // 使用范围for循环遍历forward_list
+    for (const auto& element : flist) {
+        std::cout << "Element: " << element << std::endl;
+    }
 
     // 访问元素
     auto it = flist.begin();
@@ -78,10 +81,6 @@ int main() {
         std::cout << "Forward_list is not empty." << std::endl;
     }
 
-    // 使用范围for循环遍历forward_list
-    for (const auto& element : flist) {
-        std::cout << "Element: " << element << std::endl;
-    }
 
     // 使用before_begin()和end()进行迭代
     auto beforeBegin = flist.before_begin();

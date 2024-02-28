@@ -11,7 +11,7 @@
 
 struct Compare {
     bool operator()(const int& a, const int& b) const {
-        return a > b; // 优先级队列默认是小顶堆，这里改为大顶堆
+        return a > b; // 小顶堆
     }
 };
 
