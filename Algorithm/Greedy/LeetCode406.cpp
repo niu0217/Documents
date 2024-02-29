@@ -49,3 +49,26 @@ public:
         return vector<vector<int>>(resultList.begin(), resultList.end());
     }
 };
+
+class Solution {
+public:
+    static bool compare(vector<int>& lhs, vector<int>& rhs) {
+        //如果身高相同，则按照下标从小到大排序
+        if(lhs[0] == rhs[0]) {
+            return lhs[1] < rhs[1];
+        }
+        //如果身高不同，则按照身高从大到小排序
+        return lhs[0] > rhs[0];
+    }
+    vector<vector<int>> reconstructQueue(vector<vector<int>>& people) {
+        sort(people.begin(), people.end(), compare);
+        list<vector<int>> result;
+        for(int i = 0; i < people.size(); i++) {
+            int index = people[i][1];
+            auto iter = result.begin();
+            advance(iter, index);
+            result.insert(iter, people[i]);
+        }
+        return vector<vector<int>>(result.begin(), result.end());
+    }
+};
