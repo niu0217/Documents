@@ -88,9 +88,12 @@
 
 （1）最大子序和
 
+[LeetCode53.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/Greedy/LeetCode53.cpp)
+
 （2）加油站
 
-
+[LeetCode134.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/Greedy/LeetCode134.cpp)
 
 （3）监控二叉树
 
+[LeetCode968.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/Greedy/LeetCode968.cpp)
