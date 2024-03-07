@@ -5,3 +5,7 @@
 [mac上完整卸载MySQL.md](https://github.com/niu0217/Documents/blob/main/MySQL/mac上完整卸载MySQL.md)
 
 [mac上安装MySQL.md](https://github.com/niu0217/Documents/blob/main/MySQL/mac上安装MySQL.md)
+
+## 基础知识
+
+[用户账户管理.md](https://github.com/niu0217/Documents/blob/main/MySQL/用户账户管理.md)
