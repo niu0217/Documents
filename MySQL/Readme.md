@@ -16,3 +16,5 @@
 
 [事务.md](https://github.com/niu0217/Documents/blob/main/MySQL/事务.md)
 
+[锁.md](https://github.com/niu0217/Documents/blob/main/MySQL/锁.md)
+
