@@ -19,3 +19,7 @@
 [锁.md](https://github.com/niu0217/Documents/blob/main/MySQL/锁.md)
 
 [日志与执行引擎.md](https://github.com/niu0217/Documents/blob/main/MySQL/日志与执行引擎.md)
+
+## 总结
+
+[复习.md](https://github.com/niu0217/Documents/blob/main/MySQL/复习.md)
