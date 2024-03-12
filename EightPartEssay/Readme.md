@@ -6,3 +6,5 @@
 
 [Linux共享库.md](https://github.com/niu0217/Documents/blob/main/EightPartEssay/Linux共享库.md)
 
+[位置无关代码.md](https://github.com/niu0217/Documents/blob/main/EightPartEssay/位置无关代码.md)
+
