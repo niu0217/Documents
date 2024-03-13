@@ -15,7 +15,7 @@ https://blog.csdn.net/pange1991/article/details/85460755
 | **直接插入排序** | O(n²)              | O(n²)              | O(n)               | O(1)           | 稳定       |
 | **希尔排序**     | O(nlogn)           | O(ns)              | O(n)               | O(1)           | 不稳定     |
 | **归并排序**     | O(nlogn)           | O(nlogn)           | O(nlogn)           | O(n)           | 稳定       |
-| **快速排序**     | O(nlogn)           | O(n²)              | O(nlogn)           | O(nlogn)       | 不稳定     |
+| **快速排序**     | O(nlogn)           | O(n²)              | O(nlogn)           | O(logn)        | 不稳定     |
 | **堆排序**       | O(nlogn)           | O(nlogn)           | O(nlogn)           | O(1)           | 不稳定     |
 | **计数排序**     | O(n+k)             | O(n+k)             | O(n+k)             | O(n+k)         | 稳定       |
 | **基数排序**     | O(N*M)             | O(N*M)             | O(N*M)             | O(M)           | 稳定       |
@@ -164,6 +164,8 @@ int main()
 是稳定算法。
 
 ## 希尔排序
+
+https://www.runoob.com/data-structures/shell-sort.html
 
 ```c++
 #include<iostream>
