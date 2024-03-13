@@ -12,3 +12,4 @@
 
 [位置无关代码.md](https://github.com/niu0217/Documents/blob/main/EightPartEssay/位置无关代码.md)
 
+[使用GDB解析GOT和PLT.md](https://github.com/niu0217/Documents/blob/main/EightPartEssay/使用GDB解析GOT和PLT.md)
