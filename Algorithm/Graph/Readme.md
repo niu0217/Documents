@@ -43,6 +43,8 @@ void bfs(vector<vector<char>>& grid, vector<vector<bool>>& visited, int x, int y
 
 ### 岛屿数量
 
+[LeetCode200.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/Graph/LeetCode200.cpp)
+
 ![图一](Readme.assets/20220726094200.png) 
 
 本题思路：遇到一个没有遍历过的节点陆地，计数器就加一，然后把该节点陆地所能遍历到的陆地都标记上。在遇到标记过的陆地节点和海洋节点的时候就直接跳过。
