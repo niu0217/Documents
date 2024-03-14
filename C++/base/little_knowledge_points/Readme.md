@@ -1,5 +1,9 @@
 # 小知识点
 
+## 重要但是容易忽略的知识点
+
+
+
 ## 分散知识点
 
 [C++中的static.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/base/little_knowledge_points/C%2B%2B中的static.md)
@@ -31,3 +35,4 @@
 [C++11的新特性.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/base/little_knowledge_points/C%2B%2B11的新特性.md)
 
 [C++17的新特性.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/base/little_knowledge_points/C%2B%2B17的新特性.md)
+
