@@ -9,7 +9,6 @@ class Solution {
 private:
     int dir[4][2] = {0, 1, 1, 0, -1, 0, 0, -1};
     void dfs(vector<vector<char>>& grid, vector<vector<bool>>& visited, int x, int y) {
-        visited[x][y] = true;
         for(int i = 0; i < 4; i++) {
             int nextX = x + dir[i][0];
             int nextY = y + dir[i][1];
@@ -21,7 +20,7 @@ private:
                 dfs(grid, visited, nextX, nextY);
             }
         }
-    }
+    }    
 public:
     int numIslands(vector<vector<char>>& grid) {
         int row = grid.size();
@@ -32,6 +31,7 @@ public:
             for(int j = 0; j < col; j++) {
                 if(!visited[i][j] && grid[i][j] == '1') {
                     result++;
+                    visited[i][j] = true;
                     dfs(grid, visited, i, j);
                 }
             }
