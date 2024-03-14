@@ -4,6 +4,8 @@
 
 ### 1.1 输入处理 HJ5.进制转换
 
+[题目链接](https://www.nowcoder.com/practice/8f3df50d2b9043208c5eed283d1d4da6?tpId=37&tqId=21228&rp=1&ru=/ta/huawei&qru=/ta/huawei/question-ranking&tab=answerKey)
+
 题目描述：
 
 ```
@@ -25,11 +27,116 @@
 输出:170
 ```
 
+代码：
 
+```c++
+/* ************************************************************************
+> File Name:     1_1.cpp
+> Author:        niu0217
+> Created Time:  Thu 14 Mar 2024 03:26:12 PM CST
+> Description:   HJ5 进制转换
+ ************************************************************************/
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    string s;
+    while(cin>>s) {
+        int result = 0;
+        int factor = 1;
+        for(int i = s.size() - 1; i > 1; i--) {
+            if(s[i] >= '0' && s[i] <= '9') {
+                result += factor * (s[i] - '0');
+            }
+            else {
+                result += factor * (s[i] - 'A' + 10);
+            }
+            factor *= 16;
+        }
+        cout<<result<<endl;
+    }
+}
+```
 
 ### 1.2 排列组合（牛客搜索）NC61.两数之和
 
+![image-20240314154548857](Readme.assets/image-20240314154548857.png) 
+
+代码：
+
+```c++
+/* ************************************************************************
+> File Name:     1_2.cpp
+> Author:        niu0217
+> Created Time:  Thu 14 Mar 2024 03:47:33 PM CST
+> Description:   两数之和
+ ************************************************************************/
+
+#include<iostream>
+#include<vector>
+#include<unordered_map>
+
+using namespace std;
+
+vector<int> twoSum(vector<int>& nums, int target) {
+    //key:   元素
+    //value: 该元素的下标
+    unordered_map<int, int> umap;
+    for(int i = 0; i < nums.size(); i++) {
+        auto iter = umap.find(target - nums[i]);
+        if(iter != umap.end()) {
+            return {iter->second, i + 1};
+        }
+        umap[nums[i]] = i + 1;
+    }
+}
+
+int main()
+{
+    vector<int> nums = {
+        3, 2, 4
+    };
+    int target = 6;
+    vector<int> result = twoSum(nums, target);
+    for(int num : result) {
+        cout<<num<<" ";
+    }
+    cout<<endl;
+}
+```
+
 ### 1.3 递归：NC68.跳台阶
+
+[题目链接](https://www.nowcoder.com/practice/8c82a5b80378478f9484d87d1c5f12a4?tpId=13&tqId=11161&ru=/exam/oj)
+
+代码：
+
+```c++
+class Solution {
+public:
+    /**
+     * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
+     *
+     * 
+     * @param number int整型 
+     * @return int整型
+     */
+    int jumpFloor(int n) {
+        if(n == 1) {
+            return 1;
+        }
+        vector<int> dp(n + 1, 0);
+        dp[0] = 1;
+        dp[1] = 1;
+        for(int i = 2; i <= n; i++) {
+            dp[i] = dp[i - 1] + dp[i - 2];
+        }
+        return dp[n];
+    }
+};
+```
 
 ### 1.4 快速排序 HJ3.明明的随机数
 
