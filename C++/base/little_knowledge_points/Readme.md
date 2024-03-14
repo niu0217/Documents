@@ -2,7 +2,7 @@
 
 ## 重要但是容易忽略的知识点
 
-
+[C++的输入输出流.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/base/little_knowledge_points/C%2B%2B的输入输出流.md)
 
 ## 分散知识点
 
