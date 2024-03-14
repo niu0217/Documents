@@ -26,7 +26,7 @@
 
 ### [2.3 回溯算法](https://github.com/niu0217/Documents/blob/main/Algorithm/BackTracking/Readme.md)
 
-### 2.4 动态规划
+### [2.4 动态规划](https://github.com/niu0217/Documents/blob/main/Algorithm/DynamicProgramming/Readme.md)
 
 ## [3. 排序算法](https://github.com/niu0217/Documents/blob/main/Algorithm/Sort/Readme.md)
 
