@@ -26,9 +26,13 @@
 
 ### 63 不同路径II
 
+[LeetCode63.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/DynamicProgramming/LeetCode63.cpp)
+
 ![IMG_2342](Readme.assets/IMG_2342.jpg) 
 
 ### 343 整数拆分
+
+![343](Readme.assets/343.jpg) 
 
 ### 96 不同的二叉搜索树
 
