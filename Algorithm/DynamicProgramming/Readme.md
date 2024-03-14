@@ -16,7 +16,11 @@
 
 ### 746 使用最小花费爬楼梯
 
+[LeetCode746.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/DynamicProgramming/LeetCode746.cpp)
+
 ### 62 不同路径
+
+![IMG_2341](Readme.assets/IMG_2341.jpg) 
 
 ### 63 不同路径III
 
