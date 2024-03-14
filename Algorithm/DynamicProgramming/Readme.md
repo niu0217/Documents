@@ -20,9 +20,13 @@
 
 ### 62 不同路径
 
+[LeetCode62.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/DynamicProgramming/LeetCode62.cpp)
+
 ![IMG_2341](Readme.assets/IMG_2341.jpg) 
 
-### 63 不同路径III
+### 63 不同路径II
+
+![IMG_2342](Readme.assets/IMG_2342.jpg) 
 
 ### 343 整数拆分
 
