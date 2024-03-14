@@ -10,3 +10,4 @@
 
 ## [小知识点](https://github.com/niu0217/Documents/blob/main/C%2B%2B/base/little_knowledge_points/Readme.md)
 
+## [算法需要的知识点](https://github.com/niu0217/Documents/blob/main/C%2B%2B/base/algorithm_points/Readme.md)
