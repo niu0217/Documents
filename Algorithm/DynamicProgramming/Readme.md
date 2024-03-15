@@ -127,6 +127,8 @@ int main() {
 
 ### 494 目标和
 
+[LeetCode494.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/DynamicProgramming/LeetCode494.cpp)
+
 ![IMG_2352](Readme.assets/IMG_2352.jpg) 
 
 ### 474 一和零
