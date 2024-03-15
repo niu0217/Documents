@@ -14,7 +14,7 @@ public:
         }
         int m = sum / 2; //背包的容量
         vector<vector<int>> dp(n, vector<int>(m + 1, 0));
-        for(int j = 1; j <= m; j++) {
+        for(int j = nums[0]; j <= m; j++) {
             dp[0][j] = nums[0];
         }
         for(int i = 1; i < n; i++) {
