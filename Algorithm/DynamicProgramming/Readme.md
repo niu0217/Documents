@@ -42,6 +42,8 @@
 
 ### 理论
 
+#### 二维数组实现
+
 ![IMG_2344](Readme.assets/IMG_2344.jpg) 
 
 ```c++
@@ -88,15 +90,44 @@ int main() {
 }
 ```
 
+#### 一维数组实现
+
+![IMG_2351](Readme.assets/IMG_2351.jpg) 
+
+```c++
+void test_1_wei_bag_problem() {
+    vector<int> weight = {1, 3, 4};
+    vector<int> value = {15, 20, 30};
+    int bagWeight = 4;
+
+    // 初始化
+    vector<int> dp(bagWeight + 1, 0);
+    for(int i = 0; i < weight.size(); i++) { // 遍历物品
+        for(int j = bagWeight; j >= weight[i]; j--) { // 遍历背包容量
+            dp[j] = max(dp[j], dp[j - weight[i]] + value[i]);
+        }
+    }
+    cout << dp[bagWeight] << endl;
+}
+
+int main() {
+    test_1_wei_bag_problem();
+}
+```
+
 ### 416 分割等和子集
 
 [LeetCode416.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/DynamicProgramming/LeetCode416.cpp)
 
 ![IMG_2350](Readme.assets/IMG_2350.jpg) 
 
-### 1049 最后一块石头的重量III
+### 1049 最后一块石头的重量II
+
+[LeetCode1049.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/DynamicProgramming/LeetCode1049.cpp)
 
 ### 494 目标和
+
+![IMG_2352](Readme.assets/IMG_2352.jpg) 
 
 ### 474 一和零
 
