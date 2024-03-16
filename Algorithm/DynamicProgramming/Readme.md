@@ -30,5 +30,5 @@
 
 ### 714 买卖股票的最佳时机含手续费
 
-## 子序列问题
+## [子序列问题](https://github.com/niu0217/Documents/blob/main/Algorithm/DynamicProgramming/%E5%AD%90%E5%BA%8F%E5%88%97%E9%97%AE%E9%A2%98.md)
 
