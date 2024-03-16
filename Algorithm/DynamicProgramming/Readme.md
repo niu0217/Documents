@@ -6,38 +6,6 @@
 
 ## 2. 基础题目
 
-### 509 斐波那契数
-
-[LeetCode509.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/DynamicProgramming/LeetCode509.cpp)
-
-### 70 爬楼梯
-
-[LeetCode70.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/DynamicProgramming/LeetCode70.cpp)
-
-### 746 使用最小花费爬楼梯
-
-[LeetCode746.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/DynamicProgramming/LeetCode746.cpp)
-
-### 62 不同路径
-
-[LeetCode62.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/DynamicProgramming/LeetCode62.cpp)
-
-![IMG_2341](Readme.assets/IMG_2341.jpg) 
-
-### 63 不同路径II
-
-[LeetCode63.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/DynamicProgramming/LeetCode63.cpp)
-
-![IMG_2342](Readme.assets/IMG_2342.jpg) 
-
-### 343 整数拆分
-
-[LeetCode343.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/DynamicProgramming/LeetCode343.cpp)
-
-![343](Readme.assets/343.jpg) 
-
-### 96 不同的二叉搜索树
-
 ## [3. 背包问题](https://github.com/niu0217/Documents/blob/main/Algorithm/DynamicProgramming/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98.md)
 
 ## 6. 打家劫舍
