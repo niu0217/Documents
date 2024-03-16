@@ -4,7 +4,7 @@
 
 ![IMG_2340](Readme.assets/IMG_2340.jpg) 
 
-## 2. 基础题目
+## [2. 基础题目](https://github.com/niu0217/Documents/blob/main/Algorithm/DynamicProgramming/%E5%9F%BA%E7%A1%80%E9%A2%98%E7%9B%AE.md)
 
 ## [3. 背包问题](https://github.com/niu0217/Documents/blob/main/Algorithm/DynamicProgramming/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98.md)
 
@@ -30,50 +30,5 @@
 
 ### 714 买卖股票的最佳时机含手续费
 
-## 8. 子序列问题
+## 子序列问题
 
-### 8.1 子序列不连续
-
-#### 300 最长上升子序列
-
-#### 1143 最长公共子序列
-
-#### 1035 不相交的线
-
-### 8.2 子序列连续
-
-#### 674 最长连续递增序列
-
-#### 718 最长重复子数组
-
-#### 53 最长子序和
-
-### 8.3 编辑距离
-
-#### 392 判断子序列
-
-#### 115 不同的子序列
-
-#### 583 两个字符串的删除操作
-
-#### 72 编辑距离
-
-### 8.4 回文
-
-#### 674 回文子串
-
-[LeetCode647.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/DynamicProgramming/LeetCode647.cpp)
-
-![IMG_2353](Readme.assets/IMG_2353.jpg) 
-
-#### 516 最长回文子序列
-
-[LeetCode516.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/DynamicProgramming/LeetCode516.cpp)
-
-![IMG_2354](Readme.assets/IMG_2354.jpg) 
-
-#### 5 最长回文子串
-
-[LeetCode5.cpp](https://github.com/niu0217/Documents/blob/main/Algorithm/DynamicProgramming/LeetCode5.cpp)
-
-![IMG_2355](Readme.assets/IMG_2355.jpg) 
