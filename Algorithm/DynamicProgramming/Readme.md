@@ -38,7 +38,7 @@
 
 ### 96 不同的二叉搜索树
 
-## [3. 背包问题]([背包问题.md](https://github.com/niu0217/Documents/blob/main/Algorithm/DynamicProgramming/背包问题.md))
+## [3. 背包问题](https://github.com/niu0217/Documents/blob/main/Algorithm/DynamicProgramming/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98.md)
 
 ## 6. 打家劫舍
 
