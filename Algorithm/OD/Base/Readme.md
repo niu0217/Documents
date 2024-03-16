@@ -444,6 +444,98 @@ public:
 };
 ```
 
++ 动态规划
+
+```c++
+#include <climits>
+#include <vector>
+class Solution {
+public:
+    /**
+     * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
+     *
+     * 
+     * @param A string字符串 
+     * @return int整型
+     */
+    int getLongestPalindrome(string s) {
+        vector<vector<bool>> dp(s.size(), vector<bool>(s.size(), false));
+        int maxLength = 0;
+        for(int i = s.size() - 1; i >= 0; i--) {
+            for(int j = i; j < s.size(); j++) {
+                if(s[i] == s[j]) {
+                    if(j - i <= 1) {
+                        dp[i][j] = true;
+                        maxLength = maxLength > (j - i + 1) ? maxLength : (j - i + 1);
+                    }
+                    else {
+                        if(dp[i + 1][j - 1]) {
+                            dp[i][j] = true;
+                            maxLength = maxLength > (j - i + 1) ? maxLength : (j - i + 1);
+                        }
+                    }
+                }
+            }
+        }
+        return maxLength;
+    }
+};
+```
+
 ## 6. 深度/广度搜索
 
 ### 6.1 HJ41：称砝码
+
+[题目链接](https://www.nowcoder.com/practice/f9a4c19050fc477e9e27eb75f3bfd49c?tpId=37&tags=&title=&difficulty=&judgeStatus=&rp=1&gioEnter=menu)
+
+[思路](https://www.nowcoder.com/practice/f9a4c19050fc477e9e27eb75f3bfd49c?tpId=37&tags=&title=&difficulty=&judgeStatus=&rp=1&gioEnter=menu)
+
+代码：
+
+```c++
+#include<iostream>
+#include<vector>
+#include<unordered_set>
+#include<algorithm>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    while(cin>>n) {
+        int sum = 0;
+        vector<int> weight(n); //砝码的重量
+        vector<int> num(n); //砝码的数量
+        for(int i = 0; i < n; i++) {
+            cin>>weight[i];
+        }
+        for(int i = 0; i < n; i++) {
+            cin>>num[i];
+            sum += num[i] * weight[i];
+        }
+        //dp[i]: 重量i是否出现
+        vector<bool> dp(sum + 1, false);
+        dp[0] = true;
+        for(int i = 0; i < n; i++) { //遍历物品
+            for(int j = 0; j < num[i]; j++) { //遍历物品数量
+                for(int k = sum; k >= weight[i]; k--) { //遍历背包容量
+                    if(dp[k - weight[i]]) {
+                        dp[k] = true;
+                    }
+                }
+            }
+        }
+        int count = 0;
+        for(int i = 0; i <= sum; i++) {
+            if(dp[i]) {
+                count++;
+            }
+        }
+        cout<<count<<endl;
+    }
+}
+```
+
+![IMG_2356](Readme.assets/IMG_2356.jpg) 
+
