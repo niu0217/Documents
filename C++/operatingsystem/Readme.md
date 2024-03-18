@@ -1,5 +1,9 @@
 # 操作系统
 
+## 王牌
+
+[王牌.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/operatingsystem/王牌.md)
+
 ## 虚拟内存
 
 [操作系统-虚拟内存.md](https://github.com/niu0217/Documents/blob/main/C%2B%2B/operatingsystem/操作系统-虚拟内存.md)
