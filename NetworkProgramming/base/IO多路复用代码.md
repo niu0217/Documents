@@ -89,6 +89,8 @@ struct pollfd {
 
 ## 3. epoll
 
+[epoll_server.c](https://github.com/niu0217/Documents/blob/main/NetworkProgramming/base/code/IO/epoll_server.c)
+
 虽然poll解决了select的描述符个数限制，但是实现机制都是把用户态的描述符copy到内核态，然后全部吐出来，用户手动去遍历查询。且随着数量增长，其性能也会大幅下降。于是各个平台就搞了新的I/O复用机制，Linux的是epoll，Windows的是IOCP，Unix的是Kqueue。
 
 epoll 模型中一个重要的概念是epoll instance，epoll实例是一种内核数据结构，从用户空间来看的话，可以理解为两个list。
