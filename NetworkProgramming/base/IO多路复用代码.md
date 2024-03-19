@@ -32,11 +32,11 @@ int main() {
 
 ## 1. select
 
-
+[select_server.c](https://github.com/niu0217/Documents/blob/main/NetworkProgramming/base/code/IO/select_server.c)
 
 ## 2. poll
 
-
+[poll_server.c](https://github.com/niu0217/Documents/blob/main/NetworkProgramming/base/code/IO/poll_server.c)
 
 ## 3. epoll
 
