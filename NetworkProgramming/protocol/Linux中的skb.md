@@ -14,7 +14,7 @@ https://www.cnblogs.com/sammyliu/p/5225623.html
 - socket kernel buffer （skb） 是 Linux 内核网络栈（L2 到 L4）处理网络包（packets）所使用的 buffer，它的类型是 sk_buffer。简单来说，一个 skb 表示 Linux 网络栈中的一个 packet；TCP 分段和 IP 分组生产的多个 skb 被一个 skb list 形式来保存。
 - struct sock 有三个 skb 队列（sk_buffer queue），分别是 rx , tx 和 err。
 
-![skb](Linux-sk_buff-struct 数据结构和队列.assets/skb.jpeg) 
+![skb](Linux中的skb.assets/skb.jpeg) 
 
 它的主要结构成员：
 
@@ -74,21 +74,21 @@ struct sk_buff {
 
 1）分配 skb = alloc_skb(len, GFP_KERNEL) 
 
-![skb_1](Linux-sk_buff-struct 数据结构和队列.assets/skb_1.jpeg) 
+![skb_1](Linux中的skb.assets/skb_1.jpeg) 
 
 （2）添加 payload （skb_put(skb, user_data_len)）
 
-![skb_2](Linux-sk_buff-struct 数据结构和队列.assets/skb_2.jpeg) 
+![skb_2](Linux中的skb.assets/skb_2.jpeg) 
 
 （3）使用 skb->push 添加 protocol header，或者 skb->pull 删除 header
 
-![skb_3](Linux-sk_buff-struct 数据结构和队列.assets/skb_3.jpeg) 
+![skb_3](Linux中的skb.assets/skb_3.jpeg) 
 
 ## 2. Linux 网络栈使用的驱动队列 
 
 ### 2.1 队列
 
-![队列](Linux-sk_buff-struct 数据结构和队列.assets/队列.jpeg) 
+![队列](Linux中的skb.assets/队列.jpeg) 
 
 在 IP 栈和 NIC 驱动之间，存在一个 driver queue （驱动队列）。典型地，它被实现为 FIFO ring buffer，简单地可以认为它是固定大小的。这个队列不包含 packet data，相反，它只是保存 socket kernel buffer （skb）的指针，而 skb 的使用如上节所述是贯穿内核网络栈处理过程的始终的。
 
@@ -102,7 +102,7 @@ struct sk_buff {
 
 下图表示 payload 为 1500 bytes 的 IP 包，在 MTU 为 1000 和 600 时候的分片情况：
 
-![分片](Linux-sk_buff-struct 数据结构和队列.assets/分片.jpeg) 
+![分片](Linux中的skb.assets/分片.jpeg) 
 
 
 
