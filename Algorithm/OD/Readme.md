@@ -4,6 +4,8 @@
 
 ## [进阶](https://github.com/niu0217/Documents/blob/main/Algorithm/OD/Advanced/Readme.md)
 
+## [高分](https://github.com/niu0217/Documents/blob/main/Algorithm/OD/HighScore/Readme.md)
+
 ## 数据结构
 
 ### [bitset](https://github.com/niu0217/Documents/blob/main/Algorithm/OD/bitset/Readme.md)
