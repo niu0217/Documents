@@ -17,3 +17,5 @@
 [IO多路复用.md](https://github.com/niu0217/Documents/blob/main/NetworkProgramming/base/IO多路复用.md)
 
 [IO多路复用代码.md](https://github.com/niu0217/Documents/blob/main/NetworkProgramming/base/IO多路复用代码.md)
+
+[高性能网络模式.md](https://github.com/niu0217/Documents/blob/main/NetworkProgramming/base/高性能网络模式.md)
