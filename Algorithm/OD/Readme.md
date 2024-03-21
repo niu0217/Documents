@@ -21,3 +21,5 @@
 ### [滑动窗口](https://github.com/niu0217/Documents/blob/main/Algorithm/OD/slidingwindow/Readme.md)
 
 ### [贪心](https://github.com/niu0217/Documents/blob/main/Algorithm/OD/greedy/Readme.md)
+
+### [逻辑](https://github.com/niu0217/Documents/blob/main/Algorithm/OD/logic/Readme.md)
