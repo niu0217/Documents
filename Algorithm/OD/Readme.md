@@ -6,6 +6,8 @@
 
 ## [高分](https://github.com/niu0217/Documents/blob/main/Algorithm/OD/HighScore/Readme.md)
 
+## [冲刺](https://github.com/niu0217/Documents/blob/main/Algorithm/OD/Rush/Readme.md)
+
 ## 数据结构
 
 ### [bitset](https://github.com/niu0217/Documents/blob/main/Algorithm/OD/bitset/Readme.md)
