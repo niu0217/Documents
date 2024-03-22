@@ -215,7 +215,7 @@ clean:
 
 ## 5. makefile运行流程
 
-<img src="https://img-blog.csdnimg.cn/5f2ceadab86b4b17b911e81fc95a5d0e.png#pic_center" alt="在这里插入图片描述" style="zoom:50%;" /> 
+![makefile运行流程](makefile从入门到项目编译实战.assets/makefile运行流程.png) 
 
 
 

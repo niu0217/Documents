@@ -96,7 +96,9 @@ g++ main.cpp factorial.cpp printhello.cpp -o main
 
 ### 3.1 makefile三要素
 
-![img](https://maxwell-lx.vip/content/images/2023/04/image-1-1.png) 
+https://blog.csdn.net/kaikai_sk/article/details/80685811
+
+![这里写图片描述](make的基础用法.assets/70.png) 
 
 语法：
 
@@ -110,9 +112,7 @@ g++ main.cpp factorial.cpp printhello.cpp -o main
 
 ### 3.2 make工作原理
 
-![img](https://maxwell-lx.vip/content/images/2023/04/pSeQGpF-4.png) 
-
-
+![这里写图片描述](make的基础用法.assets/70-20240322205447633.png) 
 
 ## 4. 实战
 
