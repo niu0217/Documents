@@ -14,3 +14,4 @@
 
 [C++操作单个字符.md](https://github.com/niu0217/Documents/blob/main/Algorithm/AlgorithmPoints/C%2B%2B操作单个字符.md)
 
+[C++操作字符串.md](https://github.com/niu0217/Documents/blob/main/Algorithm/AlgorithmPoints/C%2B%2B操作字符串.md)
