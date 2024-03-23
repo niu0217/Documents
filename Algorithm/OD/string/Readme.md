@@ -13,3 +13,5 @@
 [英文输入法.md](https://github.com/niu0217/Documents/blob/main/Algorithm/OD/string/英文输入法.md)
 
 [开源项目热度榜单.md](https://github.com/niu0217/Documents/blob/main/Algorithm/OD/string/开源项目热度榜单.md)
+
+[提取字符串中的最长数学表达式.md](https://github.com/niu0217/Documents/blob/main/Algorithm/OD/string/提取字符串中的最长数学表达式.md)
