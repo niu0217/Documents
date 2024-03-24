@@ -16,7 +16,7 @@
 
 ### [6.2 操作系统](https://github.com/niu0217/OperatingSystem/tree/main)
 
-### [6.3 网络编程](https://github.com/niu0217/Documents/blob/main/NetworkProgramming/Readme.md)
+### [6.3 网络编程](https://github.com/niu0217/NetworkProgramming/tree/main)
 
 ### [6.4. 八股文](https://github.com/niu0217/Documents/blob/main/EightPartEssay/Readme.md)
 
