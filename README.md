@@ -8,7 +8,7 @@
 
 ## [4. C++](https://github.com/niu0217/Documents/blob/main/C%2B%2B/Readme.md)
 
-## [5. 算法](https://github.com/niu0217/Documents/blob/main/Algorithm/Readme.md)
+## [5. 算法](https://github.com/niu0217/Algorithm/tree/main?tab=readme-ov-file)
 
 ## 6. 计算机基础
 
