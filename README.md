@@ -14,7 +14,7 @@
 
 ### [6.1 计算机网络](https://github.com/niu0217/Documents/blob/main/ComputerNetwork/Readme.md)
 
-### [6.2 操作系统](https://github.com/niu0217/Documents/blob/main/OperatingSystem/Readme.md)
+### [6.2 操作系统](https://github.com/niu0217/OperatingSystem/tree/main)
 
 ### [6.3 网络编程](https://github.com/niu0217/Documents/blob/main/NetworkProgramming/Readme.md)
 
