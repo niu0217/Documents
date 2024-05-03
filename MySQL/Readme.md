@@ -5,7 +5,7 @@
 + mac上完整卸载MySQL.md
 
 + mac上安装MySQL.md
-+ [ubuntu20.04安装mysql](https://blog.csdn.net/m0_53721382/article/details/128943162)
++ Ubuntu20.04中安装MySQL.md
 
 ## 基础知识
 
@@ -24,3 +24,4 @@
 ## 总结
 
 + 复习.md
+
