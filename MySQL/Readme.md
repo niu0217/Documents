@@ -2,24 +2,25 @@
 
 ## 安装与卸载
 
-[mac上完整卸载MySQL.md](https://github.com/niu0217/Documents/blob/main/MySQL/mac上完整卸载MySQL.md)
++ mac上完整卸载MySQL.md
 
-[mac上安装MySQL.md](https://github.com/niu0217/Documents/blob/main/MySQL/mac上安装MySQL.md)
++ mac上安装MySQL.md
++ [ubuntu20.04安装mysql](https://blog.csdn.net/m0_53721382/article/details/128943162)
 
 ## 基础知识
 
-[引入.md](https://github.com/niu0217/Documents/blob/main/MySQL/引入.md)
++ 引入.md
 
-[用户账户管理.md](https://github.com/niu0217/Documents/blob/main/MySQL/用户账户管理.md)
++ 用户账户管理.md
 
-[索引.md](https://github.com/niu0217/Documents/blob/main/MySQL/索引.md)
++ 索引.md
 
-[事务.md](https://github.com/niu0217/Documents/blob/main/MySQL/事务.md)
++ 事务.md
 
-[锁.md](https://github.com/niu0217/Documents/blob/main/MySQL/锁.md)
++ 锁.md
 
-[日志与执行引擎.md](https://github.com/niu0217/Documents/blob/main/MySQL/日志与执行引擎.md)
++ 日志与执行引擎.md
 
 ## 总结
 
-[复习.md](https://github.com/niu0217/Documents/blob/main/MySQL/复习.md)
++ 复习.md
